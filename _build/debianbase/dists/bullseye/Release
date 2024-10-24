@@ -1,0 +1,32 @@
+Origin: Debian
+Label: Debian
+Suite: oldstable
+Version: 11.7
+Codename: bullseye
+Changelogs: https://metadata.ftp-master.debian.org/changelogs/@CHANGEPATH@_changelog
+Date: Sat, 10 Jun 2023 08:52:21 UTC
+Acquire-By-Hash: yes
+No-Support-for-Architecture-all: Packages
+Architectures: amd64 arm64
+Components: main main-debian-installer
+Description: Debian 11.7 Released 29 April 2023
+
+MD5Sum:
+ f1733cd6def4f2f4882969a97e90a7e0 463879 main/binary-amd64/Packages
+ 9182c43eb71b702fa06a06aabb2e6cc8      116 main/binary-amd64/Release
+ 853d705deac2d71c09bea877a949bb86 461830 main/binary-arm64/Packages
+ 14974d5ff6ab38680119718d89297c6d      116 main/binary-arm64/Release
+ 2eee40c8a27bc4fd1c8a3a8ece92e23e   52735 main-debian-installer/binary-amd64/Packages
+ 36e234e8f3bbbf707f6aa5d3fca28571      133 main-debian-installer/binary-amd64/Release
+ f40989f1233039cb745ce7af101e0d9b   50933 main-debian-installer/binary-arm64/Packages
+ 9349d579b9c60384d2583740e1c71c8d      133 main-debian-installer/binary-arm64/Release
+
+SHA256:
+ 0292a30b608f08694b46683241c27aa5cab6377059f43b97b9ffcfb8007401f2 463879 main/binary-amd64/Packages
+ c7d76c7f95e90fa3e3b1e3c2f86276a792182139a7830cad3da78b940e66a81c      116 main/binary-amd64/Release
+ c3467bb623d124f161736eaf401333bbabc137ce0152284bad4580c731396046 461830 main/binary-arm64/Packages
+ f820415ec2dda10ace869cde5fc41db35a6ac077b5ccb24da5517cc228058420      116 main/binary-arm64/Release
+ e03945fecb204ea89f5c87f18538d954025beefd909edbecc3a75b2f75362424   52735 main-debian-installer/binary-amd64/Packages
+ 43d5595829bc752977025c0479fe697dec612288cdd6dcbd1dcdcf41f0123882      133 main-debian-installer/binary-amd64/Release
+ 25fdfb69be920b950536caec555d54226641a66232a737b3571096557d020828   50933 main-debian-installer/binary-arm64/Packages
+ 4fcbc5b2ac150e34c178091ce05210315e685ca27ff03fbd3df360e8d48bf1ca      133 main-debian-installer/binary-arm64/Release

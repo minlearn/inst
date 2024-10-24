@@ -1,0 +1,1319 @@
+
+Package: apt-mirror-setup
+Source: apt-setup
+Version: 1:0.166
+Installed-Size: 172
+Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: all
+Depends: choose-mirror-bin, base-installer (>= 1.195), cdebconf-udeb
+Description: set up a mirror in sources.list
+Description-md5: e5310581ee418f3a883c16699697cb38
+Section: debian-installer
+Priority: optional
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/apt-mirror-setup_0.166_all.udeb
+Size: 48984
+MD5sum: 76b82a03422b3eac4132312168180a7b
+SHA256: f1e4d6d5b0f1680c2c3c45aaebe34301507a819959d78d28fcfbb4799a1ae7cf
+
+Package: apt-setup-udeb
+Source: apt-setup
+Version: 1:0.166
+Installed-Size: 261
+Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: arm64
+Depends: apt-mirror-setup, installed-base, di-utils (>= 1.70), cdebconf-udeb
+Description: Configure apt
+Description-md5: 371a44f059ba31d63d9a2478ec4466f6
+Installer-Menu-Item: 7000
+Section: debian-installer
+Priority: standard
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/apt-setup-udeb_0.166_arm64.udeb
+Size: 76320
+MD5sum: 664bed5defcc17804a0227606ddce992
+SHA256: 4933db2b111f183b0fa8829d958811e67a8ccce17ef86f75b067900c3b732e20
+
+Package: ata-modules-5.10.0-22-arm64-di
+Source: linux-signed-arm64 (5.10.178+3)
+Version: 5.10.178-3
+Installed-Size: 476
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Architecture: arm64
+Provides: ata-modules
+Depends: kernel-image-5.10.0-22-arm64-di, scsi-core-modules-5.10.0-22-arm64-di
+Description: ATA disk modules
+Built-Using: linux (= 5.10.178-3)
+Description-md5: 57077a1c6349ddf1316c330c5ef263b4
+Kernel-Version: 5.10.0-22-arm64
+Section: debian-installer
+Priority: optional
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/ata-modules-5.10.0-22-arm64-di_5.10.178-3_arm64.udeb
+Size: 104180
+MD5sum: 3ad2b77d7c62d76d88fe71bf488d47fc
+SHA256: f91f888740a99a6e84e5a7739d24569eb415c764b40ea68b21d3238d1c8db878
+
+Package: base-installer
+Version: 1.206
+Installed-Size: 162
+Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: all
+Depends: cdebconf-udeb, di-utils-mapdevfs, di-utils (>= 1.48), rootskel (>= 1.19)
+Description: base system installation framework
+Description-md5: 67ab8cec64480d34e103eb2e56cc313a
+Section: debian-installer
+Priority: required
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/base-installer_1.206_all.udeb
+Size: 42004
+MD5sum: c23f16ff9e6c55072c39a0ed3eef4910
+SHA256: 2dff33232034e993b95abd2c063b84ec3128b8300165cd47e7a5973c9a92139f
+
+Package: bootstrap-base
+Source: base-installer
+Version: 1.206
+Installed-Size: 675
+Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: arm64
+Provides: installed-base, kernel-installer
+Depends: libc6-udeb (>= 2.31), libdebconfclient0-udeb (>= 0.260), libdebian-installer4-udeb (>= 0.121), mounted-partitions, created-fstab, base-installer, debootstrap-udeb (>= 1.0.7), gpgv-udeb, debian-archive-keyring-udeb, archdetect
+Description: Install the base system
+Description-md5: 39bbfd161b99a078177ae8e6ae9edeea
+Installer-Menu-Item: 6500
+Section: debian-installer
+Priority: required
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/bootstrap-base_1.206_arm64.udeb
+Size: 134932
+MD5sum: 5355be48d7f49cecc2f663212f9b22bf
+SHA256: bda287ed00ece2c10de1a5980016e86d163791d859862cf110e8fed2c9c59b40
+
+Package: btrfs-modules-5.10.0-22-arm64-di
+Source: linux-signed-arm64 (5.10.178+3)
+Version: 5.10.178-3
+Installed-Size: 2436
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Architecture: arm64
+Provides: btrfs-modules
+Depends: kernel-image-5.10.0-22-arm64-di, crc-modules-5.10.0-22-arm64-di, md-modules-5.10.0-22-arm64-di
+Description: BTRFS filesystem support
+Built-Using: linux (= 5.10.178-3)
+Description-md5: db412fa883992ae39d18a2f2f65b6882
+Kernel-Version: 5.10.0-22-arm64
+Section: debian-installer
+Priority: optional
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/btrfs-modules-5.10.0-22-arm64-di_5.10.178-3_arm64.udeb
+Size: 507396
+MD5sum: bc4d903666428ff74a1c1dfead2d2947
+SHA256: d1740b8c7478cadb5426267a21fa2a0ea7084ab955755163e21c2cd8477a2d69
+
+Package: btrfs-progs-udeb
+Source: btrfs-progs
+Version: 5.10.1-2
+Installed-Size: 1270
+Maintainer: Adam Borowski <kilobyte@angband.pl>
+Architecture: arm64
+Depends: libblkid1-udeb (>= 2.31), libc6-udeb (>= 2.31), liblzo2-2-udeb (>= 2.10), libmount1-udeb (>= 2.33), libuuid1-udeb (>= 2.31), libzstd1-udeb (>= 1.4.0), zlib1g-udeb (>= 1:1.2.3.3.dfsg-1)
+Description: Checksumming Copy on Write Filesystem utilities (udeb)
+Description-md5: 6fb6ac2b0166006bcab8da3bd23124d3
+Section: debian-installer
+Priority: optional
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/btrfs-progs-udeb_5.10.1-2_arm64.udeb
+Size: 381980
+MD5sum: cc32e9e3878aa2924b667e5f91e9ae11
+SHA256: bdb25b20a2832c0a3b5c7c7e3910d4294d35acfaadd340d9ade04d2ace5e6010
+
+Package: cdrom-core-modules-5.10.0-22-arm64-di
+Source: linux-signed-arm64 (5.10.178+3)
+Version: 5.10.178-3
+Installed-Size: 163
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Architecture: arm64
+Provides: cdrom-core-modules
+Depends: kernel-image-5.10.0-22-arm64-di, scsi-core-modules-5.10.0-22-arm64-di
+Description: CDROM support
+Built-Using: linux (= 5.10.178-3)
+Description-md5: b9a534b0013222d1bd17f475c551a89d
+Kernel-Version: 5.10.0-22-arm64
+Section: debian-installer
+Priority: standard
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/cdrom-core-modules-5.10.0-22-arm64-di_5.10.178-3_arm64.udeb
+Size: 33748
+MD5sum: 54c0003e08e5697a33b95c2d0e89213d
+SHA256: bdf33a6ec10513a6bbbd6b8a43871fc74c8c3e5eb7501135de77ca2f256f2b9e
+
+Package: clock-setup
+Version: 0.155
+Installed-Size: 165
+Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: arm64
+Depends: libc6-udeb (>= 2.31), cdebconf-udeb, localechooser, tzsetup-udeb, di-utils (>= 1.66), configured-network, rdate-udeb
+Description: set up clock
+Description-md5: 6d528d9bb114c9d11e53032d3cd27964
+Installer-Menu-Item: 2600
+Section: debian-installer
+Priority: standard
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/clock-setup_0.155_arm64.udeb
+Size: 48528
+MD5sum: 524898e2063925220db741286ec335cb
+SHA256: 33cb9c13454e61dfb1281a6c26e5ab065db5ff69641ad85fde76dbded9b1f607
+
+Package: debian-archive-keyring-udeb
+Source: debian-archive-keyring
+Version: 2021.1.1+deb11u1
+Installed-Size: 120
+Maintainer: Debian Release Team <packages@release.debian.org>
+Architecture: all
+Recommends: gpgv-udeb
+Description: GnuPG keys of the Debian archive
+Description-md5: f0d27623e9053ef250935a21b0d334e7
+Section: debian-installer
+Priority: optional
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/debian-archive-keyring-udeb_2021.1.1-deb11u1_all.udeb
+Size: 53188
+MD5sum: 0e7820631ce84a803c2762cb96600a06
+SHA256: f6fbfbd570b23b9f05d804f41cb0e3d6996acdcfb331938c8d9b461f1bad7dd0
+
+Package: debootstrap-udeb
+Source: debootstrap
+Version: 1.0.123+deb11u1
+Installed-Size: 251
+Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: all
+Depends: mounted-partitions
+Description: Bootstrap the Debian system
+Description-md5: bfa0d2d63c72f081b034836355879246
+Section: debian-installer
+Priority: optional
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/debootstrap-udeb_1.0.123-deb11u1_all.udeb
+Size: 27432
+MD5sum: 0cf322875eb42213e4249bdc432566e3
+SHA256: ccb3e2a254b89ebac05ec26ed9ef0fba7dcdecfd7682201facd07d0d063f17f1
+
+Package: disk-detect
+Source: hw-detect
+Version: 1.147
+Installed-Size: 68
+Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: arm64
+Provides: harddrive-detection
+Depends: cdebconf-udeb (>= 0.38), hw-detect, di-utils (>= 1.13), pciutils-udeb
+Enhances: hw-detect
+Description: Detect disk drives
+Description-md5: da3b08412fa8497e43b1366be1a9f766
+Installer-Menu-Item: 3500
+Section: debian-installer
+Priority: optional
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/disk-detect_1.147_arm64.udeb
+Size: 21732
+MD5sum: 9e9d78728c0eef1649c76a38f2d7251d
+SHA256: ee36b522ec0cc0662f576452351214093096338b466bef3b5704710b779dd6c4
+
+Package: di-utils-mapdevfs
+Source: debian-installer-utils
+Version: 1.140
+Installed-Size: 9
+Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: arm64
+Depends: libc6-udeb (>= 2.31), libdebian-installer4-udeb (>= 0.121)
+Description: mapdevfs utility for the debian installer
+Description-md5: f4440d5439e806409615bf983eb92485
+Section: debian-installer
+Priority: standard
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/di-utils-mapdevfs_1.140_arm64.udeb
+Size: 2448
+MD5sum: 8e7149ab5e31149a77d8f1c093295043
+SHA256: 3f2cc97a23ab2ae7809ff79fc16a89a32dda4c01c8e6e7e8b0d1418db876aaab
+
+Package: dmidecode-udeb
+Source: dmidecode
+Version: 3.3-2
+Installed-Size: 115
+Maintainer: Jörg Frings-Fürst <debian@jff.email>
+Architecture: arm64
+Depends: libc6-udeb (>= 2.31)
+Description: SMBIOS/DMI table decoder (udeb)
+Description-md5: bdfb786c6a57097be8c8600b800e749f
+Section: debian-installer
+Priority: optional
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/dmidecode-udeb_3.3-2_arm64.udeb
+Size: 33840
+MD5sum: aac432eccef1880b053a73af22406f31
+SHA256: c5094e61d5eaa677c5554601c8d1a81b6d798e0b610d8b08a739c3cda04925a2
+
+Package: dosfstools-udeb
+Source: dosfstools
+Version: 4.2-1
+Installed-Size: 190
+Maintainer: Andreas Bombe <aeb@debian.org>
+Architecture: arm64
+Depends: libc6-udeb (>= 2.31)
+Description: utilities for making and checking MS-DOS FAT filesystems (udeb)
+Description-md5: 87ccf3c37d20415935ad73e674f57395
+Section: debian-installer
+Priority: optional
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/dosfstools-udeb_4.2-1_arm64.udeb
+Size: 53180
+MD5sum: eb42ed93eb4e2a948ac1cc899f0d7b20
+SHA256: eb32a225274c4f8622f379e4cdbfd45223bb1ee54061c8d26dd6a2f178a1bf33
+
+Package: e2fsprogs-udeb
+Source: e2fsprogs
+Version: 1.46.2-2
+Installed-Size: 1194
+Maintainer: Theodore Y. Ts'o <tytso@mit.edu>
+Architecture: arm64
+Depends: libblkid1-udeb, libc6-udeb (>= 2.31), libuuid1-udeb
+Description: stripped-down versions of e2fsprogs, for debian-installer
+Description-md5: 74dfc04698fdd8cf96e97440ea52534f
+Section: debian-installer
+Priority: optional
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/e2fsprogs-udeb_1.46.2-2_arm64.udeb
+Size: 385584
+MD5sum: 8662c26a5775f0922b624fd3d454c862
+SHA256: eed3e0e5200531bc4700e5fe7a0fc731ce5f726dd6b88e8df54633d5cf77922d
+
+Package: efi-modules-5.10.0-22-arm64-di
+Source: linux-signed-arm64 (5.10.178+3)
+Version: 5.10.178-3
+Installed-Size: 31
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Architecture: arm64
+Provides: efi-modules
+Depends: kernel-image-5.10.0-22-arm64-di
+Description: EFI modules
+Built-Using: linux (= 5.10.178-3)
+Description-md5: c981f0df9a973eaae5dd4261a62781c7
+Kernel-Version: 5.10.0-22-arm64
+Section: debian-installer
+Priority: optional
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/efi-modules-5.10.0-22-arm64-di_5.10.178-3_arm64.udeb
+Size: 6552
+MD5sum: 5e18d5d82d77104608632c1b2c1ae80e
+SHA256: e328a5f79a008651a450e970edf8ee809eba645169a6f0acf14cc090d2d67b26
+
+Package: ext4-modules-5.10.0-22-arm64-di
+Source: linux-signed-arm64 (5.10.178+3)
+Version: 5.10.178-3
+Installed-Size: 1693
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Architecture: arm64
+Provides: ext2-modules, ext3-modules, ext4-modules
+Depends: kernel-image-5.10.0-22-arm64-di, crc-modules-5.10.0-22-arm64-di
+Description: ext2/ext3/ext4 filesystem support
+Built-Using: linux (= 5.10.178-3)
+Description-md5: eeab1cc0dfe3193719e5bd5f1dbcf015
+Kernel-Version: 5.10.0-22-arm64
+Section: debian-installer
+Priority: standard
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/ext4-modules-5.10.0-22-arm64-di_5.10.178-3_arm64.udeb
+Size: 327216
+MD5sum: 2eec2eab0efb7ddde523e5cdcb519559
+SHA256: 70e1afd192067715d3a570207bce8810f757188a9eb49d6b61cd3dec19371352
+
+Package: fdisk-udeb
+Source: util-linux
+Version: 2.36.1-8+deb11u1
+Installed-Size: 2666
+Maintainer: util-linux packagers <util-linux@packages.debian.org>
+Architecture: arm64
+Description: Manually partition a hard drive (fdisk)
+Description-md5: 6f79c67e140579da2e82b631a927d47f
+Installer-Menu-Item: 99999
+Section: debian-installer
+Priority: optional
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/fdisk-udeb_2.36.1-8-deb11u1_arm64.udeb
+Size: 578028
+MD5sum: 6cf331c987f0b4772b1db4fcf11fb673
+SHA256: bf42fdcc8aaa70554842c208e75ded056ea6733f53952946617b5f53c5f1ea03
+
+Package: finish-install
+Version: 2.104
+Installed-Size: 80
+Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: all
+Depends: cdebconf-udeb, archdetect, installed-base, created-fstab, bootable-system
+Description: Finish the installation and reboot
+Description-md5: 448032834fa2f6f30dae6dc16a4da17d
+Installer-Menu-Item: 7800
+Section: debian-installer
+Priority: required
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/finish-install_2.104_all.udeb
+Size: 21160
+MD5sum: d3919fc3cbb6e17c04c265edc90a5bf0
+SHA256: 6e02a0007dbaf48cbb3868fad9778c30ecaf42cc80aeeeab5ac96749d73ca175
+
+Package: fuse-udeb
+Source: fuse
+Version: 2.9.9-5
+Installed-Size: 62
+Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
+Architecture: arm64
+Depends: libc6-udeb (>= 2.31), libfuse2-udeb (= 2.9.9-5)
+Description: Filesystem in Userspace
+Description-md5: e62f7c382c41b96328cd40dc8bd03c76
+Section: debian-installer
+Priority: optional
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/fuse-udeb_2.9.9-5_arm64.udeb
+Size: 17012
+MD5sum: 910e21f9f99ec398da1a95bccd6a459c
+SHA256: f0f814c17217dad65b9f8682c2e301e69b8259c9a3f2e32304b4bfbb983009cf
+
+Package: grub-installer
+Version: 1.181
+Installed-Size: 659
+Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: arm64
+Provides: bootable-system
+Depends: libc6-udeb (>= 2.31), libparted2-udeb, cdebconf-udeb, kernel-installer, created-fstab, di-utils (>= 1.15), di-utils-mapdevfs, os-prober, partman-utils
+Description: Install GRUB on a hard disk
+Description-md5: 4bee95e5a7fe68b1b6922dec90605420
+Installer-Menu-Item: 7400
+Section: debian-installer
+Priority: standard
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/grub-installer_1.181_arm64.udeb
+Size: 157080
+MD5sum: 185f25bc7578c116f9d753e147942d15
+SHA256: e8d1c2881fd9ee510071a4d0de9719b6dad56b16eba2eb050c29dd72c3df54e4
+
+Package: grub-mount-udeb
+Source: grub2
+Version: 2.06-3~deb11u5
+Installed-Size: 1667
+Maintainer: GRUB Maintainers <pkg-grub-devel@alioth-lists.debian.net>
+Architecture: arm64
+Depends: libc6-udeb (>= 2.31), libdevmapper1.02.1-udeb (>= 2:1.02.175), libfuse2-udeb
+Description: export GRUB filesystems using FUSE
+Description-md5: ceb7f9c6d531cf741f38858040de30e1
+Section: debian-installer
+Priority: optional
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/grub-mount-udeb_2.06-3~deb11u5_arm64.udeb
+Size: 406696
+MD5sum: 1fab840488b72933b9d9a7cf154e83c4
+SHA256: c30a53d4fae1a3742439fbabc6a107a759d9d8b2f78055741f08546f746524f5
+
+Package: isofs-modules-5.10.0-22-arm64-di
+Source: linux-signed-arm64 (5.10.178+3)
+Version: 5.10.178-3
+Installed-Size: 70
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Architecture: arm64
+Provides: isofs-modules
+Depends: kernel-image-5.10.0-22-arm64-di, cdrom-core-modules-5.10.0-22-arm64-di
+Description: ISOFS filesystem support
+Built-Using: linux (= 5.10.178-3)
+Description-md5: 97c20dacb40f1dd5a35b1d949e5714a7
+Kernel-Version: 5.10.0-22-arm64
+Section: debian-installer
+Priority: standard
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/isofs-modules-5.10.0-22-arm64-di_5.10.178-3_arm64.udeb
+Size: 18544
+MD5sum: 8b3421cc771688bb5229c9da0f00df59
+SHA256: 688a43761fceaf61396d1ca7aa2cb98725c0180b684e0e077ff26c6a3f8d74ad
+
+Package: jfs-modules-5.10.0-22-arm64-di
+Source: linux-signed-arm64 (5.10.178+3)
+Version: 5.10.178-3
+Installed-Size: 349
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Architecture: arm64
+Provides: jfs-modules
+Depends: kernel-image-5.10.0-22-arm64-di
+Description: JFS filesystem support
+Built-Using: linux (= 5.10.178-3)
+Description-md5: ba8f53503cba3c38d1b740ee61487cad
+Kernel-Version: 5.10.0-22-arm64
+Section: debian-installer
+Priority: standard
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/jfs-modules-5.10.0-22-arm64-di_5.10.178-3_arm64.udeb
+Size: 88608
+MD5sum: 960538a9ddb63af90089af2a6060b5f4
+SHA256: b22140202af8c20a6ef7d54f741172fd77d45a4b724920370c59b68862b1d2d4
+
+Package: jfsutils-udeb
+Source: jfsutils
+Version: 1.1.15-5
+Installed-Size: 1483
+Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
+Architecture: arm64
+Depends: libc6-udeb (>= 2.30), libuuid1-udeb (>= 2.31)
+Description: stripped-down version of jfsutils, for debian-installer
+Description-md5: b243340e9c66de38b09fd4e0855c7f1a
+Section: debian-installer
+Priority: optional
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/jfsutils-udeb_1.1.15-5_arm64.udeb
+Size: 163264
+MD5sum: 7653a4f0ab19e35d8bab916475889c85
+SHA256: 844ade791913f135f76287853a9fb19a2d953c513e5545a72bdef29b58a43c73
+
+Package: kickseed-common
+Source: kickseed
+Version: 0.63
+Installed-Size: 75
+Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: all
+Depends: di-utils (>= 1.20)
+Description: Common files for Kickstart compatibility
+Description-md5: 227f04c0217d21b93e39c8de132f4e63
+Section: debian-installer
+Priority: standard
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/kickseed-common_0.63_all.udeb
+Size: 11152
+MD5sum: 3dfd289282c034b872f07aa93ffb2cae
+SHA256: 132a67744287c3f23d533c2ab1acf6337a36567768a92bc034811019d5460e99
+
+Package: libaio1-udeb
+Source: libaio
+Version: 0.3.112-9
+Installed-Size: 16
+Maintainer: Guillem Jover <guillem@debian.org>
+Architecture: arm64
+Depends: libc6-udeb (>= 2.31)
+Description: Linux kernel AIO access library - shared library
+Description-md5: 25ca649c9ed0eb7d5e9ae8436569e71e
+Section: debian-installer
+Priority: optional
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/libaio1-udeb_0.3.112-9_arm64.udeb
+Size: 3156
+MD5sum: 7e0b919b5093da27d94b531f26cbe77f
+SHA256: 1dd01237a09c920f96c418f788ceaca7bbdf6a6fdcecd32cb7cd225ae3812637
+
+Package: libbsd0-udeb
+Source: libbsd
+Version: 0.11.3-1
+Installed-Size: 84
+Maintainer: Guillem Jover <guillem@debian.org>
+Architecture: arm64
+Depends: libc6-udeb (>= 2.31), libmd0-udeb (>= 1.0.3)
+Description: utility functions from BSD systems - shared library
+Description-md5: 85853962ecf54d2af43ee57974a0c0ed
+Section: debian-installer
+Priority: optional
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/libbsd0-udeb_0.11.3-1_arm64.udeb
+Size: 31604
+MD5sum: f356403c31c28a3071c0a6377805e458
+SHA256: 20606a7eac4f028963ca731a5bed0329e27f066791383af08e14a035ad588efe
+
+Package: libdevmapper1.02.1-udeb
+Source: lvm2 (2.03.11-2.1)
+Version: 2:1.02.175-2.1
+Installed-Size: 436
+Maintainer: Debian LVM Team <team+lvm@tracker.debian.org>
+Architecture: arm64
+Depends: libc6-udeb (>= 2.31)
+Description: Linux Kernel Device Mapper userspace library
+Description-md5: 7aa516db6c0f9d01b51410fd712f74af
+Section: debian-installer
+Priority: optional
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/libdevmapper1.02.1-udeb_1.02.175-2.1_arm64.udeb
+Size: 101032
+MD5sum: cd998bdcb8b57391dd9ef4665b151581
+SHA256: de3e04bd508371dfc9164fd068d35078cd468bdb65e37dacc52ae7a23fa01869
+
+Package: libfuse2-udeb
+Source: fuse
+Version: 2.9.9-5
+Installed-Size: 266
+Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
+Architecture: arm64
+Depends: libc6-udeb (>= 2.31)
+Description: Filesystem in Userspace (library)
+Description-md5: 4820771d8ec229e2c1bcfbc3b8043fb4
+Section: debian-installer
+Priority: optional
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/libfuse2-udeb_2.9.9-5_arm64.udeb
+Size: 64184
+MD5sum: 2df930e02d1abc9df2e9b9f37102874c
+SHA256: ea69687a256ecc4f8c91c26e53000c268a0903e56baa4b26f256929c525a7b10
+
+Package: libinih1-udeb
+Source: libinih (53-1)
+Version: 53-1+b2
+Installed-Size: 18
+Maintainer: Yangfl <mmyangfl@gmail.com>
+Architecture: arm64
+Depends: libc6-udeb (>= 2.31)
+Description: simple .INI file parser - udeb
+Description-md5: dea8a902f8facc7b4099baf927b0e683
+Section: debian-installer
+Priority: optional
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/libinih1-udeb_53-1-b2_arm64.udeb
+Size: 4064
+MD5sum: 24c21ee5588aa486d2a1f6c0ccceb5fd
+SHA256: ace49581beb3fc5875ffb50d00128e26f063b91c4765ccf1900262ecb6a85e3f
+
+Package: libisns-udeb
+Source: open-isns
+Version: 0.100-3
+Installed-Size: 500
+Maintainer: Debian iSCSI Maintainers <open-isns@packages.debian.org>
+Architecture: arm64
+Depends: libc6-udeb (>= 2.31), libcrypto1.1-udeb (>= 1.1.1h)
+Description: Internet Storage Name Service - shared libraries
+Description-md5: d74ceca7544d7132bf02a4ab57bb833f
+Section: debian-installer
+Priority: optional
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/libisns-udeb_0.100-3_arm64.udeb
+Size: 81524
+MD5sum: dada201b1b5cc74159c3e40b52bdd85d
+SHA256: 6709663b007201c7ceb8c03c2a6a56b5e54601260452dc9398c3c0d174483108
+
+Package: liblzo2-2-udeb
+Source: lzo2
+Version: 2.10-2
+Installed-Size: 123
+Maintainer: Stephen Kitt <skitt@debian.org>
+Architecture: arm64
+Depends: libc6-udeb (>= 2.29)
+Description: data compression library
+Description-md5: 316a69ce572ab60dd5e848c0f81a8b91
+Section: debian-installer
+Priority: optional
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/liblzo2-2-udeb_2.10-2_arm64.udeb
+Size: 36492
+MD5sum: 6a2bf1fa178fc63fd6e759dc8767615f
+SHA256: 563e783fe983c8e8d440415681e7a3f43595b8e30dd5a5efc20ab75c1c67e802
+
+Package: libmd0-udeb
+Source: libmd
+Version: 1.0.3-3
+Installed-Size: 52
+Maintainer: Guillem Jover <guillem@debian.org>
+Architecture: arm64
+Depends: libc6-udeb (>= 2.31)
+Description: message digest functions from BSD systems - shared library
+Description-md5: 9f178d99a8400fec0a8ae1aa28518f9b
+Section: debian-installer
+Priority: optional
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/libmd0-udeb_1.0.3-3_arm64.udeb
+Size: 17992
+MD5sum: 0bab7137c15730d0bed2372b6166851c
+SHA256: e8a33e27371775a33294a90505a68831c131f16c678a0762379f5c6fd5f751da
+
+Package: libmount1-udeb
+Source: util-linux
+Version: 2.36.1-8+deb11u1
+Installed-Size: 393
+Maintainer: util-linux packagers <util-linux@packages.debian.org>
+Architecture: arm64
+Depends: libblkid1-udeb (>= 2.31), libc6-udeb (>= 2.31), libselinux1-udeb (>= 3.1)
+Description: stripped down device mounting library, for debian-installer
+Description-md5: 098a9c93b7da9654d0a5146939126804
+Section: debian-installer
+Priority: optional
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/libmount1-udeb_2.36.1-8-deb11u1_arm64.udeb
+Size: 130656
+MD5sum: 6a25c0e9e26dede61b3222e71febf5f8
+SHA256: 19aede05e6643d25de2843e188bc6163fe9bcdca3a502238a5510b9a6d302e38
+
+Package: libparted2-udeb
+Source: parted
+Version: 3.4-1
+Installed-Size: 352
+Maintainer: Parted Maintainer Team <parted-maintainers@alioth-lists.debian.net>
+Architecture: arm64
+Depends: libblkid1-udeb (>= 2.31), libc6-udeb (>= 2.31), libdevmapper1.02.1-udeb (>= 2:1.02.175), libuuid1-udeb (>= 2.31)
+Description: disk partition manipulator - library udeb
+Description-md5: 7ff13fb62535e1f4d5f29b387170d500
+Section: debian-installer
+Priority: optional
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/libparted2-udeb_3.4-1_arm64.udeb
+Size: 121276
+MD5sum: 19dc741f150ba563396209e27d29bd2f
+SHA256: b9ac5df35f68ead51af4e7bbcc9c2990d8357ccd61b6ece978e603f1b4d5aa45
+
+Package: libparted-fs-resize0-udeb
+Source: parted
+Version: 3.4-1
+Installed-Size: 86
+Maintainer: Parted Maintainer Team <parted-maintainers@alioth-lists.debian.net>
+Architecture: arm64
+Depends: libc6-udeb (>= 2.31), libparted2-udeb (= 3.4-1)
+Description: disk partition manipulator - FS resizing library udeb
+Description-md5: 25f90fdc7da5d8a90921d685079ac19b
+Section: debian-installer
+Priority: optional
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/libparted-fs-resize0-udeb_3.4-1_arm64.udeb
+Size: 32200
+MD5sum: 5f282ba2a9cbda440b8f69a611d1f20e
+SHA256: ee39a5c7b13567e024f51f50aed9243f2a560449f0fc1d2026fd874b24247f0f
+
+Package: libpcre3-udeb
+Source: pcre3
+Version: 2:8.39-13
+Installed-Size: 406
+Maintainer: Matthew Vernon <matthew@debian.org>
+Architecture: arm64
+Depends: libc6-udeb (>= 2.30)
+Conflicts: libpcre3-dev (<= 4.3-3)
+Description: Old Perl 5 Compatible Regular Expression Library - runtime files (udeb)
+Description-md5: 7ecf63b3d26ba40c7c244485f814fb06
+Section: debian-installer
+Priority: important
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/libpcre3-udeb_8.39-13_arm64.udeb
+Size: 135508
+MD5sum: ba99e980eb34996595b53f5f6ceb45c9
+SHA256: 6776c95317e1f834eb8420c5167d85b2d4d2dbf7e8b012cc6ccc8894d06d1bf2
+
+Package: libselinux1-udeb
+Source: libselinux
+Version: 3.1-3
+Installed-Size: 166
+Maintainer: Debian SELinux maintainers <selinux-devel@lists.alioth.debian.org>
+Architecture: arm64
+Depends: libc6-udeb (>= 2.31), libpcre2-8-0-udeb (>= 10.36)
+Description: SELinux runtime shared libraries
+Description-md5: 698fd3bf06f3c31bb4b7b567f026fffa
+Section: debian-installer
+Priority: optional
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/libselinux1-udeb_3.1-3_arm64.udeb
+Size: 60624
+MD5sum: bab46b07a81087d94dbcb1895d947a4f
+SHA256: f713f481eb6b588a4a7227daa8dfed48208e9d4254714041a41d73e9dfa41d39
+
+Package: libzstd1-udeb
+Source: libzstd
+Version: 1.4.8+dfsg-2.1
+Installed-Size: 755
+Maintainer: Debian Med Packaging Team <debian-med-packaging@lists.alioth.debian.org>
+Architecture: arm64
+Depends: libc6-udeb (>= 2.31)
+Description: fast lossless compression algorithm library for debian-installer
+Description-md5: 4deea2c6e62b386fb7d0eb4127d210e7
+Section: debian-installer
+Priority: optional
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/libzstd1-udeb_1.4.8-dfsg-2.1_arm64.udeb
+Size: 268168
+MD5sum: 42e02dcc03cfe70508dd0a5d0dd065bc
+SHA256: 98832ad70956076c241f2103039bea306551d7411399a395cae73164e0e187d5
+
+Package: loop-modules-5.10.0-22-arm64-di
+Source: linux-signed-arm64 (5.10.178+3)
+Version: 5.10.178-3
+Installed-Size: 68
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Architecture: arm64
+Provides: loop-modules
+Depends: kernel-image-5.10.0-22-arm64-di
+Description: Loopback filesystem support
+Built-Using: linux (= 5.10.178-3)
+Description-md5: 2e8648333ddd5c6927f3724c9f1413e6
+Kernel-Version: 5.10.0-22-arm64
+Section: debian-installer
+Priority: standard
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/loop-modules-5.10.0-22-arm64-di_5.10.178-3_arm64.udeb
+Size: 16644
+MD5sum: 42e617bfdd1365c4043fb8bf5f950fa1
+SHA256: 8bfe4112eb21b2dd618e4ffc2fae1ec77f5e76c0a3cca8dfddb324acf4615644
+
+Package: lowmem
+Version: 1.50
+Installed-Size: 8
+Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: all
+Depends: cdebconf-udeb
+Description: free memory for lowmem install
+Description-md5: 661730d3bba6c8a0ab83562900c2fd64
+Installer-Menu-Item: 2500
+Section: debian-installer
+Priority: optional
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/lowmem_1.50_all.udeb
+Size: 1592
+MD5sum: 315d30fad2b0e356cdc1d6be0c4f4aff
+SHA256: f2f319afa60089c79961951a8faa3198b04f152fefbf195088a4a8dc62313b6c
+
+Package: lvm2-udeb
+Source: lvm2
+Version: 2.03.11-2.1
+Installed-Size: 2953
+Maintainer: Debian LVM Team <team+lvm@tracker.debian.org>
+Architecture: arm64
+Depends: libaio1-udeb (>= 0.3.112), libblkid1-udeb (>= 2.31), libc6-udeb (>= 2.31)
+Description: Linux Logical Volume Manager
+Description-md5: e9593344953c37983c9aff39dd3508b2
+Section: debian-installer
+Priority: optional
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/lvm2-udeb_2.03.11-2.1_arm64.udeb
+Size: 611092
+MD5sum: 46f712aff8ff852d7f5ab25bdb976940
+SHA256: e04f3b0f52fb6b8d7ee84ecf095373d2ac308bd8a0a6506862dfba093fa701c3
+
+Package: mdadm-udeb
+Source: mdadm
+Version: 4.1-11
+Installed-Size: 899
+Maintainer: Felix Lechner <felix.lechner@lease-up.com>
+Architecture: arm64
+Depends: libc6-udeb (>= 2.31)
+Description: Tool to administer Linux MD arrays (software RAID)
+Description-md5: bdc3025a224506766ba5b2acbdf125b0
+Section: debian-installer
+Priority: optional
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/mdadm-udeb_4.1-11_arm64.udeb
+Size: 265996
+MD5sum: 750c3e440caa8a6c53d5cb88d35a2926
+SHA256: 1aea03531b3b7221ce871d450542c85d82b45c5125598acae4afae3ea3e7cbbf
+
+Package: md-modules-5.10.0-22-arm64-di
+Source: linux-signed-arm64 (5.10.178+3)
+Version: 5.10.178-3
+Installed-Size: 2290
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Architecture: arm64
+Provides: md-modules
+Depends: kernel-image-5.10.0-22-arm64-di, crc-modules-5.10.0-22-arm64-di
+Description: RAID and LVM support
+Built-Using: linux (= 5.10.178-3)
+Description-md5: be04a8600706ec5d995ac31a1ed68610
+Kernel-Version: 5.10.0-22-arm64
+Section: debian-installer
+Priority: optional
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/md-modules-5.10.0-22-arm64-di_5.10.178-3_arm64.udeb
+Size: 509436
+MD5sum: fbe8457c011d9f682f4bb9d2390f60e9
+SHA256: 4245263a509d08e0d0f09866262eba7e910cc7169530ef76fcaa484850c27c06
+
+Package: network-console
+Version: 1.88
+Installed-Size: 219
+Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: arm64
+Depends: cdebconf-udeb, configured-network, openssh-server-udeb
+Description: Continue installation remotely using SSH
+Description-md5: e55411fc6e0b28d64ec96a3c712bf9c6
+Installer-Menu-Item: 2100
+Section: debian-installer
+Priority: optional
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/network-console_1.88_arm64.udeb
+Size: 64924
+MD5sum: 364dfbf166421f93aba9e1d296708855
+SHA256: d4cc5155f55b7f86276e33cf686f40fb68543e01a852d497d0de773897c3d8de
+
+Package: nobootloader
+Version: 1.63
+Installed-Size: 219
+Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: all
+Provides: bootable-system
+Depends: cdebconf-udeb, installed-base, di-utils-mapdevfs
+Description: Don't install any bootloader
+Description-md5: 6c574c15c77d134963f3bc2e282af390
+Installer-Menu-Item: 7700
+Section: debian-installer
+Priority: standard
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/nobootloader_1.63_all.udeb
+Size: 52632
+MD5sum: de3efdab6b0cba754bba2e98b54dbb4e
+SHA256: 60a6781b21247a10676c18ca93062c0fc568da27cd65d05c5379e097f8955366
+
+Package: ntfs-3g-udeb
+Source: ntfs-3g
+Version: 1:2017.3.23AR.3-4+deb11u3
+Installed-Size: 574
+Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
+Architecture: arm64
+Depends: libc6-udeb (>= 2.31), fuse-udeb
+Description: read/write NTFS driver for FUSE
+Description-md5: 02a565591c45fcabdc21d1a829182737
+Section: debian-installer
+Priority: optional
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/ntfs-3g-udeb_2017.3.23AR.3-4-deb11u3_arm64.udeb
+Size: 207576
+MD5sum: ea4794424a7805ed4682a3f93fa74cc1
+SHA256: 94a1688656b0493cebac5e469b5b36ef1c05671dad152eb663009ff99f2bb6aa
+
+Package: open-iscsi-udeb
+Source: open-iscsi
+Version: 2.1.3-5
+Installed-Size: 1293
+Maintainer: Debian iSCSI Maintainers <open-iscsi@packages.debian.org>
+Architecture: arm64
+Depends: libc6-udeb (>= 2.31), libcrypto1.1-udeb (>= 1.1.1k), libisns-udeb, libkmod2-udeb (>= 28), libmount1-udeb (>= 2.33), libsystemd0 (>= 247.3), scsi-modules
+Description: Configure iSCSI
+Description-md5: e5b2394988f528acdb8b0e6d4891c5b1
+Section: debian-installer
+Priority: optional
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/open-iscsi-udeb_2.1.3-5_arm64.udeb
+Size: 243536
+MD5sum: fee2b995755f4c2c0637428042edce95
+SHA256: 1ce3895cfc3c00b2e5b8f55fa54d40ff5a90b301d119df6f5eb1f997255fd790
+
+Package: openssh-server-udeb
+Source: openssh
+Version: 1:8.4p1-5+deb11u1
+Installed-Size: 1125
+Maintainer: Debian OpenSSH Maintainers <debian-ssh@lists.debian.org>
+Architecture: arm64
+Depends: libc6-udeb (>= 2.31), libcrypt1-udeb (>= 1:4.4.18), libcrypto1.1-udeb (>= 1.1.1n), zlib1g-udeb (>= 1:1.2.3.3.dfsg-1)
+Description: secure shell server for the Debian installer
+Description-md5: 1de3721655cd1a38fac0fe1a6b2b1e22
+Section: debian-installer
+Priority: optional
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/openssh-server-udeb_8.4p1-5-deb11u1_arm64.udeb
+Size: 301020
+MD5sum: 772e0711590204825a500a80a042584f
+SHA256: 5051047f9d465b6d2f515a80c4a33b88b969270f40ebd0d61e544d75e634a5f6
+
+Package: os-prober-udeb
+Source: os-prober
+Version: 1.79
+Installed-Size: 63
+Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: arm64
+Provides: os-prober
+Depends: libc6-udeb (>= 2.31), di-utils-mapdevfs, anna (>= 1.16), grub-mount-udeb
+Description: utility to detect other OSes on a set of drives
+Description-md5: eb9308d87278ee3239e33353ec9b0216
+Section: debian-installer
+Priority: optional
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/os-prober-udeb_1.79_arm64.udeb
+Size: 12372
+MD5sum: e761fa678c70afa46463550fb5c15f29
+SHA256: 0ee51fac2e9479bec58959a78b56454acce1e98b9709cac84df364efaf15adce
+
+Package: parted-udeb
+Source: parted
+Version: 3.4-1
+Installed-Size: 70
+Maintainer: Parted Maintainer Team <parted-maintainers@alioth-lists.debian.net>
+Architecture: arm64
+Depends: libc6-udeb (>= 2.31), libparted2-udeb (= 3.4-1)
+Description: Manually partition a hard drive (parted)
+Description-md5: 4f6f7c59ec85baf2c88c7eb3221edd53
+Installer-Menu-Item: 99999
+Section: debian-installer
+Priority: optional
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/parted-udeb_3.4-1_arm64.udeb
+Size: 23444
+MD5sum: b7b2581391d0aa42b4543c0929297fc4
+SHA256: 767e5ad3ddcb778d007bf3ec3c3944d79e50b8a4b0ea4b4434120198db521da3
+
+Package: partman-auto
+Version: 157
+Installed-Size: 290
+Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: arm64
+Depends: cdebconf-udeb, di-utils, partman-base (>= 129), partman-basicfilesystems, partman-ext3
+Description: Automatically partition storage devices (partman)
+Description-md5: f55374eaa156935ee72eb809efc54a32
+Section: debian-installer
+Priority: standard
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/partman-auto_157_arm64.udeb
+Size: 66184
+MD5sum: 55661dae7bbde16f3e14e83bf4cc8d0b
+SHA256: cfc9f8d161b25c9d5d94833d6894ecb1dbbc0921f38dfc384e31dc2012f1d03c
+
+Package: partman-auto-crypto
+Version: 33
+Installed-Size: 20
+Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: all
+Depends: cdebconf-udeb, partman-auto (>= 81), partman-auto-lvm (>= 24), partman-crypto (>= 25), partman-base (>= 114)
+Description: Automatically partition storage devices using crypto and LVM
+Description-md5: 36b82ceea4a7c308eb115b0a0776701c
+Section: debian-installer
+Priority: optional
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/partman-auto-crypto_33_all.udeb
+Size: 5728
+MD5sum: 0e71387aee8fba446ed859ba96ae13b1
+SHA256: 34622bb3b4c5d8003d5652b9365216b7e550baa51a184ca39e508e825d59e224
+
+Package: partman-auto-lvm
+Version: 85
+Installed-Size: 306
+Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: all
+Depends: cdebconf-udeb, partman-base (>= 125), partman-auto (>= 84), partman-lvm (>= 72), di-utils (>= 1.66)
+Description: Automatically partition storage devices using LVM
+Description-md5: 1e4a0ba43f3c2ad21ae0b2ae73013f6b
+Section: debian-installer
+Priority: optional
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/partman-auto-lvm_85_all.udeb
+Size: 83956
+MD5sum: 1ca0739591401b4d61d5cb6ef2a512dc
+SHA256: 2988a1cb5f39426dd8b8b473874303fbe5d675b64e2cffd319b5137cdec4196f
+
+Package: partman-auto-raid
+Version: 47
+Installed-Size: 58
+Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: all
+Depends: cdebconf-udeb, partman-base (>= 114), partman-basicfilesystems, partman-ext3, partman-auto (>= 58), partman-md
+Description: Allow preseeded RAID installs
+Description-md5: 4980b44a46b672ade3ce96b5d7e7ad8a
+Section: debian-installer
+Priority: standard
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/partman-auto-raid_47_all.udeb
+Size: 18420
+MD5sum: 4426408810df15ac04fdc2004e098a3b
+SHA256: cac7dd60903bd1bb5633b2d75fcf181cd6ce98c9e977233df873a329a182dc9f
+
+Package: partman-base
+Version: 217
+Installed-Size: 645
+Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: arm64
+Provides: created-fstab, made-filesystems, mounted-partitions, partitioned-harddrives
+Depends: libc6-udeb (>= 2.31), libparted-fs-resize0-udeb, libparted2-udeb, cdebconf-udeb (>= 0.133), partman-utils, partman-partitioning (>= 54), partman-target, archdetect, harddrive-detection, di-utils-mapdevfs, di-utils (>= 1.66)
+Description: Partition the storage devices (partman)
+Description-md5: ebb4076ee5fc12b4583e7c980c5381eb
+Installer-Menu-Item: 4200
+Section: debian-installer
+Priority: standard
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/partman-base_217_arm64.udeb
+Size: 125084
+MD5sum: 464c26f3762fd69ca807a94e99afbf63
+SHA256: 871bbdf5c0f1c9ee9bcfe7ee8837de25da80307e0fd5d829d8e1f6cd1b343644
+
+Package: partman-basicfilesystems
+Version: 156
+Installed-Size: 726
+Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: arm64
+Provides: partman-filesystem
+Depends: cdebconf-udeb, e2fsprogs-udeb, ext2-modules, fat-modules, dosfstools-udeb
+Description: Add to partman support for ext2, linux-swap, fat16, fat32 and ntfs
+Description-md5: 30a43cbdf168eeac685bb2513601cecf
+Section: debian-installer
+Priority: standard
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/partman-basicfilesystems_156_arm64.udeb
+Size: 136504
+MD5sum: 664476c7bf4f00d87677655a03a10390
+SHA256: 9d4b600fa0ba350be57b75501b831a7bb363ecdcc910e37064a82fa52ac1636e
+
+Package: partman-basicmethods
+Version: 72
+Installed-Size: 86
+Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: all
+Provides: partman-method
+Depends: cdebconf-udeb
+Description: Basic partition usage methods for partman
+Description-md5: 836b36a4046795c47544e576cb36fa47
+Section: debian-installer
+Priority: optional
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/partman-basicmethods_72_all.udeb
+Size: 18892
+MD5sum: a920a86c9c8121da72f5253c8e1bea75
+SHA256: 929e048328134180b028e7ef42211a1e1d26c7fb293226b90e9fa5dc23b10d3a
+
+Package: partman-btrfs
+Version: 54
+Installed-Size: 82
+Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: all
+Provides: partman-filesystem
+Depends: cdebconf-udeb, btrfs-progs-udeb, btrfs-modules, partman-basicfilesystems (>= 59), partman-base (>= 124)
+Description: Add to partman support for btrfs
+Description-md5: 983664935a97d6109f2d5a0bf49c0587
+Section: debian-installer
+Priority: standard
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/partman-btrfs_54_all.udeb
+Size: 16604
+MD5sum: 47ef6b3cca7097a851bf72317f4d8ab0
+SHA256: d16abd22c49fa145c5db0623106071d67f52746bd13d2c9bf952f94251d5fffb
+
+Package: partman-crypto
+Version: 114
+Installed-Size: 982
+Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: arm64
+Depends: partman-base (>= 134), cdebconf-udeb (>= 0.133), libc6-udeb (>= 2.31)
+Description: Add to partman support for block device encryption
+Description-md5: 347830263d845f638b547875c959bcf5
+Section: debian-installer
+Priority: optional
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/partman-crypto_114_arm64.udeb
+Size: 215760
+MD5sum: 2677195537ebe819f54b9f7ca10feb56
+SHA256: 8fea7ebf95f00834b1c0f24065afd08fb7e733ba2f93c34f8edd671b7e4f5135
+
+Package: partman-efi
+Version: 94
+Installed-Size: 101
+Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: arm64
+Depends: partman-base (>= 114), efi-modules, dosfstools-udeb, cdebconf-udeb
+Description: Add to partman support for EFI System Partitions
+Description-md5: 332baa08803b8b4625c96820605bcd4e
+Section: debian-installer
+Priority: standard
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/partman-efi_94_arm64.udeb
+Size: 27224
+MD5sum: e03400f0ceb9f8da0fb8f51ba05037a7
+SHA256: 5552f9f792e98b0cc955d0c5f7cd4215216a3f1f1b5030b912d27b65c27e6ea5
+
+Package: partman-ext3
+Version: 107
+Installed-Size: 265
+Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: all
+Provides: partman-filesystem
+Depends: cdebconf-udeb, e2fsprogs-udeb, ext3-modules, ext4-modules, partman-basicfilesystems (>= 59), partman-base (>= 140)
+Description: Add to partman support for ext3 and ext4
+Description-md5: f4a6cc371c4b24d6846172cfb977dfe0
+Section: debian-installer
+Priority: standard
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/partman-ext3_107_all.udeb
+Size: 54396
+MD5sum: cdf192a1c75b86abc264f56075e0a34f
+SHA256: 6eb529a6d48db1fa927aa10438986b43983dd4be427b51b514d2f6f9d4621319
+
+Package: partman-iscsi
+Version: 70
+Installed-Size: 149
+Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: all
+Depends: cdebconf-udeb (>= 0.133), partman-base (>= 114), di-utils (>= 1.66), open-iscsi-udeb
+Description: Adds support for iSCSI to partman
+Description-md5: 657ebb2c0907be8bac65b2f2e46b066e
+Section: debian-installer
+Priority: standard
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/partman-iscsi_70_all.udeb
+Size: 39292
+MD5sum: a66e7687ad8f6293673c1abf67f22d5f
+SHA256: 123313a8230fdacf5ce15af14d0b7a9954c0efc89ac0cbb6c99fbef915034cbb
+
+Package: partman-jfs
+Version: 61
+Installed-Size: 106
+Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: all
+Provides: partman-filesystem
+Depends: cdebconf-udeb, jfsutils-udeb, jfs-modules, partman-basicfilesystems (>= 59), partman-base (>= 124)
+Description: Add support for jfs to partman
+Description-md5: 9a58d6e05e80240eb79458d398910a29
+Section: debian-installer
+Priority: standard
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/partman-jfs_61_all.udeb
+Size: 21464
+MD5sum: 76d1c1b1959264991f9eb8dfef83639a
+SHA256: 11cd7c2426c2fa57c987e3df2951141a782214529c27a662db4a59d3f7cbc226
+
+Package: partman-lvm
+Version: 140
+Installed-Size: 1030
+Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: all
+Depends: cdebconf-udeb (>= 0.133), partman-base (>= 134), di-utils (>= 1.14), md-modules, lvm2-udeb
+Description: Adds support for LVM to partman
+Description-md5: 7f8e5c7b5fa97fc0638792ea59f306ff
+Section: debian-installer
+Priority: optional
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/partman-lvm_140_all.udeb
+Size: 192300
+MD5sum: 28d3123e04a79615e977408f0b3e2808
+SHA256: b46a494729dc0b7d8cf82073d6d7c399b1e66f2c77e9fcba7cd2749b7f021980
+
+Package: partman-md
+Version: 100
+Installed-Size: 629
+Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: all
+Depends: cdebconf-udeb, di-utils (>= 1.16), md-modules, mdadm-udeb (>= 2.5.2), partman-base (>= 134)
+Description: Add to partman support for MD
+Description-md5: ff0bf70fc09953c1d5914cb94ae5ac4b
+Section: debian-installer
+Priority: standard
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/partman-md_100_all.udeb
+Size: 143408
+MD5sum: 9a3e2bd5cb4665b3808bdb3ba5f732c4
+SHA256: 2617cbcdeeea91b6f54a5a51584398439aa908968e4d23c33b6b68f9f2f7a6e7
+
+Package: partman-partitioning
+Version: 140
+Installed-Size: 588
+Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: arm64
+Depends: e2fsprogs-udeb, ntfs-3g-udeb, cdebconf-udeb, di-utils (>= 1.66)
+Description: Partitioning operations for partman
+Description-md5: 0ffef719d737b8746863f8419eaa3f07
+Section: debian-installer
+Priority: optional
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/partman-partitioning_140_arm64.udeb
+Size: 133516
+MD5sum: a6b7290505f5092cbdf44dc946387259
+SHA256: dec5d80c4e69f5a6afb11a5fa25e8a23265ea3e438dc8c2044ae66f1f0dbabfc
+
+Package: partman-target
+Version: 122
+Installed-Size: 388
+Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: all
+Depends: cdebconf-udeb, partman-basicfilesystems, partman-basicmethods, di-utils-mapdevfs, di-utils (>= 1.68)
+Description: Provides partman with ability to prepare /target
+Description-md5: 535ff0bb18e2c09365d0dea98fe407e9
+Section: debian-installer
+Priority: standard
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/partman-target_122_all.udeb
+Size: 91524
+MD5sum: b059213ec07e437d9b996c60d677cc6c
+SHA256: 9ebdefa87e60daceed4fc54f7de3efddbd78a9101b3fe9d454446f31786ae99d
+
+Package: partman-utils
+Source: partman-base
+Version: 217
+Installed-Size: 19
+Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: arm64
+Depends: libc6-udeb (>= 2.31), libparted2-udeb
+Description: Utilities related to partitioning
+Description-md5: d50e0f2a82bafae199bf9188e0e9d789
+Section: debian-installer
+Priority: optional
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/partman-utils_217_arm64.udeb
+Size: 3420
+MD5sum: d2927fb4c263a87115d5ad72ffde7820
+SHA256: 6d6c33901bbc269cb8c5a7eb24d487784e4cbe09d8513a9881b54c1e09c166e6
+
+Package: partman-xfs
+Version: 68
+Installed-Size: 39
+Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: all
+Provides: partman-filesystem
+Depends: cdebconf-udeb, xfsprogs-udeb, xfs-modules, partman-basicfilesystems (>= 59), partman-base (>= 124)
+Description: Add to partman support for xfs
+Description-md5: 0f1313afd09b046ba0c90035673f6ef9
+Section: debian-installer
+Priority: standard
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/partman-xfs_68_all.udeb
+Size: 5320
+MD5sum: 0d579931b87b0e117982144b86ec634c
+SHA256: 49e4c5551cc3dad55ef9be536bc80e6f11ffaef892e28446823d081211435af7
+
+Package: pkgsel
+Version: 0.73
+Installed-Size: 102
+Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: all
+Depends: cdebconf-udeb, apt-setup-udeb, di-utils (>= 1.56)
+Description: Select and install packages
+Description-md5: 3daecd491b846f306b5069932c089763
+Installer-Menu-Item: 7000
+Section: debian-installer
+Priority: standard
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/pkgsel_0.73_all.udeb
+Size: 30184
+MD5sum: c3e2a16e1476fa4c11a5324c664024c1
+SHA256: b2c231eaecd05a2e53086c28ba7171a17a520a9a61a3d6db55d680cc02ec4220
+
+Package: rdate-udeb
+Source: rdate
+Version: 1:1.10-4
+Installed-Size: 22
+Maintainer: Thiago Andrade Marques <andrade@debian.org>
+Architecture: arm64
+Depends: libbsd0-udeb (>= 0.10.0), libc6-udeb (>= 2.31)
+Description: sets the system's date from a remote host
+Description-md5: 1b08d6568efd3c37082807154d086ec1
+Section: debian-installer
+Priority: optional
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/rdate-udeb_1.10-4_arm64.udeb
+Size: 7416
+MD5sum: b0761a7bd5d0734c2fc71c72676a1786
+SHA256: 8c79563a03e2e455ab6af73d999c88a8689624ef5f53ac0ef405be58e572244b
+
+Package: sata-modules-5.10.0-22-arm64-di
+Source: linux-signed-arm64 (5.10.178+3)
+Version: 5.10.178-3
+Installed-Size: 962
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Architecture: arm64
+Provides: sata-modules
+Depends: kernel-image-5.10.0-22-arm64-di, scsi-core-modules-5.10.0-22-arm64-di, ata-modules-5.10.0-22-arm64-di
+Description: SATA drivers
+Built-Using: linux (= 5.10.178-3)
+Description-md5: 0615d00c9166fbcb342ecb5319a4a2c1
+Kernel-Version: 5.10.0-22-arm64
+Section: debian-installer
+Priority: standard
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/sata-modules-5.10.0-22-arm64-di_5.10.178-3_arm64.udeb
+Size: 156088
+MD5sum: 6c756f7a2cd2439706726f9292e2c1c7
+SHA256: 6275e69441316f0b85f0bb49423146519e2ed612e04fa74c79460f7f3bb7f682
+
+Package: scsi-modules-5.10.0-22-arm64-di
+Source: linux-signed-arm64 (5.10.178+3)
+Version: 5.10.178-3
+Installed-Size: 11977
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Architecture: arm64
+Provides: scsi-modules
+Depends: kernel-image-5.10.0-22-arm64-di, scsi-core-modules-5.10.0-22-arm64-di, cdrom-core-modules-5.10.0-22-arm64-di, ata-modules-5.10.0-22-arm64-di
+Description: SCSI drivers
+Built-Using: linux (= 5.10.178-3)
+Description-md5: beccbc3b2149ccb5ebed1b6359e849f7
+Kernel-Version: 5.10.0-22-arm64
+Section: debian-installer
+Priority: standard
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/scsi-modules-5.10.0-22-arm64-di_5.10.178-3_arm64.udeb
+Size: 2388408
+MD5sum: 3ea1a324179e90ac076e4c23d1ec2f8e
+SHA256: 415447fb458142b317ef4913dbfd5ed0c563532295c09a5cb1c72470025d46e7
+
+Package: tzsetup-udeb
+Source: tzsetup
+Version: 1:0.115
+Installed-Size: 282
+Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: all
+Depends: cdebconf-udeb, localechooser
+Description: choose time zone
+Description-md5: 4748312c715d3e534fdac57879f07da3
+Section: debian-installer
+Priority: optional
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/tzsetup-udeb_0.115_all.udeb
+Size: 65072
+MD5sum: 97eaf2a041b4d9080d538ffa549fa5c8
+SHA256: 717f9b58b267069965176b0958570cabe9917e9948d64ab15e987607d144e989
+
+Package: user-setup-udeb
+Source: user-setup
+Version: 1.88
+Installed-Size: 450
+Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: all
+Depends: cdebconf-udeb (>= 0.133)
+Description: Set up users and passwords
+Description-md5: 243d3a0b8c30e62b589266a9194580df
+Installer-Menu-Item: 2400
+Section: debian-installer
+Priority: standard
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/user-setup-udeb_1.88_all.udeb
+Size: 116136
+MD5sum: a68d941969392bc294a9c9f72ee04918
+SHA256: ad06fb8371e65efedabf1cd66439d00c037c5cc3b44177f1a24ba6d73027563b
+
+Package: xfs-modules-5.10.0-22-arm64-di
+Source: linux-signed-arm64 (5.10.178+3)
+Version: 5.10.178-3
+Installed-Size: 2501
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Architecture: arm64
+Provides: xfs-modules
+Depends: kernel-image-5.10.0-22-arm64-di, crc-modules-5.10.0-22-arm64-di
+Description: XFS filesystem support
+Built-Using: linux (= 5.10.178-3)
+Description-md5: af940d874a0e44fe930227fd1f4f4a7d
+Kernel-Version: 5.10.0-22-arm64
+Section: debian-installer
+Priority: standard
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/xfs-modules-5.10.0-22-arm64-di_5.10.178-3_arm64.udeb
+Size: 438852
+MD5sum: 0d9303411c8035dec33e9c45237f55d9
+SHA256: 74f8ed9608355e42b16c00b9624ac1566cac763f23c7c2c7bfdf8e0a70ed5f8b
+
+Package: xfsprogs-udeb
+Source: xfsprogs
+Version: 5.10.0-4
+Installed-Size: 306
+Maintainer: XFS Development Team <linux-xfs@vger.kernel.org>
+Architecture: arm64
+Depends: libblkid1-udeb (>= 2.31), libc6-udeb (>= 2.31), libinih1-udeb (>= 53), libuuid1-udeb (>= 2.31)
+Description: A stripped-down version of xfsprogs, for debian-installer
+Description-md5: 61e64f60ad3161722cb5c6ebc2be724e
+Section: debian-installer
+Priority: optional
+Filename: dists/bullseye/main-debian-installer/binary-arm64/udeb/xfsprogs-udeb_5.10.0-4_arm64.udeb
+Size: 122864
+MD5sum: 0f29c82e7437d3aedaec946ef3a08652
+SHA256: a3d4292a0bcc060ae9af7a62538fbe20d5bd20690546c77204562c2620eb6783
+
+
