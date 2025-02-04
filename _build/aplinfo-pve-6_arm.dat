@@ -1,0 +1,5 @@
+Package: pve-web-news
+Description: News displayed on the admin interface
+  <b>Welcome</b> to the Proxmox Virtual Environment!<br><br>
+  For more information please visit our homepage at
+  <a href='http://www.proxmox.com' target='_blank'>www.proxmox.com</a>
