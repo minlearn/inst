@@ -1,0 +1,31 @@
+Package: pve-web-news
+Description: News displayed on the admin interface
+  <b>Welcome</b> to the Proxmox Virtual Environment!<br><br>
+  For more information please visit our homepage at
+  <a href='http://www.proxmox.com' target='_blank'>www.proxmox.com</a>
+
+Package: lxcdebtpl
+Version: 20200823
+Type: lxc
+OS: debian
+Section: 1keyddhubfree
+Maintainer: github.com/minlearn <minlearn@minlearn.org>
+Architecture: amd64
+Location: lxcdebtpl.tar.xz
+md5sum: 
+sha512sum: 
+Infopage: https://github.com/minlearn/1keyddhubfree-lxcdebtpl
+Description: LXC default image for lxcdebtpl
+
+Package: lxcdebtpl
+Version: 20200823
+Type: lxc
+OS: debian
+Section: 1keyddhubfree
+Maintainer: github.com/minlearn <minlearn@minlearn.org>
+Architecture: arm64
+Location: lxcdebtpl_arm64.tar.xz
+md5sum: 
+sha512sum: 
+Infopage: https://github.com/minlearn/1keyddhubfree-lxcdebtpl
+Description: LXC default image for lxcdebtpl
