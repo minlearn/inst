@@ -1,0 +1,18 @@
+name: auto sync to gitlab
+on:
+  workflow_dispatch:
+  push:
+jobs:
+  run:
+    name: sync
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: yesolutions/mirror-action@master
+        with:
+          REMOTE: https://gitlab.com/minlearn/inst.git
+          GIT_USERNAME: username
+          GIT_PASSWORD: ${{ secrets.GITLAB_TOKEN }}
+          PUSH_ALL_REFS: false
