@@ -1,0 +1,11 @@
+Template: my_script/progress/predd
+Type: text
+Description: predd begin,cleaning ...
+
+Template: my_script/progress/dd
+Type: text
+Description: wget dd,please wait: ${STATUS}
+
+Template: my_script/progress/postdd
+Type: text
+Description: postdd done,rebooting ...

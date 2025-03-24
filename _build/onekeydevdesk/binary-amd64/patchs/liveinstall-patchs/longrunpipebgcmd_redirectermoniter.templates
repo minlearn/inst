@@ -1,0 +1,11 @@
+Template: my_script/progress/parted
+Type: text
+Description: parted,please wait ...
+
+Template: my_script/progress/wget
+Type: text
+Description: wget dd,please wait: ${STATUS}
+
+Template: my_script/progress/grub
+Type: text
+Description: process grub,rebooting ...
