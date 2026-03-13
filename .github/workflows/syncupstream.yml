@@ -1,0 +1,65 @@
+name: syncupstream
+
+on:
+  schedule:
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+
+      # fetch-depth is important for all to work well
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Set up Git user
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+      - run: |
+          git remote add upstream https://github.com/minlearn/inst.git || true
+          git fetch origin
+          git fetch upstream
+          git checkout master
+
+      - name: Calculate ahead/behind
+        id: ab
+        run: |
+          ahead=$(git rev-list --count upstream/master..master)
+          behind=$(git rev-list --count master..upstream/master)
+          echo "ahead=$ahead"
+          echo "behind=$behind"
+          echo "ahead=$ahead" >> $GITHUB_OUTPUT
+          echo "behind=$behind" >> $GITHUB_OUTPUT
+
+      - name: Check for common ancestor
+        id: ancestor
+        run: |
+          ancestor=$(git merge-base master upstream/master || echo "")
+          if [ -z "$ancestor" ]; then
+            echo "common_ancestor=0" >> $GITHUB_OUTPUT
+          else
+            echo "common_ancestor=1" >> $GITHUB_OUTPUT
+          fi
+
+      - name: First merge (no common ancestor, allow unrelated histories)
+        if: steps.ancestor.outputs.common_ancestor == '0'
+        run: |
+          git merge upstream/master --allow-unrelated-histories -X ours --no-edit
+          git push origin master
+          echo "首次同步，无共同祖先，已合并 upstream 内容并推送。"
+
+      - name: Normal merge (has common ancestor and behind)
+        if: steps.ancestor.outputs.common_ancestor == '1' && steps.ab.outputs.behind != '0'
+        run: |
+          git merge upstream/master -X ours --no-edit
+          git push origin master
+          echo "正常同步，已合并 upstream 的新内容并推送。"
+
+      - name: Already up-to-date
+        if: steps.ancestor.outputs.common_ancestor == '1' && steps.ab.outputs.behind == '0'
+        run: |
+          echo "本地已与 upstream 同步，无需合并。"
+
