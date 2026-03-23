@@ -1,0 +1,24 @@
+Origin: Debian
+Label: Debian
+Suite: oldstable
+Version: 11.7
+Codename: bullseye
+Changelogs: https://metadata.ftp-master.debian.org/changelogs/@CHANGEPATH@_changelog
+Date: Sat, 10 Jun 2023 08:52:21 UTC
+Acquire-By-Hash: yes
+No-Support-for-Architecture-all: Packages
+Architectures: amd64 arm64
+Components: main-debian-installer
+Description: Debian 11.7 Released 29 April 2023
+
+MD5Sum:
+ 46c05d0c4ff6dcf4584d34f814a173f0  117185 Packages
+ 36e234e8f3bbbf707f6aa5d3fca28571      133 amd64
+ bca30de64d3ad43da58b6c4272024236  110243 Packages_arm64
+ 9349d579b9c60384d2583740e1c71c8d      133 arm64
+
+SHA256:
+ d49320f917a69faed307ee43327c37216f69da9a8e6bf0b825b990cb72b81fdf  117185 Packages
+ 43d5595829bc752977025c0479fe697dec612288cdd6dcbd1dcdcf41f0123882      133 amd64
+ 44083499cc7e2e5a702290852f7728f18d7e883f324580f591ba89888ebb5293  110243 Packages_arm64
+ 4fcbc5b2ac150e34c178091ce05210315e685ca27ff03fbd3df360e8d48bf1ca      133 arm64
