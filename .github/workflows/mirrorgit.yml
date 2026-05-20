@@ -1,0 +1,27 @@
+name: mirrorgit
+on:
+  #push:
+    #branches: [master]
+  workflow_dispatch:
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: ${{ github.event.inputs.DEPLOYMENT_ENVIRONMENT }}
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: mirror to git
+        run: |
+          sudo apt update && sudo apt install git git-lfs python3-full python3-pip -y && sudo sh -c "echo StrictHostKeyChecking no >> /etc/ssh/ssh_config"
+          sudo mkdir -p /root/.ssh
+          sudo sh -c "echo '${{ secrets.GITEE_KEY }}' > /root/.ssh/id_rsa"
+          #sudo sh -c "echo '${{ secrets.GITEA_KEY }}' > /root/.ssh/id_rsa"
+          sudo chmod 600 /root/.ssh/id_rsa
+          sudo apt remove python3-urllib3 python3-idna python3-chardet
+          sudo pip3 install -r .github/hubmirror/requirements.txt
+          sudo git lfs install
+          sudo python3 .github/hubmirror/hubmirror.py --src "github/minlearn" --dst "gitee/minlearn" --dst-key "${{ secrets.GITEE_KEY }}" --dst-token "${{ secrets.GITEE_TOKEN }}" --static-list "inst" --account-type "org" --force-update "true"
+          #sudo python3 .github/hubmirror/hubmirror.py --src "github/minlearn" --dst "gitea/minlearn" --gitea-url http://inst.xxx/gitea --dst-key "${{ secrets.GITEA_KEY }}" --dst-token "${{ secrets.GITEA_TOKEN }}" --static-list "inst" --force-update "true"

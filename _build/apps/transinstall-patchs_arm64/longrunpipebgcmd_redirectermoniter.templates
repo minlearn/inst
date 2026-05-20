@@ -1,0 +1,15 @@
+Template: my_script/progress/down
+Type: text
+Description: get deps,please wait ...
+
+Template: my_script/progress/parted
+Type: text
+Description: parted,please wait ...
+
+Template: my_script/progress/wgetrans
+Type: text
+Description: wgetrans,please wait: ${STATUS}
+
+Template: my_script/progress/grub
+Type: text
+Description: grub,wait ...
