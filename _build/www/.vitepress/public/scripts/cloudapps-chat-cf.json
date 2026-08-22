@@ -1,0 +1,54 @@
+{
+  "id": "cloudapps-chat-cf",
+  "slug": "chat-cf",
+  "name": "chat-cf",
+  "type": "script",
+  "description": "chat-cf",
+  "date_created": "2026-08-22",
+  "lastUpdated": "2026-08-22",
+  "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+  "category": "cloudapps",
+  "categories": [
+    "cloudapps"
+  ],
+  "sections": [
+    {
+      "type": "text",
+      "content": [
+        "<a href=\"#演示与特性\" target=\"_blank\" rel=\"noopener\">演示与特性</a> | <a href=\"#下载安装及用法\" target=\"_blank\" rel=\"noopener\">下载安装及用法</a> | <a href=\"#服务及支持\" target=\"_blank\" rel=\"noopener\">服务及支持</a>",
+        "chat-cf: 最沉浸的一键个人chat🚀🎉\n=====",
+        "新的创新选择小玩具"
+      ],
+      "title": ""
+    },
+    {
+      "type": "quote",
+      "content": "作为个人support及chat都可  ..  "
+    },
+    {
+      "type": "text",
+      "content": "项目地址：<a href=\"https://github.com/minlearn/chat-cf\" target=\"_blank\" rel=\"noopener\">https://github.com/minlearn/chat-cf</a>"
+    },
+    {
+      "type": "image",
+      "alt": "",
+      "src": "https://github.com/minlearn/minlearnprogramming/raw/master/_build/assets/instapps/chat.png",
+      "title": "演示与特性✨"
+    },
+    {
+      "type": "text",
+      "content": [
+        "### 部署到本地或vps",
+        "打开 <a href=\"https://github.com/minlearn/inst/tree/master/_build/apps/chat-cf\" target=\"_blank\" rel=\"noopener\">https://github.com/minlearn/inst/tree/master/_build/apps/chat-cf</a> ，在装有debian的vps上运行脚本chat-cf_install.sh即可。"
+      ],
+      "title": "下载安装及用法📄"
+    },
+    {
+      "type": "text",
+      "content": "略，无",
+      "title": "服务及支持👀"
+    }
+  ],
+  "install_methods": [],
+  "config_file": ""
+}

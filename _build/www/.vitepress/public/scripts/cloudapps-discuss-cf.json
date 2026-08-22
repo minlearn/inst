@@ -1,0 +1,132 @@
+{
+  "id": "cloudapps-discuss-cf",
+  "slug": "discuss-cf",
+  "name": "discuss-cf",
+  "type": "script",
+  "description": "discuss-cf",
+  "date_created": "2026-08-22",
+  "lastUpdated": "2026-08-22",
+  "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+  "category": "cloudapps",
+  "categories": [
+    "cloudapps"
+  ],
+  "sections": [
+    {
+      "type": "text",
+      "content": [
+        "<a href=\"#演示与特性\" target=\"_blank\" rel=\"noopener\">演示与特性</a> | <a href=\"#下载安装及用法\" target=\"_blank\" rel=\"noopener\">下载安装及用法</a> | <a href=\"#服务及支持\" target=\"_blank\" rel=\"noopener\">服务及支持</a>",
+        "discuss: 省事一键轻量可联合社交化平台(可cf部署)🚀🎉\n=====",
+        "鉴于现在的主机论很难玩又融入奇特化\n发布这个新的创新选择小玩具"
+      ],
+      "title": ""
+    },
+    {
+      "type": "quote",
+      "content": "基于serverless的discuss，全称为discuss-cf  ..  "
+    },
+    {
+      "type": "text",
+      "content": "项目地址：<a href=\"https://github.com/minlearn/discuss-cf\" target=\"_blank\" rel=\"noopener\">https://github.com/minlearn/discuss-cf</a>"
+    },
+    {
+      "type": "image",
+      "alt": "",
+      "src": "https://github.com/minlearn/minlearnprogramming/raw/master/_build/assets/instapps/discuss.png",
+      "title": "演示与特性✨"
+    },
+    {
+      "type": "text",
+      "content": [
+        "共3步",
+        "### 第一步. Fork本仓库到你的GitHub帐号",
+        "登你的github，然后点击 <a href=\"https://github.com/minlearn/discuss-cf/fork\" target=\"_blank\" rel=\"noopener\">https://github.com/minlearn/discuss-cf/fork</a> 把仓库fork到你的github帐号",
+        "### 第二步. 在你fork到的仓库里面加几个部署相关的密码变量",
+        "进入你fork到的仓库的 <a href=\"../../settings/secrets/actions\" target=\"_blank\" rel=\"noopener\">Settings -> Secrets -> Actions</a>, 创建几个部署相关的密码变量，共3个（最后2个r2相关的不需要），如何获取这些变量及如何复制为变量(请展开查看细节)："
+      ],
+      "title": "下载安装及用法📄"
+    },
+    {
+      "type": "image",
+      "alt": "",
+      "src": "https://user-images.githubusercontent.com/1719237/205524410-268abf92-af61-467a-8883-78b8d4de3c56.png"
+    },
+    {
+      "type": "text",
+      "content": [
+        "<details>\n<summary><b>如何获得CLOUDFLARE_ACCOUNT_ID变量</b></summary>\n登录cf面板会自动跳到:https://dash.cloudflare.com/[你的帐号id]  ，比如这样：https://dash.cloudflare.com/fff88980eeeeedcc3ffffd4f555f4999，  后面的 <em> fff88980eeeeedcc3ffffd4f555f4999 </em> 就是帐号id  \n将其复制到仓库的<a href=\"../../settings/secrets/actions\" target=\"_blank\" rel=\"noopener\">Settings -> Secrets -> Actions</a> 处即可，注意复制到不要有多余字符，会显示为星号，\n<IMG src=\"https://user-images.githubusercontent.com/1719237/208216752-56f00f51-29cb-43ea-b720-75244719898d.png\"/>\n</details>",
+        "<details>\n<summary><b>如何获得CLOUDFLARE_API_TOKEN变量</b></summary>\n登录cf，定位到: https://dash.cloudflare.com/profile/api-tokens  创建一个custom token:  \n<IMG src=\"https://user-images.githubusercontent.com/1719237/205525627-14da54ae-1733-4db5-b65d-94f5ec48f360.png\"/>\n修改token的权限，放行Cloudflare Pages 和 D1:\n<IMG src=\"https://user-images.githubusercontent.com/1719237/205525675-4c8a6bce-21a8-45e3-bf0c-28981f123da3.png\"/>\n像复制帐号id一样复制为仓库的对应名字变量\n</details>",
+        "<details>\n<summary><b>给要部署到cf的整套应用取一个名字前缀CLOUDFLARE_PROJECT_NAME</b></summary>\n随便都可以，就是不要带._等特殊符号，比如你取名为discuss，或discussmyxxxdomain都可以\n像复制帐号id一样复制为仓库的对应名字变量\n</details>",
+        "### 第三步. 在你fork到的仓库里面运行名为updatebuilddiscuss的部署",
+        "前往 <a href=\"../../actions/workflows/deploy.yml\" target=\"_blank\" rel=\"noopener\">Actions -> Deploy to Cloudflare Pages</a> 运行deploy"
+      ]
+    },
+    {
+      "type": "image",
+      "alt": "",
+      "src": "https://user-images.githubusercontent.com/1719237/205526856-05ea0ff4-703a-4d08-bc7f-4ae2dfc07cfe.png"
+    },
+    {
+      "type": "text",
+      "content": [
+        "### 最后，检查结果",
+        "等部署完毕, 绿点表示成功. 你可以在 <a href=\"https://dash.cloudflare.com/sign-up/pages\" target=\"_blank\" rel=\"noopener\">Cloudflare dashboard</a> 处看到已生成形式为 CLOUDFLARE_PROJECT_NAME变量.pages.dev 的pages应用，点击即可访问",
+        "### 更新/修改设置：",
+        "常规操作在论坛界面上即可操作。其它的如修改全局设置，将用户设为仲裁员和增加注册码的工作，请直接在d1数据库中操作。",
+        "global:",
+        "找到这条数据（只有一条），下面字样默认on改成off可打开邀请及关闭公开浏览贴子，反之同理，不要破坏json结构\n{\"sitetitle\":\"Discuss\",\"dismissmessage\":\"xxxxxx\",\"public\":\"on\"}",
+        "regcodes:"
+      ]
+    },
+    {
+      "type": "table",
+      "headers": [
+        "body",
+        "isredeemed",
+        "redeemedto"
+      ],
+      "rows": [
+        [
+          "你要发放的邀请码",
+          "0",
+          "留空，邀请码被使用时会自动变成1"
+        ]
+      ]
+    },
+    {
+      "type": "text",
+      "content": "users:"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "...",
+        "roletags"
+      ],
+      "rows": [
+        [
+          "...",
+          "admin为超管,mod为仲裁,留空为普通成员"
+        ]
+      ]
+    },
+    {
+      "type": "text",
+      "content": [
+        "### 部署到本地或vps",
+        "打开 <a href=\"https://github.com/minlearn/inst/tree/master/_build/apps/discuss-cf\" target=\"_blank\" rel=\"noopener\">https://github.com/minlearn/inst/tree/master/_build/apps/discuss-cf</a> ，在装有debian的vps上运行脚本discuss_install.sh即可。"
+      ]
+    },
+    {
+      "type": "quote",
+      "content": "Wrangler v3 默认使用了Miniflare v3,而Miniflare v3使用了workerd, workerd不仅是支持wrangler本地调试的worker模拟环境，而且是产品级的nodejs runtime，所以可供本地直接部署worker/pages用，搭配带缓存的cdn，可以直接做站。  "
+    },
+    {
+      "type": "text",
+      "content": "略，无",
+      "title": "服务及支持👀"
+    }
+  ],
+  "install_methods": [],
+  "config_file": ""
+}

@@ -1,0 +1,168 @@
+{
+  "id": "instrepos-wikihost",
+  "slug": "wikihost",
+  "title": "wikihost",
+  "subtitle": "",
+  "icon": "📄",
+  "tags": [
+    "文档"
+  ],
+  "category": "instrepos",
+  "lastUpdated": "2026-08-22",
+  "sections": [
+    {
+      "type": "text",
+      "content": "wikihost的linux包",
+      "title": ""
+    },
+    {
+      "type": "table",
+      "headers": [
+        "系统",
+        "作者",
+        "解压",
+        "平台",
+        "启动",
+        "登录密码",
+        "直链"
+      ],
+      "rows": [
+        [
+          "AlmaLinux8",
+          "wikihost",
+          "2-4G",
+          "amd64",
+          "BIOS",
+          "inst.sh",
+          "https://down.idc.wiki/Image/realServer-Template/current/qcow2/almalinux8.qcow2"
+        ],
+        [
+          "AlmaLinux9",
+          "wikihost",
+          "2-4G",
+          "amd64",
+          "BIOS",
+          "inst.sh",
+          "https://down.idc.wiki/Image/realServer-Template/current/qcow2/almalinux9.qcow2"
+        ],
+        [
+          "centos7",
+          "wikihost",
+          "2-4G",
+          "amd64",
+          "BIOS",
+          "inst.sh",
+          "https://down.idc.wiki/Image/realServer-Template/current/qcow2/centos7.qcow2"
+        ],
+        [
+          "centos8 stream",
+          "wikihost",
+          "2-4G",
+          "amd64",
+          "BIOS",
+          "inst.sh",
+          "https://down.idc.wiki/Image/realServer-Template/current/qcow2/centos8-stream.qcow2"
+        ],
+        [
+          "centos9 stream",
+          "wikihost",
+          "2-4G",
+          "amd64",
+          "BIOS",
+          "inst.sh",
+          "https://down.idc.wiki/Image/realServer-Template/current/qcow2/centos9-stream.qcow2"
+        ],
+        [
+          "debian11",
+          "wikihost",
+          "2-4G",
+          "amd64",
+          "BIOS",
+          "inst.sh",
+          "https://down.idc.wiki/Image/realServer-Template/current/qcow2/debian11.qcow2"
+        ],
+        [
+          "debian12",
+          "wikihost",
+          "2-4G",
+          "amd64",
+          "BIOS",
+          "inst.sh",
+          "https://down.idc.wiki/Image/realServer-Template/current/qcow2/debian12.qcow2"
+        ],
+        [
+          "rocky8",
+          "wikihost",
+          "2-4G",
+          "amd64",
+          "BIOS",
+          "inst.sh",
+          "https://down.idc.wiki/Image/realServer-Template/current/qcow2/rockylinux8.qcow2"
+        ],
+        [
+          "ubuntu18",
+          "wikihost",
+          "2-4G",
+          "amd64",
+          "BIOS",
+          "inst.sh",
+          "https://down.idc.wiki/Image/realServer-Template/current/qcow2/ubuntu18.qcow2"
+        ],
+        [
+          "ubuntu20",
+          "wikihost",
+          "2-4G",
+          "amd64",
+          "BIOS",
+          "inst.sh",
+          "https://down.idc.wiki/Image/realServer-Template/current/qcow2/ubuntu20.qcow2"
+        ],
+        [
+          "ubuntu22",
+          "wikihost",
+          "2-4G",
+          "amd64",
+          "BIOS",
+          "inst.sh",
+          "https://down.idc.wiki/Image/realServer-Template/current/qcow2/ubuntu22.qcow2"
+        ],
+        [
+          "ubuntu24",
+          "wikihost",
+          "2-4G",
+          "amd64",
+          "BIOS",
+          "inst.sh",
+          "https://down.idc.wiki/Image/realServer-Template/current/qcow2/ubuntu24.qcow2"
+        ]
+      ]
+    },
+    {
+      "type": "text",
+      "content": "offical"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "系统",
+        "作者",
+        "解压",
+        "平台",
+        "启动",
+        "登录密码",
+        "直链"
+      ],
+      "rows": [
+        [
+          "debian12",
+          "debian",
+          "2-4G",
+          "amd64",
+          "UEFI",
+          "inst.sh",
+          "https://cloud.debian.org/images/cloud/bookworm/latest/debian-12-generic-amd64.qcow2"
+        ]
+      ]
+    }
+  ]
+}

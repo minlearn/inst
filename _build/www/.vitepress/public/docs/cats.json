@@ -1,0 +1,190 @@
+{
+  "categories": [
+    {
+      "id": "instrepos",
+      "title": "instrepos",
+      "icon": "📦",
+      "sort_order": 1,
+      "items": [
+        {
+          "id": "instrepos-1keydd",
+          "slug": "1keydd",
+          "title": "1keydd",
+          "icon": "📄"
+        },
+        {
+          "id": "instrepos-bin456789",
+          "slug": "bin456789",
+          "title": "bin456789",
+          "icon": "📄"
+        },
+        {
+          "id": "instrepos-linuxlive",
+          "slug": "linuxlive",
+          "title": "linuxlive isos",
+          "icon": "📄"
+        },
+        {
+          "id": "instrepos-natee",
+          "slug": "natee",
+          "title": "natee",
+          "icon": "📄"
+        },
+        {
+          "id": "instrepos-teddysun",
+          "slug": "teddysun",
+          "title": "teddysun",
+          "icon": "📄"
+        },
+        {
+          "id": "instrepos-wikihost",
+          "slug": "wikihost",
+          "title": "wikihost",
+          "icon": "📄"
+        },
+        {
+          "id": "instrepos-windowsisos",
+          "slug": "windowsisos",
+          "title": "windows isos",
+          "icon": "📄"
+        }
+      ]
+    },
+    {
+      "id": "instnews",
+      "title": "instnews",
+      "icon": "📰",
+      "sort_order": 2,
+      "items": [
+        {
+          "id": "instnews-cleanuipve",
+          "slug": "cleanuipve",
+          "title": "巨清爽，为pve增加了clean mode",
+          "icon": "📄"
+        },
+        {
+          "id": "instnews-cmdslip",
+          "slug": "cmdslip",
+          "title": "利用支持命令注入的一键dd脚本inst.sh重装linux并注入桌面安装参数（也支持windows注入）",
+          "icon": "📄"
+        },
+        {
+          "id": "instnews-compactlxcwiz",
+          "slug": "compactlxcwiz",
+          "title": "给pve装一个一屏式lxc创建向导",
+          "icon": "📄"
+        },
+        {
+          "id": "instnews-headlesspve",
+          "slug": "headlesspve",
+          "title": "无头模式pve和本地分离式前端",
+          "icon": "📄"
+        },
+        {
+          "id": "instnews-isoinstall",
+          "slug": "isoinstall",
+          "title": "利用支持iso镜像的一键dd脚本inst.sh重装linux为带GUI的桌面版本（暂无计划支持win iso）",
+          "icon": "📄"
+        },
+        {
+          "id": "instnews-lightve",
+          "slug": "lightve",
+          "title": "只占不到500m内存的pve轻量版",
+          "icon": "📄"
+        },
+        {
+          "id": "instnews-localinstall",
+          "slug": "localinstall",
+          "title": "本地镜像离线方式将vps上的linux重装为windows(pc+usb也适用)",
+          "icon": "📄"
+        },
+        {
+          "id": "instnews-nativelxcvnc",
+          "slug": "nativelxcvnc",
+          "title": "给自己一个大玩具/免qemu虚拟机，pve lxc容器直接支持图形化vnc显示了",
+          "icon": "📄"
+        },
+        {
+          "id": "instnews-natproxy",
+          "slug": "natproxy",
+          "title": "将一台内网linux重装为公网windows(win to linux也可)",
+          "icon": "📄"
+        },
+        {
+          "id": "instnews-nc",
+          "slug": "nc",
+          "title": "利用一键dd打包脚本inst.sh导出硬盘为http直链包(也可导出分区)",
+          "icon": "📄"
+        },
+        {
+          "id": "instnews-ociredroid",
+          "slug": "ociredroid",
+          "title": "利用支持导入docker oci镜像的一键dd脚本inst.sh在debian11上安装嵌入式pve lxc redroid云手机平台（也支持其它docker）",
+          "icon": "📄"
+        },
+        {
+          "id": "instnews-osxsupport",
+          "slug": "osxsupport",
+          "title": "利用可显进度的一键dd脚本1keydd重装osx为带gui的pve",
+          "icon": "📄"
+        },
+        {
+          "id": "instnews-panel",
+          "slug": "panel",
+          "title": "如何使用installpanelcf来部署inst.sh web版本",
+          "icon": "📄"
+        },
+        {
+          "id": "instnews-pbsinbuilt",
+          "slug": "pbsinbuilt",
+          "title": "你的下一个pve allinone,何必只是pve allinone",
+          "icon": "📄"
+        },
+        {
+          "id": "instnews-qcow2",
+          "slug": "qcow2",
+          "title": "如何将vps重装为almalinux cloudimage (支持其它主流linux发行版的qcow2)",
+          "icon": "📄"
+        },
+        {
+          "id": "instnews-qemupve",
+          "slug": "qemupve",
+          "title": "在linux桌面下直装独立窗口版pve",
+          "icon": "📄"
+        },
+        {
+          "id": "instnews-rescue",
+          "slug": "rescue",
+          "title": "利用支持rescue的一键dd脚本inst.sh重装vps/独服为windows(也支持第三方救援环境)",
+          "icon": "📄"
+        },
+        {
+          "id": "instnews-vzpve",
+          "slug": "vzpve",
+          "title": "将openvz容器一键转化为pve",
+          "icon": "📄"
+        },
+        {
+          "id": "instnews-win11arm",
+          "slug": "win11arm",
+          "title": "把arm vps从linux重装为win11(同样支持oracle ampere)",
+          "icon": "📄"
+        },
+        {
+          "id": "instnews-windowssupport",
+          "slug": "windowssupport",
+          "title": "利用可显进度的一键dd脚本1keydd在windows上就地重装windows",
+          "icon": "📄"
+        }
+      ]
+    },
+    {
+      "id": "misc",
+      "title": "misc",
+      "icon": "📌",
+      "sort_order": 99,
+      "items": []
+    }
+  ],
+  "cards": []
+}

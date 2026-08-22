@@ -1,0 +1,141 @@
+{
+  "id": "instrepos-teddysun",
+  "slug": "teddysun",
+  "title": "teddysun",
+  "subtitle": "",
+  "icon": "📄",
+  "tags": [
+    "文档"
+  ],
+  "category": "instrepos",
+  "lastUpdated": "2026-08-22",
+  "sections": [
+    {
+      "type": "text",
+      "content": "teddysun的windows包",
+      "title": ""
+    },
+    {
+      "type": "table",
+      "headers": [
+        "系统",
+        "作者",
+        "解压",
+        "平台",
+        "启动",
+        "登录密码",
+        "直链"
+      ],
+      "rows": [
+        [
+          "win10",
+          "teddysun",
+          "16.0GB",
+          "amd64",
+          "BIOS",
+          "Teddysun.com",
+          "https://dl.lamp.sh/vhd/zh-cn_windows10_ltsc.xz"
+        ],
+        [
+          "win10",
+          "teddysun",
+          "16.0GB",
+          "amd64",
+          "UEFI",
+          "Teddysun.com",
+          "https://dl.lamp.sh/vhd/zh-cn_win10_ltsc_uefi.xz"
+        ],
+        [
+          "win11",
+          "teddysun",
+          "16.0GB",
+          "amd64",
+          "BIOS",
+          "Teddysun.com",
+          "https://dl.lamp.sh/vhd/zh-cn_windows11_22h2.xz"
+        ],
+        [
+          "win11",
+          "teddysun",
+          "16.0GB",
+          "amd64",
+          "UEFI",
+          "Teddysun.com",
+          "https://dl.lamp.sh/vhd/zh-cn_windows11_22h2_uefi.xz"
+        ],
+        [
+          "winserver 2012",
+          "teddysun",
+          "16.0GB",
+          "amd64",
+          "BIOS",
+          "Teddysun.com",
+          "https://dl.lamp.sh/vhd/cn_win2012r2.xz"
+        ],
+        [
+          "winserver 2012",
+          "teddysun",
+          "16.0GB",
+          "amd64",
+          "UEFI",
+          "Teddysun.com",
+          "https://dl.lamp.sh/vhd/cn_win2012r2_uefi.xz"
+        ],
+        [
+          "winserver 2016",
+          "teddysun",
+          "16.0GB",
+          "amd64",
+          "BIOS",
+          "Teddysun.com",
+          "https://dl.lamp.sh/vhd/cn_win2016.xz"
+        ],
+        [
+          "winserver 2016",
+          "teddysun",
+          "16.0GB",
+          "amd64",
+          "UEFI",
+          "Teddysun.com",
+          "https://dl.lamp.sh/vhd/cn_win2016_uefi.xz"
+        ],
+        [
+          "winserver 2019",
+          "teddysun",
+          "16.0GB",
+          "amd64",
+          "BIOS",
+          "Teddysun.com",
+          "https://dl.lamp.sh/vhd/cn_win2019.xz"
+        ],
+        [
+          "winserver 2019",
+          "teddysun",
+          "16.0GB",
+          "amd64",
+          "UEFI",
+          "Teddysun.com",
+          "https://dl.lamp.sh/vhd/cn_win2019_uefi.xz"
+        ],
+        [
+          "winserver 2022",
+          "teddysun",
+          "16.0GB",
+          "amd64",
+          "BIOS",
+          "Teddysun.com",
+          "https://dl.lamp.sh/vhd/zh-cn_win2022.xz"
+        ],
+        [
+          "winserver 2022",
+          "teddysun",
+          "16.0GB",
+          "amd64",
+          "UEFI",
+          "Teddysun.com",
+          "https://dl.lamp.sh/vhd/zh-cn_win2022_uefi.xz"
+        ]
+      ]
+    }
+  ]
+}

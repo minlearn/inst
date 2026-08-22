@@ -1,0 +1,71 @@
+{
+  "id": "instnews-pbsinbuilt",
+  "slug": "pbsinbuilt",
+  "title": "你的下一个pve allinone,何必只是pve allinone",
+  "subtitle": "",
+  "icon": "📄",
+  "tags": [
+    "文档"
+  ],
+  "category": "instnews",
+  "lastUpdated": "2023-05-17",
+  "sections": [
+    {
+      "type": "text",
+      "content": [
+        "众所周知，pbs本来就是被设计成跟pve分开使用的，作异地备份\n这里把pve和pbs整合在一起了。却没有带来任何不和谐",
+        "部署方法完全自由\n你可以部署到另外一台pve服务器，完全当异备用，。\n你也可以不用pbs，关掉它的服务即可。这样就恢复成单纯的pve。"
+      ],
+      "title": ""
+    },
+    {
+      "type": "image",
+      "alt": "",
+      "src": "/assets/instnews/l7FTt9mfI5WjwDo.png"
+    },
+    {
+      "type": "text",
+      "content": "这是因为pbs有着鲜明的特点：",
+      "title": "为什么这样做"
+    },
+    {
+      "type": "ul",
+      "items": [
+        "它是rust写的，这种程序超级省内存，整个pbs全部服务启动只占30-100多m内存，而且，它与pve共享很多系统包和组件，天然生态吻合。它更像是一个pve的组件，只是以异地部署的理由弄成了一份独立发行。"
+      ]
+    },
+    {
+      "type": "text",
+      "content": "所以，多一个不多，为啥不集成到pve呢。随用随开。"
+    },
+    {
+      "type": "ul",
+      "items": [
+        "部署pve和pbs这二者是分开的。需要部署二次。而存在很多场景，需要同时部署pve和伴随部署pbs。"
+      ]
+    },
+    {
+      "type": "text",
+      "content": "所以，多一个够好，省事起见。不如一次部署。"
+    },
+    {
+      "type": "ul",
+      "items": [
+        "pbs对pve是关键部件，防灾和迁移都必要。"
+      ]
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "content": "wget -qO- 1keydd.com/inst.sh|bash，选择2\ndd过程中打开ip:80查看进程\ndd完成后ip:8006,root/1keydd打开pve\n\nsystemctl enable proxmox-backup proxmox-backup-proxy\nsystemctl start proxmox-backup proxmox-backup-proxy\nip:8007,root/1keydd打开pbs\n\n连接和设置方法见图，异备部署用，把localhost换成对应ip即可",
+      "title": "尝新方法："
+    },
+    {
+      "type": "text",
+      "content": [
+        "目前仅amd支持一键dd\narm的还在编译。",
+        "来https://github.com/minlearn/inst点个小心吧"
+      ]
+    }
+  ]
+}

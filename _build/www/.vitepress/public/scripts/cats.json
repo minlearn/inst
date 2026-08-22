@@ -1,0 +1,500 @@
+{
+  "categories": [
+    {
+      "id": "baseapps",
+      "name": "baseapps",
+      "icon": "📦",
+      "sort_order": 1,
+      "items": [
+        {
+          "id": "baseapps-mariadb",
+          "slug": "mariadb",
+          "name": "mariadb",
+          "type": "script",
+          "date_created": "2026-08-22",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "mariadb"
+        },
+        {
+          "id": "baseapps-mongodb",
+          "slug": "mongodb",
+          "name": "mongodb",
+          "type": "script",
+          "date_created": "2026-08-22",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "mongodb"
+        },
+        {
+          "id": "baseapps-mysql57",
+          "slug": "mysql57",
+          "name": "mysql57",
+          "type": "script",
+          "date_created": "2026-08-22",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "mysql57"
+        },
+        {
+          "id": "baseapps-postgresql",
+          "slug": "postgresql",
+          "name": "postgresql",
+          "type": "script",
+          "date_created": "2026-08-22",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "postgresql"
+        },
+        {
+          "id": "baseapps-redis",
+          "slug": "redis",
+          "name": "redis",
+          "type": "script",
+          "date_created": "2026-08-22",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "redis"
+        }
+      ]
+    },
+    {
+      "id": "cloudapps",
+      "name": "cloudapps",
+      "icon": "☁️",
+      "sort_order": 2,
+      "items": [
+        {
+          "id": "cloudapps-chat-cf",
+          "slug": "chat-cf",
+          "name": "chat-cf",
+          "type": "script",
+          "date_created": "2026-08-22",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "chat-cf"
+        },
+        {
+          "id": "cloudapps-counter",
+          "slug": "counter",
+          "name": "counter",
+          "type": "script",
+          "date_created": "2026-08-22",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "counter"
+        },
+        {
+          "id": "cloudapps-discuss-cf",
+          "slug": "discuss-cf",
+          "name": "discuss-cf",
+          "type": "script",
+          "date_created": "2026-08-22",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "discuss-cf"
+        },
+        {
+          "id": "cloudapps-gitbook",
+          "slug": "gitbook",
+          "name": "gitbook",
+          "type": "script",
+          "date_created": "2026-08-22",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "gitbook"
+        },
+        {
+          "id": "cloudapps-kasmvnc",
+          "slug": "kasmvnc",
+          "name": "kasmvnc",
+          "type": "script",
+          "date_created": "2026-08-22",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "kasmvnc"
+        },
+        {
+          "id": "cloudapps-nextcloud",
+          "slug": "nextcloud",
+          "name": "nextcloud",
+          "type": "script",
+          "date_created": "2026-08-22",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "nextcloud"
+        },
+        {
+          "id": "cloudapps-ollama",
+          "slug": "ollama",
+          "name": "ollama",
+          "type": "script",
+          "date_created": "2026-08-22",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "ollama"
+        },
+        {
+          "id": "cloudapps-openwebui",
+          "slug": "openwebui",
+          "name": "openwebui",
+          "type": "script",
+          "date_created": "2026-08-22",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "openwebui"
+        },
+        {
+          "id": "cloudapps-vncterm",
+          "slug": "vncterm",
+          "name": "vncterm",
+          "type": "script",
+          "date_created": "2026-08-22",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "vncterm"
+        },
+        {
+          "id": "cloudapps-wordpress",
+          "slug": "wordpress",
+          "name": "wordpress",
+          "type": "script",
+          "date_created": "2026-08-22",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "wordpress"
+        }
+      ]
+    },
+    {
+      "id": "devapps",
+      "name": "devapps",
+      "icon": "🛠️",
+      "sort_order": 3,
+      "items": [
+        {
+          "id": "devapps-buildkernel",
+          "slug": "buildkernel",
+          "name": "buildkernel",
+          "type": "script",
+          "date_created": "2026-08-22",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "buildkernel"
+        },
+        {
+          "id": "devapps-cloudflared",
+          "slug": "cloudflared",
+          "name": "cloudflared",
+          "type": "script",
+          "date_created": "2026-08-22",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "cloudflared"
+        },
+        {
+          "id": "devapps-code-server",
+          "slug": "code-server",
+          "name": "code-server",
+          "type": "script",
+          "date_created": "2026-08-22",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "code-server"
+        },
+        {
+          "id": "devapps-debian-installer",
+          "slug": "debian-installer",
+          "name": "debian-installer",
+          "type": "script",
+          "date_created": "2026-08-22",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "debian-installer"
+        },
+        {
+          "id": "devapps-debmirror",
+          "slug": "debmirror",
+          "name": "debmirror",
+          "type": "script",
+          "date_created": "2026-08-22",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "debmirror"
+        },
+        {
+          "id": "devapps-debootstrap",
+          "slug": "debootstrap",
+          "name": "debootstrap",
+          "type": "script",
+          "date_created": "2026-08-22",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "debootstrap"
+        },
+        {
+          "id": "devapps-dibootstrap",
+          "slug": "dibootstrap",
+          "name": "dibootstrap",
+          "type": "script",
+          "date_created": "2026-08-22",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "dibootstrap"
+        },
+        {
+          "id": "devapps-docker",
+          "slug": "docker",
+          "name": "docker",
+          "type": "script",
+          "date_created": "2026-08-22",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "docker"
+        },
+        {
+          "id": "devapps-gitea",
+          "slug": "gitea",
+          "name": "gitea",
+          "type": "script",
+          "date_created": "2026-08-22",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "gitea"
+        },
+        {
+          "id": "devapps-golang",
+          "slug": "golang",
+          "name": "golang",
+          "type": "script",
+          "date_created": "2026-08-22",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "golang"
+        },
+        {
+          "id": "devapps-iplc",
+          "slug": "iplc",
+          "name": "iplc",
+          "type": "script",
+          "date_created": "2026-08-22",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "iplc"
+        },
+        {
+          "id": "devapps-jigdo",
+          "slug": "jigdo",
+          "name": "jigdo",
+          "type": "script",
+          "date_created": "2026-08-22",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "jigdo"
+        },
+        {
+          "id": "devapps-mmdebstrap",
+          "slug": "mmdebstrap",
+          "name": "mmdebstrap",
+          "type": "script",
+          "date_created": "2026-08-22",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "mmdebstrap"
+        },
+        {
+          "id": "devapps-nbd",
+          "slug": "nbd",
+          "name": "nbd",
+          "type": "script",
+          "date_created": "2026-08-22",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "nbd"
+        },
+        {
+          "id": "devapps-nodejs",
+          "slug": "nodejs",
+          "name": "nodejs",
+          "type": "script",
+          "date_created": "2026-08-22",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "nodejs"
+        },
+        {
+          "id": "devapps-python",
+          "slug": "python",
+          "name": "python",
+          "type": "script",
+          "date_created": "2026-08-22",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "python"
+        }
+      ]
+    },
+    {
+      "id": "gameapps",
+      "name": "gameapps",
+      "icon": "🎮",
+      "sort_order": 4,
+      "items": [
+        {
+          "id": "gameapps-bxcq",
+          "slug": "bxcq",
+          "name": "bxcq",
+          "type": "script",
+          "date_created": "2026-08-22",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "bxcq"
+        }
+      ]
+    },
+    {
+      "id": "osapps",
+      "name": "osapps",
+      "icon": "💿",
+      "sort_order": 5,
+      "items": [
+        {
+          "id": "osapps-android",
+          "slug": "android",
+          "name": "android",
+          "type": "script",
+          "date_created": "2026-08-22",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "android"
+        },
+        {
+          "id": "osapps-debiande",
+          "slug": "debiande",
+          "name": "debiande",
+          "type": "script",
+          "date_created": "2026-08-22",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "debiande"
+        },
+        {
+          "id": "osapps-kvmosx",
+          "slug": "kvmosx",
+          "name": "kvmosx",
+          "type": "script",
+          "date_created": "2026-08-22",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "kvmosx"
+        },
+        {
+          "id": "osapps-kvmwin",
+          "slug": "kvmwin",
+          "name": "kvmwin",
+          "type": "script",
+          "date_created": "2026-08-22",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "kvmwin"
+        },
+        {
+          "id": "osapps-owt",
+          "slug": "owt",
+          "name": "owt",
+          "type": "script",
+          "date_created": "2026-08-22",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "owt"
+        },
+        {
+          "id": "osapps-proxmox-backup",
+          "slug": "proxmox-backup",
+          "name": "proxmox-backup",
+          "type": "script",
+          "date_created": "2026-08-22",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "proxmox-backup"
+        },
+        {
+          "id": "osapps-proxmox-ve",
+          "slug": "proxmox-ve",
+          "name": "proxmox-ve",
+          "type": "script",
+          "date_created": "2026-08-22",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "proxmox-ve"
+        },
+        {
+          "id": "osapps-qemu",
+          "slug": "qemu",
+          "name": "qemu",
+          "type": "script",
+          "date_created": "2026-08-22",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "qemu"
+        },
+        {
+          "id": "osapps-redriod",
+          "slug": "redriod",
+          "name": "redriod",
+          "type": "script",
+          "date_created": "2026-08-22",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "redriod"
+        }
+      ]
+    },
+    {
+      "id": "toolapps",
+      "name": "toolapps",
+      "icon": "🔧",
+      "sort_order": 6,
+      "items": [
+        {
+          "id": "toolapps-chrome",
+          "slug": "chrome",
+          "name": "chrome",
+          "type": "script",
+          "date_created": "2026-08-22",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "chrome"
+        },
+        {
+          "id": "toolapps-clashmeta",
+          "slug": "clashmeta",
+          "name": "clashmeta",
+          "type": "script",
+          "date_created": "2026-08-22",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "clashmeta"
+        },
+        {
+          "id": "toolapps-dummy",
+          "slug": "dummy",
+          "name": "dummy",
+          "type": "script",
+          "date_created": "2026-08-22",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "dummy"
+        },
+        {
+          "id": "toolapps-ovhauto",
+          "slug": "ovhauto",
+          "name": "ovhauto",
+          "type": "script",
+          "date_created": "2026-08-22",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "ovhauto"
+        },
+        {
+          "id": "toolapps-playwright",
+          "slug": "playwright",
+          "name": "playwright",
+          "type": "script",
+          "date_created": "2026-08-22",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "playwright"
+        },
+        {
+          "id": "toolapps-tm",
+          "slug": "tm",
+          "name": "tm",
+          "type": "script",
+          "date_created": "2026-08-22",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "tm"
+        },
+        {
+          "id": "toolapps-xmrig",
+          "slug": "xmrig",
+          "name": "xmrig",
+          "type": "script",
+          "date_created": "2026-08-22",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "xmrig"
+        },
+        {
+          "id": "toolapps-xray",
+          "slug": "xray",
+          "name": "xray",
+          "type": "script",
+          "date_created": "2026-08-22",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "xray"
+        }
+      ]
+    },
+    {
+      "id": "misc",
+      "name": "misc",
+      "sort_order": 99,
+      "description": "",
+      "icon": "📌"
+    }
+  ]
+}

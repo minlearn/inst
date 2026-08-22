@@ -1,0 +1,87 @@
+{
+  "id": "instrepos-natee",
+  "slug": "natee",
+  "title": "natee",
+  "subtitle": "",
+  "icon": "📄",
+  "tags": [
+    "文档"
+  ],
+  "category": "instrepos",
+  "lastUpdated": "2026-08-22",
+  "sections": [
+    {
+      "type": "text",
+      "content": "natee的windows包",
+      "title": ""
+    },
+    {
+      "type": "table",
+      "headers": [
+        "系统",
+        "作者",
+        "解压",
+        "平台",
+        "启动",
+        "登录密码",
+        "直链"
+      ],
+      "rows": [
+        [
+          "win10",
+          "natee",
+          "11GB",
+          "amd64",
+          "BIOS",
+          "nat.ee",
+          "https://file.1323123.xyz/dd/windows/natee/guajibao-win10-ent-ltsc-2021-x64-cn.vhd.gz"
+        ],
+        [
+          "win10",
+          "natee",
+          "11GB",
+          "amd64",
+          "UEFI",
+          "nat.ee",
+          "https://file.1323123.xyz/dd/windows/natee/guajibao-win10-ent-ltsc-2021-x64-cn-efi.vhd.gz"
+        ],
+        [
+          "winserver 2012",
+          "natee",
+          "8.1GB",
+          "amd64",
+          "BIOS",
+          "nat.ee",
+          "https://file.1323123.xyz/dd/windows/natee/winsrv2012r2-data-x64-cn.vhd.gz"
+        ],
+        [
+          "winserver 2012",
+          "natee",
+          "8.1GB",
+          "amd64",
+          "UEFI",
+          "nat.ee",
+          "https://file.1323123.xyz/dd/windows/natee/winsrv2012r2-data-x64-cn-efi.vhd.gz"
+        ],
+        [
+          "winserver 2022",
+          "natee",
+          "11.0GB",
+          "amd64",
+          "BIOS",
+          "nat.ee",
+          "https://file.1323123.xyz/dd/windows/natee/winsrv2022-data-x64-cn.vhd.gz"
+        ],
+        [
+          "winserver 2022",
+          "natee",
+          "11.0GB",
+          "amd64",
+          "UEFI",
+          "nat.ee",
+          "https://file.1323123.xyz/dd/windows/natee/winsrv2022-data-x64-cn-efi.vhd.gz"
+        ]
+      ]
+    }
+  ]
+}

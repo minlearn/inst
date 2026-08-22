@@ -1,0 +1,57 @@
+{
+  "id": "devapps-gitea",
+  "slug": "gitea",
+  "name": "gitea",
+  "type": "script",
+  "description": "gitea",
+  "date_created": "2026-08-22",
+  "lastUpdated": "2026-08-22",
+  "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+  "category": "devapps",
+  "categories": [
+    "devapps"
+  ],
+  "sections": [
+    {
+      "type": "text",
+      "content": [
+        "<a href=\"#演示与特性\" target=\"_blank\" rel=\"noopener\">演示与特性</a> | <a href=\"#下载安装及用法\" target=\"_blank\" rel=\"noopener\">下载安装及用法</a> | <a href=\"#服务及支持\" target=\"_blank\" rel=\"noopener\">服务及支持</a>",
+        "gitea\n=====",
+        "项目地址：<a href=\"https://github.com/minlearn/inst/tree/master/_build/apps/gitea\" target=\"_blank\" rel=\"noopener\">https://github.com/minlearn/inst/tree/master/_build/apps/gitea</a>"
+      ],
+      "title": ""
+    },
+    {
+      "type": "text",
+      "content": "无",
+      "title": "演示与特性✨"
+    },
+    {
+      "type": "ul",
+      "items": [
+        "如果你是在devdeskos中执行  "
+      ],
+      "title": "下载安装及用法📄"
+    },
+    {
+      "type": "code",
+      "language": "pveinst gitea```",
+      "content": "跑完后bash /root/init.sh(如果有) 初始化服务器  \n自动或手动透出端口服务\n\n\n\n2) 如果你是在自己的vps中执行\n\n"
+    },
+    {
+      "type": "text",
+      "content": "跑完后bash /root/init.sh(如果有) 初始化服务器  \n自动或手动透出端口服务"
+    },
+    {
+      "type": "text",
+      "content": "略",
+      "title": "服务及支持👀"
+    }
+  ],
+  "install_methods": [
+    {
+      "script": "master/_build/apps/gitea/gitea_install.sh"
+    }
+  ],
+  "config_file": ""
+}

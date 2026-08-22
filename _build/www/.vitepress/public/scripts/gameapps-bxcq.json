@@ -1,0 +1,72 @@
+{
+  "id": "gameapps-bxcq",
+  "slug": "bxcq",
+  "name": "bxcq",
+  "type": "script",
+  "description": "bxcq",
+  "date_created": "2026-08-22",
+  "lastUpdated": "2026-08-22",
+  "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+  "category": "gameapps",
+  "categories": [
+    "gameapps"
+  ],
+  "sections": [
+    {
+      "type": "text",
+      "content": [
+        "<a href=\"#演示与特性\" target=\"_blank\" rel=\"noopener\">演示与特性</a> | <a href=\"#下载安装及用法\" target=\"_blank\" rel=\"noopener\">下载安装及用法</a> | <a href=\"#服务及支持\" target=\"_blank\" rel=\"noopener\">服务及支持</a>",
+        "bxcq\n=====",
+        "项目地址：<a href=\"https://github.com/minlearn/inst/tree/master/_build/apps/bxcq\" target=\"_blank\" rel=\"noopener\">https://github.com/minlearn/inst/tree/master/_build/apps/bxcq</a>"
+      ],
+      "title": ""
+    },
+    {
+      "type": "text",
+      "content": "无",
+      "title": "演示与特性✨"
+    },
+    {
+      "type": "ul",
+      "items": [
+        "如果你是在devdeskos中执行  "
+      ],
+      "title": "下载安装及用法📄"
+    },
+    {
+      "type": "code",
+      "language": "pveinst mysql57```",
+      "content": "跑完后cat mysql.cred查看数据库帐密  \n\n"
+    },
+    {
+      "type": "text",
+      "content": "跑完后bash /root/init.sh 初始化服务器，填入你的数据库帐密，和服务端ip:port  \n透出9001服务和网页客户端服务"
+    },
+    {
+      "type": "ul",
+      "items": [
+        "如果你是在自己的vps中执行"
+      ]
+    },
+    {
+      "type": "code",
+      "language": "wget -qO- https://github.com/minlearn/inst/raw/master/_build/apps/mysql57/mysql57_install.sh | bash```",
+      "content": "跑完后cat mysql.cred查看数据库帐密\n"
+    },
+    {
+      "type": "text",
+      "content": "跑完后bash /root/init.sh 初始化服务器，填入你的数据库帐密，和服务端ip:port  \n透出9001服务和网页客户端服务"
+    },
+    {
+      "type": "text",
+      "content": "略",
+      "title": "服务及支持👀"
+    }
+  ],
+  "install_methods": [
+    {
+      "script": "master/_build/apps/mysql57/mysql57_install.sh"
+    }
+  ],
+  "config_file": ""
+}

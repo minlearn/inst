@@ -1,0 +1,56 @@
+{
+  "id": "instnews-windowssupport",
+  "slug": "windowssupport",
+  "title": "利用可显进度的一键dd脚本1keydd在windows上就地重装windows",
+  "subtitle": "",
+  "icon": "📄",
+  "tags": [
+    "文档"
+  ],
+  "category": "instnews",
+  "lastUpdated": "2023-12-29",
+  "sections": [
+    {
+      "type": "text",
+      "content": "第一步，在你要d的windows上安装下面脚本依赖，把它做成一个脚本友好的“类unix”环境：",
+      "title": ""
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "content": "https://github.com/minlearn/inst/releases/download/inital/instsupportforwin.exe"
+    },
+    {
+      "type": "text",
+      "content": "(解压并安装它，有二个installer.bat，一个是安装cygwin，一个是安装grub，分别执行完，确保安装完成。  \n点击桌面生成的cygwin快捷方式图标，并执行下面脚本："
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "content": "wget -qO- inst.sh|bash -s - -t xxx  \n脚本在linux下的大部分参数都适用这里，除了不需要-n参数  "
+    },
+    {
+      "type": "text",
+      "content": "为了保留独立数据卷，你可以加个-o 4参数在-t前面，形如："
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "content": "wget -qO- inst.sh|bash - s - -o 4 -t xxx  "
+    },
+    {
+      "type": "hr"
+    },
+    {
+      "type": "text",
+      "content": [
+        "仓库:",
+        "https://github.com/minlearn/inst/",
+        "教程和dd实例:",
+        "https://inst.sh",
+        "视频:",
+        "<iframe src=\"//player.bilibili.com/player.html?aid=240494609&bvid=BV1xe411q78P&cid=1385057593&p=1\" scrolling=\"no\" border=\"0\" frameborder=\"no\" framespacing=\"0\" allowfullscreen=\"true\"> </iframe>"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "id": "instrepos-1keydd",
+  "slug": "1keydd",
+  "title": "1keydd",
+  "subtitle": "",
+  "icon": "📄",
+  "tags": [
+    "文档"
+  ],
+  "category": "instrepos",
+  "lastUpdated": "2026-08-22",
+  "sections": [
+    {
+      "type": "text",
+      "content": "1keydd的二合一windows包",
+      "title": ""
+    },
+    {
+      "type": "table",
+      "headers": [
+        "系统",
+        "作者",
+        "解压",
+        "平台",
+        "启动",
+        "登录密码",
+        "直链"
+      ],
+      "rows": [
+        [
+          "win10",
+          "minlearn",
+          "20.0GB",
+          "amd64",
+          "BIOS/UEFI",
+          "1keydd",
+          "https://file.1323123.xyz/dd/windows/1keydd/win10ltsc_password_1keydd.gz"
+        ]
+      ]
+    }
+  ]
+}

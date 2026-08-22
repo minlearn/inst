@@ -1,0 +1,69 @@
+{
+  "id": "instrepos-windowsisos",
+  "slug": "windowsisos",
+  "title": "windows isos",
+  "subtitle": "",
+  "icon": "📄",
+  "tags": [
+    "文档"
+  ],
+  "category": "instrepos",
+  "lastUpdated": "2026-08-22",
+  "sections": [
+    {
+      "type": "text",
+      "content": "一些windows官方发布的 desktop/sever光盘",
+      "title": ""
+    },
+    {
+      "type": "table",
+      "headers": [
+        "系统",
+        "作者",
+        "解压",
+        "平台",
+        "启动",
+        "登录密码",
+        "直链(右键复制)"
+      ],
+      "rows": [
+        [
+          "windows10 ltsc",
+          "microsoft",
+          "2-4G",
+          "amd64",
+          "BIOS/UEFI",
+          "inst.sh",
+          "https://guest:guest@d.minlearn.org/dav/win10/zh-cn_windows_10_enterprise_ltsc_2021_x64_dvd_033b7312.iso"
+        ],
+        [
+          "windows2016 srv",
+          "microsoft",
+          "2-4G",
+          "amd64",
+          "BIOS/UEFI",
+          "inst.sh",
+          "https://guest:guest@d.minlearn.org/dav/winsrv2016/cn_windows_server_2016_vl_x64_dvd_11636695.iso"
+        ],
+        [
+          "windows2019 srv",
+          "microsoft",
+          "2-4G",
+          "amd64",
+          "BIOS/UEFI",
+          "inst.sh",
+          "https://guest:guest@d.minlearn.org/dav/winsrv2019/zh-cn_windows_server_2019_x64_dvd_19d65722.iso"
+        ],
+        [
+          "windows2022 srv",
+          "microsoft",
+          "2-4G",
+          "amd64",
+          "BIOS/UEFI",
+          "inst.sh",
+          "https://guest:guest@d.minlearn.org/dav/winsrv2022/zh-cn_windows_server_2022_updated_june_2026_x64_dvd_dda28eeb.iso"
+        ]
+      ]
+    }
+  ]
+}

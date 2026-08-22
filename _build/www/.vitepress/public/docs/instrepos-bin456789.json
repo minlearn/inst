@@ -1,0 +1,42 @@
+{
+  "id": "instrepos-bin456789",
+  "slug": "bin456789",
+  "title": "bin456789",
+  "subtitle": "",
+  "icon": "📄",
+  "tags": [
+    "文档"
+  ],
+  "category": "instrepos",
+  "lastUpdated": "2026-08-22",
+  "sections": [
+    {
+      "type": "text",
+      "content": "bin456789的arm windows包",
+      "title": ""
+    },
+    {
+      "type": "table",
+      "headers": [
+        "系统",
+        "作者",
+        "解压",
+        "平台",
+        "启动",
+        "登录密码",
+        "直链"
+      ],
+      "rows": [
+        [
+          "win11",
+          "bin456789",
+          "10.0GB",
+          "arm64",
+          "UEFI",
+          "123@@@",
+          "https://r2.hotdog.eu.org/en-us_windows_11_enterprise_ltsc_2024_arm64_10g_123%40%40%40.xz"
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "id": "instrepos-linuxlive",
+  "slug": "linuxlive",
+  "title": "linuxlive isos",
+  "subtitle": "",
+  "icon": "📄",
+  "tags": [
+    "文档"
+  ],
+  "category": "instrepos",
+  "lastUpdated": "2026-08-22",
+  "sections": [
+    {
+      "type": "text",
+      "content": "一些linux发行版官方发布的live desktop/sever光盘",
+      "title": ""
+    },
+    {
+      "type": "table",
+      "headers": [
+        "系统",
+        "作者",
+        "解压",
+        "平台",
+        "启动",
+        "登录密码",
+        "直链(右键复制)"
+      ],
+      "rows": [
+        [
+          "debian12 live",
+          "debian",
+          "2-4G",
+          "amd64",
+          "BIOS/UEFI",
+          "inst.sh",
+          "http://cdimage.debian.org/cdimage/archive/12.11.0-live/amd64/iso-hybrid/debian-live-12.11.0-amd64-gnome.iso"
+        ],
+        [
+          "ubuntu24 live",
+          "ubuntu",
+          "4-6G",
+          "amd64",
+          "BIOS/UEFI",
+          "inst.sh",
+          "https://releases.ubuntu.com/24.04.2/ubuntu-24.04.2-desktop-amd64.iso"
+        ],
+        [
+          "uos20 live",
+          "uniontech",
+          "2-4G",
+          "amd64",
+          "BIOS/UEFI",
+          "inst.sh",
+          "https://cdimage-download.chinauos.com/desktop-professional/1042/uniontechos-desktop-20-professional-1042-amd64.iso"
+        ],
+        [
+          "ky10 live",
+          "kylinux",
+          "2-4G",
+          "amd64",
+          "BIOS/UEFI",
+          "inst.sh",
+          "https://sx.ygwid.cn:4431/iso/Kylin-Desktop-V10-Release-2107-x86_64.iso"
+        ],
+        [
+          "debian-live-13.0.0-amd64-standard.iso",
+          "debian",
+          "2-4G",
+          "amd64",
+          "BIOS/UEFI",
+          "inst.sh",
+          "https://cdimage.debian.org/cdimage/archive/13.0.0-live/amd64/iso-hybrid/debian-live-13.0.0-amd64-standard.iso"
+        ],
+        [
+          "ubuntu-25.10-live-server-amd64.iso",
+          "ubuntu",
+          "2-4G",
+          "amd64",
+          "BIOS/UEFI",
+          "inst.sh",
+          "https://releases.ubuntu.com/25.10/ubuntu-25.10-live-server-amd64.iso"
+        ]
+      ]
+    }
+  ]
+}
