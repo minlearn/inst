@@ -1,0 +1,89 @@
+{
+  "id": "instnews-panel",
+  "slug": "panel",
+  "title": "如何使用installpanelcf来部署inst.sh web版本",
+  "subtitle": "",
+  "icon": "📄",
+  "tags": [
+    "文档"
+  ],
+  "category": "instnews",
+  "lastUpdated": "2026-08-07",
+  "sections": [
+    {
+      "type": "text",
+      "content": [
+        "reinstall scripts现今很流行，然而都没有一个web版本的panel，今天我们制造出了一个web的inst.sh，我们叫他installpanelcf，它提供了一个类似isp商后台vps重装系统的基本的流程和功能，即：",
+        "1，填入安装参数， 比如选择硬盘，硬盘布局(这个我们还没有raid选项，不过快了)，网卡，静态参数，诸如此类...  \n2，开跑，  \n3，提供vnc监控，，，，",
+        "一句话：它不只是一个webssh，还是一套重装流程。"
+      ],
+      "title": ""
+    },
+    {
+      "type": "quote",
+      "content": "当然，这一切是建立在利用linux本身进行provision的基础（这也是di或基于di的reinstall scripts的基础），，比不了qemu利用母机上的现有模板，或者利用母机上vnc代理可以全程看到vps屏幕的方便性，，，不过，它幸好胜在可以提供更多的定制性上："
+    },
+    {
+      "type": "text",
+      "content": "开玩吧，"
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "content": "直接打开演示：https://inst.sh"
+    },
+    {
+      "type": "text",
+      "content": "注意：passwd是存本地的。但是是加密发往installpanelcf所在api服务器的。（你的浏览器本身无法作为api去登录ssh，必须需要一个ssh relay）  \n，，所以如果不放心的话，建议你使用临时密码跑接下来的dd过程，或者搭建自己的installpanelcf端(在文尾有仓库)",
+      "title": "第一屏是会话登录，"
+    },
+    {
+      "type": "image",
+      "alt": "",
+      "src": "/assets/instcf.png",
+      "title": "以下是第二屏："
+    },
+    {
+      "type": "text",
+      "content": "进入第二屏，当条件满足（ssh连接状态有效时），你需要点开安装选项中的target："
+    },
+    {
+      "type": "ul",
+      "items": [
+        "target里可以选择各种现成镜像和提供custom直链，",
+        "然后直接点下面长长的exec install按钮，  ",
+        "等待就是  "
+      ]
+    },
+    {
+      "type": "text",
+      "content": [
+        "这是你需要的所有操作。",
+        "execute install的下面会显示专用log。,右上角有ssh和debconf状态显示，还有vnc和通用log",
+        "右上退出到会话列表（退出并不会清理会话）",
+        "如果失去di或结束，10分钟后它会停下来，提示你可以清理服务端会话了，耐心多等些时间等dd完成。",
+        "关于右上2个状态和3个tab，以及debconf-protocol进度显示"
+      ]
+    },
+    {
+      "type": "quote",
+      "content": "等待全程可以点开vnc或log：这2要在debconf联上才能打开,这要求你目标机器开80和8080 你也可以观察那个底部的debconf-protocol进度显示，它会显示debconf的进度，包括db_process等"
+    },
+    {
+      "type": "text",
+      "content": "好了就这么多了"
+    },
+    {
+      "type": "hr"
+    },
+    {
+      "type": "text",
+      "content": [
+        "仓库：",
+        "https://inst.sh\nhttps://github.com/minlearn/inst.git  \nhttps://github.com/minlearn/inst-cf.git  \nreadme.md自解释，足够简单，你直接看就明白了。  \n自己用accesspoint保护起来，不保护也没关系。",
+        "视频：",
+        "无"
+      ]
+    }
+  ]
+}

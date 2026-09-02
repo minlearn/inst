@@ -1,0 +1,80 @@
+{
+  "hero": {
+    "title": "inst",
+    "subtitle": "lifelong linux and onekeystoke netinstall script/panel/appstore",
+    "ctas": [
+      { "text": "开始使用", "link": "https://p.inst.sh", "primary": true },
+      { "text": "更多文档", "link": "/docs", "primary": false }
+    ],
+    "image": "https://raw.githubusercontent.com/minlearn/inst/master/_build/www/assets/instcf.png"
+  },
+  "features": [
+    {
+      "icon": "⚡",
+      "title": "clean",
+      "details": "portable, taken alway, live and clean"
+    },
+    {
+      "icon": "📝",
+      "title": "easy",
+      "details": "all in one click, mininmal curve,well granulated"
+    },
+    {
+      "icon": "🎨",
+      "title": "open",
+      "details": "drop in,open,diyable, no over abstracted,freedom for selfbuild,custom"
+    },
+    {
+      "icon": "🔍",
+      "title": "full",
+      "details": "all self containerd, services almost builtin"
+    },
+    {
+      "icon": "🧩",
+      "title": "long",
+      "details": "immersive, battery included, life long,persistable"
+    },
+    {
+      "icon": "📦",
+      "title": "dedi",
+      "details": "raw coded,flat packaged, mininmal deps with externals"
+    },
+    {
+      "icon": "📦",
+      "title": "safe",
+      "details": "one stop all in,one closure, core in a nutshell and solid blackbox"
+    }
+  ],
+  "pricing": {
+    "title": "用户对比",
+    "free": {
+      "name": "一般用户",
+      "price": "免费",
+      "period": "",
+      "cta": "开始使用",
+      "link": "https://p.inst.sh",
+      "features": [
+        "基础脚本库",
+        "公开文档",
+        "基础面板",
+        "手动更新"
+      ]
+    },
+    "paid": {
+      "name": "群组用户",
+      "price": "¥99",
+      "period": "终身",
+      "cta": "立即加入",
+      "link": "#supportly",
+      "features": [
+        "基础脚本库",
+        "公开文档",
+        "基础面板",
+        "手动更新",
+        "社区支持",
+        "定制镜像",
+        "专属资源配置"
+      ]
+    }
+  }
+}

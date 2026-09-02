@@ -1,0 +1,51 @@
+{
+  "id": "instrepos-osxdmgs",
+  "slug": "osxdmgs",
+  "title": "osx dmgs",
+  "subtitle": "",
+  "icon": "📄",
+  "tags": [
+    "文档"
+  ],
+  "category": "instrepos",
+  "lastUpdated": "2026-09-02",
+  "sections": [
+    {
+      "type": "text",
+      "content": "一些无改的osx dmg",
+      "title": ""
+    },
+    {
+      "type": "table",
+      "headers": [
+        "系统",
+        "作者",
+        "解压",
+        "平台",
+        "启动",
+        "登录密码",
+        "直链(右键复制)"
+      ],
+      "rows": [
+        [
+          "osx11",
+          "apple",
+          "10-15G",
+          "amd64",
+          "UEFI",
+          "none",
+          "https://guest:guest@d.minlearn.org/dav/osx11/macos-bigsur-11.7.11-20g1443.dmg_000:https://guest:guest@d.minlearn.org/dav/osxp2/macos-bigsur-11.7.11-20g1443.dmg_001"
+        ],
+        [
+          "osx12",
+          "apple",
+          "10-15G",
+          "amd64",
+          "UEFI",
+          "none",
+          "https://guest:guest@d.minlearn.org/dav/osx12/macos-monterey-12.7.6-21h1320.dmg_000:https://guest:guest@d.minlearn.org/dav/osxp2/macos-monterey-12.7.6-21h1320.dmg_001"
+        ]
+      ]
+    }
+  ]
+}

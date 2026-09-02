@@ -1,0 +1,57 @@
+{
+  "id": "instnews-localinstall",
+  "slug": "localinstall",
+  "title": "本地镜像离线方式将vps上的linux重装为windows(pc+usb也适用)",
+  "subtitle": "",
+  "icon": "📄",
+  "tags": [
+    "文档"
+  ],
+  "category": "instnews",
+  "lastUpdated": "2025-04-07",
+  "sections": [
+    {
+      "type": "text",
+      "content": [
+        "现在，您可以使用 inst.sh 作为 Symantec Ghost 的替代品，在 VPS 或您的电脑上快速离线重新安装操作系统，无需考虑任何网络延迟和网络问题。",
+        "让我们以VPS为例开始：",
+        "首先，您需要在磁盘中准备好离线的 inst.sh 脚本仓库，并将目标操作系统镜像放入其中：",
+        "准备工作",
+        "下载 https://github.com/minlearn/inst/archive/refs/heads/master.zip ，将其解压到任意目录（推荐 /root），您会发现一个名为 inst 的目录，里面有 _build、inst.sh、readme.md 文件。",
+        "现在将您的目标操作系统镜像文件移入 inst 目录中（您带来的镜像文件应以 .xz 或 .gz 结尾）。",
+        "完成上述步骤后，如下操作：",
+        "执行",
+        "在 inst 目录中，输入："
+      ],
+      "title": ""
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "content": "bash inst.sh ./yourimgfilename.gz"
+    },
+    {
+      "type": "text",
+      "content": [
+        "等待脚本完成并重启您的电脑，它会进入 VNC。",
+        "在 pass1 阶段，它会将 yourimgfilename.gz 对齐到磁盘的尾部，我们始终使用包含 yourimgfilename.gz 的单个磁盘作为离线安装的源中介（与在线安装中网络作为源中介相对）和目标磁盘。",
+        "在 pass2 阶段，它会使用 dd 命令将尾部的 yourimgfilename.gz 二进制段逐段写入磁盘本身的头部（效果非常好！因为 dd 以线性方向读写并始终以二进制为导向，因此不会导致任何损坏，无论镜像大小如何！）。",
+        "最后，它会重启进入重新安装的操作系统。"
+      ]
+    },
+    {
+      "type": "hr"
+    },
+    {
+      "type": "text",
+      "content": [
+        "仓库:",
+        "https://github.com/minlearn/inst",
+        "资源:",
+        "https://github.com/minlearn/inst/archive/refs/heads/master.zip",
+        "视频:",
+        "<iframe src=\"//player.bilibili.com/player.html?isOutside=true&aid=114292032537699&bvid=BV1dwRzYjEL4&cid=29271984731&p=1\" scrolling=\"no\" border=\"0\" frameborder=\"no\" framespacing=\"0\" allowfullscreen=\"true\"></iframe>"
+      ]
+    }
+  ]
+}

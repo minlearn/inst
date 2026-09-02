@@ -1,0 +1,57 @@
+{
+  "id": "instnews-qemupve",
+  "slug": "qemupve",
+  "title": "在linux桌面下直装独立窗口版pve",
+  "subtitle": "",
+  "icon": "📄",
+  "tags": [
+    "文档"
+  ],
+  "category": "instnews",
+  "lastUpdated": "2024-03-02",
+  "sections": [
+    {
+      "type": "text",
+      "content": [
+        "<strong>pve无处不在!!</strong>",
+        "这实际上是qemu虚拟机版的pve，不是正常将pve重装代替主机的pve\n所以这算是type2?",
+        "不管了，反正pve可在linux桌面下窗口模式运行了\n这套方案适用于osx和win桌面"
+      ],
+      "title": ""
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "content": "要求主机和主机系统提供嵌套虚拟的能力，否则效果会有点差\nlinux是kvm, win是whpx,osx是hvf\n主机上的虚拟套件比如osx是virtual.framework，win是hyperv\n\n如何检测cpu：\nlinux: cat /proc/cpuinfo|grep vmx|svm\nosx/win:下载工具识别\n\n主机上安装qemu：\nwindows下载包\nlinux: apt-get install qemu-system\nosx: brew install qemu\n"
+    },
+    {
+      "type": "text",
+      "content": "找个linux桌面,ssh中打入:",
+      "title": "如何尝试"
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "content": "wget -qO- inst.sh|bash -s - -t debiandemu"
+    },
+    {
+      "type": "text",
+      "content": [
+        "将生成的imgscafford(10G)和start.txt放到你要测试的环境，如果是linux，可以就地测试无须移动文件",
+        "打开start.txt修理内容，把不要的启动命令删除，修改文件名，加起执行权限chmod +x，以sudo管理权限或正常用户权限执行,win,osx同理"
+      ]
+    },
+    {
+      "type": "hr"
+    },
+    {
+      "type": "text",
+      "content": [
+        "视频:",
+        "<iframe src=\"//player.bilibili.com/player.html?aid=1201300496&bvid=BV1fF4m157kV&cid=1456160838&p=1\" scrolling=\"no\" border=\"0\" frameborder=\"no\" framespacing=\"0\" allowfullscreen=\"true\"> </iframe>",
+        "仓库:",
+        "https://github.com/minlearn/inst"
+      ]
+    }
+  ]
+}

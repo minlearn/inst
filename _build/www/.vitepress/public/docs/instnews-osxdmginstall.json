@@ -1,0 +1,103 @@
+{
+  "id": "instnews-osxdmginstall",
+  "slug": "osxdmginstall",
+  "title": "利用支持osx dmg镜像的一键dd面板installpanelcf重装linux杜甫为osx/黑苹果（也支持reverse reinstall）",
+  "subtitle": "",
+  "icon": "📄",
+  "tags": [
+    "文档"
+  ],
+  "category": "instnews",
+  "lastUpdated": "2026-08-27",
+  "sections": [
+    {
+      "type": "text",
+      "content": [
+        "inst.sh对于osx dmg的支持比想象中简单多了。",
+        "跟windows iso类似的原理就是把osx dmg上的文件解压到硬盘上，最后再remaster一下做成硬盘可启动,美中不足的是它无法注入无人值守设置（当然还有其它跟win安装镜像深刻不一样的地方），，具体解包dmg做成硬盘可启动布局的细节看/apps/dipatch_traninstall源码。"
+      ],
+      "title": ""
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "content": "apple osx install app安装镜像都处处防修改，没法，只能整个createmediainstall到一张gpt的sparseimage上再转成为dmg。这对展开过程来说反而省事，缺点就是失去了注入无人值守和其它方面的优势，比如精简支持。只能使用原版本。"
+    },
+    {
+      "type": "text",
+      "content": "这里只介绍下dmg支持的使用（跟winisoinstall篇一样不使用脚本演示，直接用installpanelcf演示，流程全程可见，且清晰）："
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "content": "需要准备一台efi的独服，而不是bios或efi的vps，虽然opencore支持bios,但流行的普遍支持方案是为efi而作，另外，vps不像独立物理主机，虽然osx的virtio支持也不错，但还是那句，流行的普遍支持方案不是为vps而作（比如嵌套cpu需要msr）\n另外，需要独服支持kvm或amt或IPMI或vnc来调试efi文件和配置，虽然inst.sh曾弄过循环grub-boot嵌入自身到菜单，但后来废弃了。\n\n关掉硬件bios中的secure-boot和raid改成ahci这种。",
+      "title": "准备硬件和efi"
+    },
+    {
+      "type": "text",
+      "content": "首先，把你的机器装成win，下载 https://github.com/lzhoang2801/OpCore-Simplify ,启动OpCore-Simplify.bat先导出硬件，然后指定osx版本，生成efi文件夹，删掉里面的boot文件夹仅留oc，然后对efi文件打包成7z"
+    },
+    {
+      "type": "text",
+      "content": [
+        "fork https://github.com/minlearn/inst , 替换_build/release/inital中的efi-default.7z, 把7z中的oc/config.plist解出来放_build/release/inital，修改/apps/dipatch_traninstall把wget config.plist注释打开和cp -f config.plist到oc打开",
+        "当然，如果你省掉这一步，在接下来的开始dd中一遍通过，这步完全不需要(直接在下一步使用inst.sh面板和仓库即可），fork仓库这步是为接下来调试准备的。"
+      ],
+      "title": "然后准备你的仓库和调试基础 (如果接下来DD一次成功，这步是可选的)"
+    },
+    {
+      "type": "text",
+      "content": "然后把你的机器重装成debian，直接下载inst.sh的instsupportforwin.exe就地dd，打开inst.sh网页服务：",
+      "title": "开始dd和调试"
+    },
+    {
+      "type": "image",
+      "alt": "",
+      "src": "/assets/instcf.png"
+    },
+    {
+      "type": "text",
+      "content": "root登录，target选择某个 osx dmg，把repo镜像改成你的仓库 https://github.com/你的仓库名/inst/raw/master ，然后点击命令预览下面的长条execute install按钮开始安装即可。等debconf连上，即可连上右上的vnc查看进度。\n全程无须啥多余手动操作。\n差不多debconf失联一会，就可以连目标ip的vnc了，从这里开始，你需要重启到recovery或ipmi下调试efi直至安装和启动都成功。"
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "content": "关于efi调试：\n\n关于生成的配置文件可能不适用你的独服。黑苹果调试，最重要的永远是acpi表，如果这个调通，可以解决在config.plist层的相当多的问题（比如nvme不认拉，黑屏拉~）\n\n所以你往往需要多次调试才能成功看到osx安装器启动。github上也有一些配好的efi文件。"
+    },
+    {
+      "type": "text",
+      "content": "使用以下命令在recovery下或ipmi下测试和刷新你硬盘上的config.plist："
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "content": "mkdir p3;mount /dev/你的硬盘名p3 p3\nwget --no-check-certificate https://github.com/你的仓库名/inst/raw/master/_build/releases/download/inital/config-default.plist -O p3/EFI/OC/config.plist"
+    },
+    {
+      "type": "text",
+      "content": "祝你玩得开心！！"
+    },
+    {
+      "type": "hr"
+    },
+    {
+      "type": "text",
+      "content": [
+        "至于脚本用法，还是给一下：",
+        "命令参考："
+      ]
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "content": "wget -qO- inst.sh|bash -s - -t https://guest:guest@d.minlearn.org/dav/osx11/macos-bigsur-11.7.11-20g1443.dmg_000:https://guest:guest@d.minlearn.org/dav/osxp2/macos-bigsur-11.7.11-20g1443.dmg_001"
+    },
+    {
+      "type": "text",
+      "content": [
+        "项目地址：  \nhttps://github.com/minlearn/inst  \nhttps://github.com/lzhoang2801/OpCore-Simplify",
+        "演示视频：  \n无（面板一图即够，无须过程演示）"
+      ]
+    }
+  ]
+}
