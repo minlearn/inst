@@ -1,0 +1,10 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "installpanel",
+  "main": "./api/worker.js",
+  "compatibility_date": "2026-07-06",
+  "compatibility_flags": ["nodejs_compat"],
+  "durable_objects": { "bindings": [ { "name": "STATE", "class_name": "StateDO" } ] },
+  "migrations": [ { "tag": "v1", "new_sqlite_classes": ["StateDO"] } ],
+  "assets": { "directory": "./frontend", "not_found_handling": "single-page-application", "run_worker_first": ["/api/*", "/hardware", "/instrepos"] },
+}

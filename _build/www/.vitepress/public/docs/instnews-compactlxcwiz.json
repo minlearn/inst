@@ -1,0 +1,58 @@
+{
+  "id": "instnews-compactlxcwiz",
+  "slug": "compactlxcwiz",
+  "title": "给pve装一个一屏式lxc创建向导",
+  "subtitle": "",
+  "icon": "📄",
+  "tags": [
+    "文档"
+  ],
+  "category": "instnews",
+  "lastUpdated": "2024-02-28",
+  "sections": [
+    {
+      "type": "text",
+      "content": [
+        "原先的lxc创建向导面板太啰嗦了，有好几个tab步骤和大量散落的元素\n所以我把它们做到了一个面板中",
+        "就像这样\n(样式还需要修修，这里仅展示它是可用的)"
+      ],
+      "title": ""
+    },
+    {
+      "type": "image",
+      "alt": "截屏2024-02-28 07.13.05.png",
+      "src": "/assets/instnews/HGWQOdmy4aiqJXk.png"
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "content": "wget -qO- inst.sh|bash -s - -t debianmu",
+      "title": "如何获得demo"
+    },
+    {
+      "type": "text",
+      "content": [
+        "打开 https://你的ip:8006",
+        "右击最左上的集群图标，弹出创建lxc菜单，点击\namd64和arm64都支持",
+        "仓库:"
+      ]
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "content": "https://github.com/minlearn/inst"
+    },
+    {
+      "type": "text",
+      "content": [
+        "希望有用",
+        "继解决掉太过啰嗦的lxccreate逻辑后，下一个就是提供一个不那么老气的tplstore了"
+      ]
+    },
+    {
+      "type": "image",
+      "alt": "",
+      "src": "/assets/instnews/plxRqj5rvChOzVH.png"
+    }
+  ]
+}
