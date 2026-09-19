@@ -1,0 +1,63 @@
+{
+  "id": "instnews-lightve",
+  "slug": "lightve",
+  "title": "只占不到500m内存的pve轻量版",
+  "subtitle": "",
+  "icon": "📄",
+  "tags": [
+    "文档"
+  ],
+  "category": "instnews",
+  "lastUpdated": "2023-04-26",
+  "sections": [
+    {
+      "type": "image",
+      "alt": "Demo",
+      "src": "/assets/instnews/JgmQUhpwTcG25Fu.png",
+      "title": ""
+    },
+    {
+      "type": "text",
+      "content": "(这是一个安装在2G VPS上的演示，它在运行一个LXC时仅使用了300M内存。)"
+    },
+    {
+      "type": "text",
+      "content": [
+        "安装devdeskos：一个精简但集成的Proxmox项目分支，见 <a href=\"https://github.com/minlearn/inst\" target=\"_blank\" rel=\"noopener\">github.com/minlearn/inst</a>",
+        "以下操作在基于Debian的Linux操作系统下进行，你可以在 <code>http://yourip80</code> 打开novnc视图以追踪安装过程："
+      ],
+      "title": "如何操作"
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "content": "wget -qO- 1keydd.com/inst.sh | bash -s - -t devdeskos"
+    },
+    {
+      "type": "ul",
+      "items": [
+        "在一个512M~1G内存的VPS中，你可以在LXC中安装LNMP，作为web应用平台",
+        "在一个带有KVM nested的2G VPS中，你可以安装一个客机QEMU桌面操作系统（至少留给主机500-800M内存以避免交换爆发，也就是说，分配1G-1.2G内存给客机）",
+        "你也可以安装devdeskosfull，其中包含一个LXC Debian桌面",
+        "对于具有大量内存和快速SSD的专用服务器，只需像正常情况下那样自由使用，例如：以“一体化”的方式。"
+      ],
+      "title": "使用场景"
+    },
+    {
+      "type": "text",
+      "content": "默认的“多集群和高可用性”功能内置于PVE：即Corosync服务，被隐藏，实际上使其成为一个独立节点的“PVE”。\n并且“pveproxy、pvedaemon、pvestatd”进程被集成到一个新的pvedaemon-mu进程中作为守护进程工作。\n这与通常需要>600M内存的新鲜安装Proxmox相比，显著减少了多达50%的内存使用。",
+      "title": "技术细节"
+    },
+    {
+      "type": "quote",
+      "content": "注意： 它们并未被切断，而是以另一种方式“仅被隐藏”，这意味着，没有任何功能丧失， 并且你可以在切换使用集群功能时<strong>重新激活隐藏的Corosync</strong>。"
+    },
+    {
+      "type": "text",
+      "content": [
+        "享受你的使用过程，如果你喜欢，请不要忘记给这个GitHub仓库加星：",
+        "<a href=\"https://github.com/minlearn/inst\" target=\"_blank\" rel=\"noopener\">https://github.com/minlearn/inst</a>"
+      ]
+    }
+  ]
+}
