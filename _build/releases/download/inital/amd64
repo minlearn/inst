@@ -1,0 +1,7 @@
+Archive: oldstable
+Origin: Debian
+Label: Debian
+Version: 11.7
+Acquire-By-Hash: yes
+Component: main-debian-installer
+Architecture: amd64

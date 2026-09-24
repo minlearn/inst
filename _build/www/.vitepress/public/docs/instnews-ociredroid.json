@@ -1,0 +1,84 @@
+{
+  "id": "instnews-ociredroid",
+  "slug": "ociredroid",
+  "title": "利用支持导入docker oci镜像的一键dd脚本inst.sh在debian11上安装嵌入式pve lxc redroid云手机平台（也支持其它docker）",
+  "subtitle": "",
+  "icon": "📄",
+  "tags": [
+    "文档"
+  ],
+  "category": "instnews",
+  "lastUpdated": "2025-07-17",
+  "sections": [
+    {
+      "type": "text",
+      "content": [
+        "epve（原名 devdesk）是一个易于部署的 PVE 分支版本。它保留了 PVE/LXC 的核心功能集，旨在嵌入主流 Linux 发行版（目前支持 Debian 11）。epve 也特别为初学者设计，配合 inst.sh 脚本，可以更方便地在 epve 上安装应用：现在已集成了众多开箱即用的脚本和应用（可在 github.com/minlearn/inst/_build/apps 找到）。",
+        "如今，我们甚至可以借助 Docker 的 OCI 镜像来扩展我们的应用生态系统。"
+      ],
+      "title": ""
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "content": "为什么 PVE/LXC 支持 Docker 镜像？\n\n其原理在于 Docker 及其引擎本身就是 OCI 容器标准的实现之一。且与 KVM 相比，Docker 和 LXC 都提供了轻量且可扩展的虚拟化解决方案。\nDocker 和 LXC 的一个关键区别是：Docker 更像一个应用，其入口主程序不需要是系统的 init 进程，\n而 LXC 容器通常更像虚拟机：它们需要标准的 Linux init 作为主进程。\n不过，它们都共享 Linux 的底层基础设施，例如 cgroups。\n\n实际上，最早的 Docker 就是基于 LXC 实现的。而 LXC 原生就支持 OCI 模板，\n但对于 PVE，得益于 lurenJBD 及其 PCT 补丁，我们现在可以通过额外的工具进一步自动化这个流程：而这正是 inst.sh 的作用！"
+    },
+    {
+      "type": "text",
+      "content": [
+        "在本文中，我们将演示如何使用 inst.sh 在 epve 上安装 Redroid 11。以下步骤基于 Debian 11，但 epve 未来将力争支持更多的发行版。",
+        "让我们开始吧：",
+        "1）首先，在 Debian 11 的 SSH 终端中执行 inst.sh（如果你后续需要使用 adb/scrcpy，建议使用 Debian 11 桌面环境）："
+      ]
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "content": "wget -qO- inst.sh | bash -s - -t redroid/redroid:11.0.0-latest\n\n（这会在 Debian 11 上安装 Redroid，会自动安装 epve 和 Redroid 11 作为 LXC 应用。\n!!! 注意：首次生成 redroid11.tar.xz 模板时可能需要较长时间，请耐心等待）\n\n\nwget -qO- inst.sh | bash -s - -t devdesk\n（如果你只想在 Debian 11 上安装 epve，请使用此命令）\n\nwget -qO- inst.sh | bash -s - -t appname\n（如果你只想在安装 epve 后安装其他应用，请使用此命令）"
+    },
+    {
+      "type": "text",
+      "content": [
+        "如果一切顺利，你将看到容器已运行。你现在可以登录到机器的https://ip:8006去到pve界面查看云手机容器了。",
+        "2）接下来，在容器运行后，（如果你安装的是debian11桌面的话）你可以通过 adb 连接 Redroid 并查看 Redroid 屏幕："
+      ]
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "content": "apt-get install adb scrcpy\nadb connect 10.10.10.1:5555\nscrcpy"
+    },
+    {
+      "type": "text",
+      "content": [
+        "如果一切顺利，你将看到 redroid 屏幕。",
+        "最后）请确保所有关键项已准备好且持续有效。如遇异常可尝试以下调试方法：",
+        "从主机的 32 个 /dev/binder 设备中分配 3 个，映射到容器中的 /dev/binder、/dev/hwbinder、/dev/vndbinder。",
+        "（对于第一个使用 ``<code>-t redroid/redroid:11.0.0-latest</code>`<code> 创建的 Redroid LXC 应用，默认已分配 /dev/binder1、/dev/binder2、/dev/binder3，应能正常工作；但如果之后还要创建更多 Redroid LXC 应用，则需在 </code>`<code>container/resources view -> mount entry</code>`` 手动添加和映射这些设备）"
+      ]
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "content": "关于如何查询可用的 /dev/binder 设备集，以及如何使用 adb、nginx/scrcpy-web 等，请参考 github.com/inst/app/redroid 中的逻辑，了解纯 Docker 方式搭建 Redroid 管理系统的方法。\n\n注意！！并非所有 Docker 镜像都能作为 PVE LXC 容器使用并能直接运行，因为它们的 init 及其他设置可能需要进一步调整。Redroid 只是一个特例。"
+    },
+    {
+      "type": "text",
+      "content": [
+        "你还可以在 ``<code>container/resources view -> mount point</code>`<code> 中添加 /data 挂载点，\n并在 </code>`<code>container/options view</code>`` 中调整 initcmd。",
+        "祝你玩得开心！！"
+      ]
+    },
+    {
+      "type": "hr"
+    },
+    {
+      "type": "text",
+      "content": [
+        "视频：",
+        "<iframe src=\"//player.bilibili.com/player.html?isOutside=true&aid=114867977588662&bvid=BV1RSgNzSEHW&cid=31105944067&p=1\" scrolling=\"no\" border=\"0\" frameborder=\"no\" framespacing=\"0\" allowfullscreen=\"true\"></iframe>",
+        "仓库：\nhttps://github.com/minlearn/inst"
+      ]
+    }
+  ]
+}

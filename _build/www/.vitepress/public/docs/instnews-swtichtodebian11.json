@@ -1,0 +1,36 @@
+{
+  "id": "instnews-swtichtodebian11",
+  "slug": "swtichtodebian11",
+  "title": "inst基础大版本升级到debian11",
+  "subtitle": "",
+  "icon": "📄",
+  "tags": [
+    "文档"
+  ],
+  "category": "instnews",
+  "lastUpdated": "2023-10-07",
+  "sections": [
+    {
+      "type": "text",
+      "content": "inst.sh的基础di和pve已升级到debian11",
+      "title": ""
+    },
+    {
+      "type": "text",
+      "content": "方法不变，依旧为：",
+      "title": "方法："
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "content": "wget -qO- inst.sh|bash -s - -t debian10,debian11,debian12,debian"
+    },
+    {
+      "type": "text",
+      "content": [
+        "(debian默认11)",
+        "觉得好用可去star或fork\nhttps://github.com/minlearn/inst"
+      ]
+    }
+  ]
+}
