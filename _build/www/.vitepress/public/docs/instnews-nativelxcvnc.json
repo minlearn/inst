@@ -1,0 +1,53 @@
+{
+  "id": "instnews-nativelxcvnc",
+  "slug": "nativelxcvnc",
+  "title": "给自己一个大玩具/免qemu虚拟机，pve lxc容器直接支持图形化vnc显示了",
+  "subtitle": "",
+  "icon": "📄",
+  "tags": [
+    "文档"
+  ],
+  "category": "instnews",
+  "lastUpdated": "2023-04-07",
+  "sections": [
+    {
+      "type": "text",
+      "content": "一般的云主机就直接可以多开上免污染的桌面环境了。不比哪些乱七八糟的面板要好？",
+      "title": ""
+    },
+    {
+      "type": "image",
+      "alt": "",
+      "src": "/assets/instnews/BiusrCWhVQaOEAZ.png"
+    },
+    {
+      "type": "text",
+      "content": "update：已经完美了，dd完后只需调整一步"
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "content": "wget -qO- 1keydd.com/inst.sh|bash -s - -t devdeskosfull",
+      "title": "方法："
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "content": "1，启动1010102,点击console，提示password check错误\n\n2，在datacenter中，选择syslog，找到命令带一串码，形如x11vnc -storepasswd PVEVNC:642A9400::....(省略)......4MAG1wA== /etc/x11vnc.pwd\n右上进入1010102的xtermjs，root/1keydd，执行一次得到命令码串。\n\n3，继续点1010102的vnc，已经可以了。以后也不会让你输入码了",
+      "title": "调整:"
+    },
+    {
+      "type": "text",
+      "content": "还可以\n一种在甲骨文上安装pve和容器控制占用，避免机器被收回的方法\n看我的占用（开了一个ytb双核arm有30%的cpu占用,持续播放网络和内存占用都有了）："
+    },
+    {
+      "type": "image",
+      "alt": "",
+      "src": "/assets/instnews/r6sySu9gCXeLJGk.png"
+    },
+    {
+      "type": "text",
+      "content": "觉得好用可去star或fork\nhttps://github.com/minlearn/inst"
+    }
+  ]
+}

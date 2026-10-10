@@ -1,0 +1,57 @@
+{
+  "id": "instnews-isoinstall",
+  "slug": "isoinstall",
+  "title": "利用支持iso镜像的一键dd脚本inst.sh重装linux为带GUI的桌面版本（暂无计划支持win iso）",
+  "subtitle": "",
+  "icon": "📄",
+  "tags": [
+    "文档"
+  ],
+  "category": "instnews",
+  "lastUpdated": "2025-07-20",
+  "sections": [
+    {
+      "type": "text",
+      "content": [
+        "如今，Linux 桌面发行版通常采用安装框架工具来实现 <strong>“Live Install（实时安装）”</strong> 功能。常见的安装框架有：Ubuntu 的 Ubiquity，Arch Linux 的 archinstall，Manjaro 的 Calamares。这些工具生成的 ISO 镜像采用了 live/只读介质（如内存 RAM 或 CD-ROM），并利用 SquashFS 及底层文件系统等技术，在无需实际安装到硬盘的情况下，即可启动一个功能完整的桌面环境。这种方式为用户提供了一种便捷的方式，在安装到硬盘之前，甚至无需安装，就可以直接体验这些桌面系统。",
+        "<code>inst.sh</code> 现在可以将这些 Live 桌面发行版的 Linux <strong>重新安装到硬盘</strong>上，其原理是将 ISO 镜像内容转换为硬盘安装。--------- 具体步骤是：首先分区，然后下载 ISO，解压 ISO，找到包含压缩分层根文件系统树的 SquashFS 镜像，再将其解压到硬盘上，构建出一个可用的 Linux 根文件系统。--------- 简而言之，核心工作就是将 ISO 的一切内容“变换”为适合硬盘实际安装的形式，因此这个过程被称为 “transinstall（转制安装）”。"
+      ],
+      "title": ""
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "content": "与 \"ddinstall\" 以及 `inst.sh` 提供的其他重装范式相比，\n后者优雅地面向：\n1. 在线命令行，\n2. 在线即时提取和安装，\n3. 使用非硬盘介质作为源和目标，\n而事实上，“transinstall” 可以替代 `inst.sh` 提供的许多上述重装范式：\n因为你可以在磁盘上做更多事，虽然在优雅程度上不及它们。"
+    },
+    {
+      "type": "text",
+      "content": [
+        "以 Ubuntu 24 的 ISO 为例，安装完成后，你就会在硬盘上获得一个 Ubuntu 24 的 GNOME 桌面。",
+        "首先，在一台 Linux 主机命令行中运行："
+      ]
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "content": "wget -qO- inst.sh|bash -s - -t https://releases.ubuntu.com/24.04.2/ubuntu-24.04.2-desktop-amd64.iso\n\n（等待安装过程，安装完成后，用下述用户名/密码登录，这个账户有 sudo 权限）\n\n用户名：user  \n密码：inst.sh"
+    },
+    {
+      "type": "text",
+      "content": [
+        "切换到 Debian 桌面 ISO 时，请选择 live 版的 ISO。Debian 支持两类 ISO：一类用于 deb 源安装（netinstall CD、DVD），一类为 live 安装（主要用于桌面版）。deb 源 ISO 安装时是从包构建系统，而 live ISO 则直接用压缩好的预制根文件系统从介质运行（就像上文所述 Ubuntu 24 的方式）。",
+        "祝你玩得开心！！目前很抱歉暂未支持 Windows ISO。"
+      ]
+    },
+    {
+      "type": "hr"
+    },
+    {
+      "type": "text",
+      "content": [
+        "命令参考：  \nwget -qO- inst.sh|bash -s - -t https://releases.ubuntu.com/24.04.2/ubuntu-24.04.2-desktop-amd64.iso",
+        "项目地址：  \nhttps://github.com/minlearn/inst",
+        "演示视频：  \n<iframe src=\"//player.bilibili.com/player.html?isOutside=true&aid=114941377906101&bvid=BV1JPhAzKENj&cid=31376540661&p=1\" scrolling=\"no\" border=\"0\" frameborder=\"no\" framespacing=\"0\" allowfullscreen=\"true\"></iframe>"
+      ]
+    }
+  ]
+}

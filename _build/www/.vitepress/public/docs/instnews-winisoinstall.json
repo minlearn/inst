@@ -1,0 +1,71 @@
+{
+  "id": "instnews-winisoinstall",
+  "slug": "winisoinstall",
+  "title": "利用支持windows iso镜像的一键dd面板installpanelcf重装linux为windows桌面（也支持osx dmg）",
+  "subtitle": "",
+  "icon": "📄",
+  "tags": [
+    "文档"
+  ],
+  "category": "instnews",
+  "lastUpdated": "2026-08-23",
+  "sections": [
+    {
+      "type": "text",
+      "content": [
+        "其实自从linux iso支持之后，windows iso支持也差不多出来了，当初说windows iso not in the plan，除了拖延症犯了，还有一个原因是我想等osx dmg把它一起做了，顺便再写篇文章。",
+        "如果说linux iso的支持原理是把live iso上的分层文件系统重新组装为硬盘上的文件系统，那么windows iso的支持原理就是把windows iso上的文件解压到硬盘上，加入virtio驱动注入无人值守设置，最后再remaster一下做成硬盘可启动,当然其中还有不少细节处理，具体看/apps/dipatch_traninstall源码。"
+      ],
+      "title": ""
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "content": "这种方案其实是相当有缺陷的，在di环境下处理windows iso，只能简单地wimimagex处理，有些事情，诸如补丁集成那种，不能直接在di环境下处理，只能在纯windows下进行。\n但是对于使windows iso变成硬盘版本，绝对够用。"
+    },
+    {
+      "type": "text",
+      "content": "这里只介绍下iso支持的使用（从这篇开始不再使用脚本演示，直接用installpanelcf演示，流程全程可见，且清晰）："
+    },
+    {
+      "type": "text",
+      "content": [
+        "首先，把你的机器装成debian，然后打开inst.sh：",
+        "root登录，target选择某个 windows ISO，然后点击命令预览下面的长条execute install按钮开始安装即可。等debconf连上，即可连上右上的vnc查看进度。\n全程无须啥多余手动操作。\n差不多debconf失联一会，就可以连目标ip的远程桌面了，用户名是默认的administrator，密码是inst.sh。"
+      ],
+      "title": "使用"
+    },
+    {
+      "type": "image",
+      "alt": "",
+      "src": "/assets/instcf.png"
+    },
+    {
+      "type": "text",
+      "content": "祝你玩得开心！！"
+    },
+    {
+      "type": "hr"
+    },
+    {
+      "type": "text",
+      "content": [
+        "至于脚本用法，还是给一下：",
+        "命令参考："
+      ]
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "content": "wget -qO- inst.sh|bash -s - -t https://guest:guest@d.minlearn.org/dav/win10/zh-cn_windows_10_enterprise_ltsc_2021_x64_dvd_033b7312.iso"
+    },
+    {
+      "type": "text",
+      "content": [
+        "项目地址：  \nhttps://github.com/minlearn/inst",
+        "演示视频：  \n无（面板一图即够，无须过程演示）",
+        "下一篇就写osx dmg的支持了。"
+      ]
+    }
+  ]
+}

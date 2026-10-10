@@ -1,0 +1,60 @@
+{
+  "id": "instnews-qcow2",
+  "slug": "qcow2",
+  "title": "如何将vps重装为almalinux cloudimage (支持其它主流linux发行版的qcow2)",
+  "subtitle": "",
+  "icon": "📄",
+  "tags": [
+    "文档"
+  ],
+  "category": "instnews",
+  "lastUpdated": "2024-08-31",
+  "sections": [
+    {
+      "type": "text",
+      "content": [
+        "今天，我们花了点时间实现了debian到主流linux cloudimage qcow2的在线重装(alma,centos,rocky,debian,ubuntu,etc..)",
+        "比起其它脚本，inst.sh依然坚守了“基于串流和解压”的在线安装理论和实现，因此："
+      ],
+      "title": ""
+    },
+    {
+      "type": "ul",
+      "items": [
+        "保留了一惯的脚本平滑内存要求。",
+        "保留了一惯的面向用户命令结构。"
+      ]
+    },
+    {
+      "type": "quote",
+      "content": "qcow2的在线串流和解压 ,也就是nbdcopy and nbdkit/qemu-nbd这些工具提供的"
+    },
+    {
+      "type": "text",
+      "content": "开始演示如何安装:  \n(你的源linux要是基于deb的，比如<code>debian,ubuntu,kali...</code>)"
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "content": "wget -qO- inst.sh|bash -s - -t https://down.idc.wiki/Image/realServer-Template/2024-08-05/qcow2/almalinux8.qcow2"
+    },
+    {
+      "type": "text",
+      "content": [
+        "(我们使用almalinux cloudimage作为演示,但实际上所有 https://down.idc.wiki/Image/realServer-Template/2024-08-05/qcow2/ 上的直链都可用)",
+        "重装完成, 如果无误,root密码是``<code>inst.sh</code>`<code>  \n安装过程中可去</code>`<code>http://yourvpspublicip</code>``看实时vnc视图"
+      ]
+    },
+    {
+      "type": "hr"
+    },
+    {
+      "type": "text",
+      "content": [
+        "给个星标:",
+        "仓库: https://github.com/minlearn/inst  \n资源: https://down.idc.wiki/Image/realServer-Template/2024-08-05/qcow2/",
+        "<iframe src=\"//player.bilibili.com/player.html?isOutside=true&aid=113054679303573&bvid=BV1HSndezEaq&cid=25668619934&p=1\" scrolling=\"no\" border=\"0\" frameborder=\"no\" framespacing=\"0\" allowfullscreen=\"true\"></iframe>"
+      ]
+    }
+  ]
+}

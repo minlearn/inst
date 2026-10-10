@@ -1,0 +1,78 @@
+{
+  "id": "instnews-natproxy",
+  "slug": "natproxy",
+  "title": "将一台内网linux重装为公网windows(win to linux也可)",
+  "subtitle": "",
+  "icon": "📄",
+  "tags": [
+    "文档"
+  ],
+  "category": "instnews",
+  "lastUpdated": "2025-03-20",
+  "sections": [
+    {
+      "type": "text",
+      "content": [
+        "又一个惊爆特性!!",
+        "我们现在可以使用inst.sh将一台nat vps（它可能没有任何外网联网能力，比如一台nas，一台家用电脑，一台办公电脑）重装为一台外网可访问的电脑。改变其系统。",
+        "这一切是将inst.sh答配使用一台自建的内网穿透机来进行的：",
+        "自建rathole nat服务器",
+        "准备一台有公网ip的vps,（注意这台并 <em><strong>不是</strong></em> 你要运行inst.sh进行重装的那台）",
+        "从 https://github.com/rapiz1/rathole/releases/download/v0.4.8/rathole-x86_64-unknown-linux-musl.zip 这里下载二进制并解压\n写一个叫 server.toml的配置文件放在同目录下"
+      ],
+      "title": ""
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "content": "[server]\nbind_addr = \"0.0.0.0:2333\"\ndefault_token = \"default_token_if_not_specify\"\nheartbeat_interval = 30\n[server.services.1]\nbind_addr = \"0.0.0.0:8000\"\n[server.services.22]\nbind_addr = \"0.0.0.0:1022\"\n[server.services.80]\nbind_addr = \"0.0.0.0:1080\"\n[server.services.3389]\nbind_addr = \"0.0.0.0:13389\"\n[server.services.8000]\nbind_addr = \"0.0.0.0:18000\""
+    },
+    {
+      "type": "text",
+      "content": [
+        "the [server.services.3389] 这段将被inst.sh使用, 保证13389口未被使用",
+        "执行"
+      ]
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "content": "./rathole server.toml"
+    },
+    {
+      "type": "text",
+      "content": [
+        "重装完成在log窗口将会出现13389相关的条目，但是现在只显示0.0.0.0:2333监听字样",
+        "执行inst.sh命令",
+        "在你要进行重装到win的linux的ssh下, 执行:"
+      ]
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "content": "wget -qO- inst.sh|bash -s - -o 3389:ratholeip -t windowsgzurl"
+    },
+    {
+      "type": "text",
+      "content": [
+        "这将暴露本地的3389到远程rathole server的13389，有人喜欢反过来说是13389转到到3389，不必拘泥这种说法上的区别,如果你在win上执行，请前往 https://github.com/minlearn/inst 寻找在win下运行inst.sh的说明,你甚至可以在命令尾部加入\"-d 22:ratholeip\"以监视重装过程的进度，同样前往 https://github.com/minlearn/inst 寻找相关说明",
+        "3, 重装完成后",
+        "在rathole所在vps的log窗口中，寻找有无13389的条目，如果有，你就可以用rathole的ip:13389连接你内网的windows rdp服务了"
+      ]
+    },
+    {
+      "type": "hr"
+    },
+    {
+      "type": "text",
+      "content": [
+        "inst.sh:",
+        "https://github.com/minlearn/inst",
+        "rathole:",
+        "https://github.com/rapiz1/rathole/releases/download/v0.4.8/rathole-x86_64-unknown-linux-musl.zip",
+        "视频:",
+        "<iframe src=\"//player.bilibili.com/player.html?isOutside=true&aid=114193147626619&bvid=BV1h3XPYiE7z&cid=28964292351&p=1\" scrolling=\"no\" border=\"0\" frameborder=\"no\" framespacing=\"0\" allowfullscreen=\"true\"></iframe>"
+      ]
+    }
+  ]
+}

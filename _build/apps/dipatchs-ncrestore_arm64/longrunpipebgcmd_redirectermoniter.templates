@@ -1,0 +1,11 @@
+Template: my_script/progress/preres
+Type: text
+Description: preres begin,cleaning ...
+
+Template: my_script/progress/res
+Type: text
+Description: nc restore,please wait: ${STATUS}
+
+Template: my_script/progress/postres
+Type: text
+Description: postres done,rebooting ...

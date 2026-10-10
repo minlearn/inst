@@ -1,0 +1,47 @@
+{
+  "id": "instnews-cmdslip",
+  "slug": "cmdslip",
+  "title": "利用支持命令注入的一键dd脚本inst.sh重装linux并注入桌面安装参数（也支持windows注入）",
+  "subtitle": "",
+  "icon": "📄",
+  "tags": [
+    "文档"
+  ],
+  "category": "instnews",
+  "lastUpdated": "2025-06-08",
+  "sections": [
+    {
+      "type": "text",
+      "content": [
+        "虽然人们通常使用在线安装服务器版本的linux,但好像安装完linux加一个桌面也是挺有意思的事",
+        "inst.sh现在支持向在线安装的linux注入命令参数，你可以不断丰富并调试这些命令参数，利用它制造多样化在线安装过程。比如安装app，给系统进行tweaks，定制安装过程完成后的每一个部分  \ninst.sh下windows也支持注入命令参数，可玩性因此比以前更多样，甚至给windows注入驱动这样的事也可以完成",
+        "以下演示在linux下进行，通常也支持linux to linux,win to linux,linux to win"
+      ],
+      "title": ""
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "content": "wget -qO- inst.sh|bash -s - --cmd 'tasksel install desktop' -t debian  \n(注意:  命令参数要用双单引号括起来, 并保持命令为一行式 )  "
+    },
+    {
+      "type": "text",
+      "content": [
+        "在系统安装完并启动进入后，会有图形进度显示后续执行这些命令参数的过程（比如调用whiptail的命令过程，当然，如果本来是控制台命令，将不会有图形显示命令进度）",
+        "这一切都是利用/etc/rc.local或windows的自启文件机制来承载注入的命令完成的  \n在命令全部执行成功后，当前linux用户目录或windows桌面会出现net.txt文件",
+        "enjoy yourself ！！"
+      ]
+    },
+    {
+      "type": "hr"
+    },
+    {
+      "type": "text",
+      "content": [
+        "命令示例：  \nwget -qO- inst.sh|bash -s - --cmd 'tasksel install desktop' -t debian",
+        "项目地址：\nhttps://github.com/minlearn/inst",
+        "演示视频：\n<iframe src=\"//player.bilibili.com/player.html?isOutside=true&aid=114644119193774&bvid=BV1tvTmzJEpH&cid=30378888212&p=1\" scrolling=\"no\" border=\"0\" frameborder=\"no\" framespacing=\"0\" allowfullscreen=\"true\"></iframe>"
+      ]
+    }
+  ]
+}
