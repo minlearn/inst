@@ -1,0 +1,81 @@
+{
+  "hero": {
+    "title": "inst",
+    "subtitle": "lifelong linux and onekeystoke netinstall script/panel/appstore",
+    "ctas": [
+      { "text": "开始使用", "link": "https://p.inst.sh", "primary": true },
+      { "text": "更多文档", "link": "/docs/#/instintro-intro", "primary": false }
+    ],
+    "image": "https://raw.githubusercontent.com/minlearn/inst/master/_build/www/assets/instcf.png"
+  },
+  "features": [
+    {
+      "icon": "⚡",
+      "title": "clean",
+      "details": "portable, taken alway, live and clean"
+    },
+    {
+      "icon": "📝",
+      "title": "easy",
+      "details": "all in one click, mininmal curve,well granulated"
+    },
+    {
+      "icon": "🎨",
+      "title": "open",
+      "details": "drop in,open,diyable, no over abstracted,freedom for selfbuild,custom"
+    },
+    {
+      "icon": "🔍",
+      "title": "full",
+      "details": "all self containerd, services almost builtin"
+    },
+    {
+      "icon": "🧩",
+      "title": "long",
+      "details": "immersive, battery included, life long,persistable"
+    },
+    {
+      "icon": "📦",
+      "title": "dedi",
+      "details": "raw coded,flat packaged, mininmal deps with externals"
+    },
+    {
+      "icon": "📦",
+      "title": "safe",
+      "details": "one stop all in,one closure, core in a nutshell and solid blackbox"
+    }
+  ],
+  "pricing": {
+    "title": "用户对比",
+    "free": {
+      "name": "一般用户",
+      "price": "免费",
+      "period": "",
+      "cta": "开始使用",
+      "link": "https://p.inst.sh",
+      "features": [
+        "基础脚本库",
+        "公开文档",
+        "基础面板"
+      ]
+    },
+    "paid": {
+      "name": "群组用户",
+      "price": "¥99",
+      "period": "终身",
+      "cta": "立即加入",
+      "link": "#supportly",
+      "widgetChannelId": "supportly-widget-ch_04b307667f6c0225062b42347907191f-frame",
+      "features": [
+        "基础脚本库",
+        "公开文档",
+        "基础面板",
+        "社区支持",
+        "定制镜像",
+        "精细到厂商机型的DD方案",
+        "专属资源配置"
+      ]
+    }
+  },
+  "quote": "本项目采用捐助开发模式，本人长期接脚本二次功能开发/有偿付费dd/定制dd镜像服务/定制app服务，价格各60元/10U起，不成功不收费，可送加群资格"
+}

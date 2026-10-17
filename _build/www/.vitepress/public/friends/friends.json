@@ -1,0 +1,18 @@
+{
+  "title": "友链",
+  "description": "互为友链，互相推荐。欢迎交换友链，申请可通过右下角弹窗联系。",
+  "friends": [
+    {
+      "name": "minlearn",
+      "url": "https://www.minlearn.org",
+      "desc": "一点就通，终身学习，开源技术博客。",
+      "tags": ["博客"]
+    },
+    {
+      "name": "烧饼主机社区",
+      "url": "https://sb.sb/",
+      "desc": "一个开放包容的、有活力的新生主机社区，会员急速增加中，欢迎加入。",
+      "tags": ["论坛"]
+    }
+  ]
+}
