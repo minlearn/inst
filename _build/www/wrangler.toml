@@ -1,0 +1,35 @@
+name = "panel"
+main = "./api/worker.js"
+compatibility_date = "2026-07-06"
+compatibility_flags = ["nodejs_compat"]
+
+# default behaiver for wrangler 4.x
+#[build]
+#upload.format = "service-worker"
+
+[[durable_objects.bindings]]
+name = "STATE"
+class_name = "StateDO"
+
+[[migrations]]
+tag = "v1_state"
+new_sqlite_classes = ["StateDO"]
+
+[assets]
+# 静态请求在 compatibility_date >= 2025-04-01 时不计费
+directory = "./frontend"
+# SPA fallback：前端路由刷新时返回 index.html（避免 404）
+not_found_handling = "single-page-application"
+# 配置：明确指定这些路径优先进入 Worker 处理
+run_worker_first = ["/api/*", "/health", "/hardware", "/instrepos"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "panel"
+database_id = "00000000-0000-0000-0000-000000000000"
+
+[vars]
+CF_CREDENTIALS_KEY = "dev-cf-credentials-key-change-before-deploy"
+CF_CATALOG_URL = ""
+ENVIRONMENT = "demo"
+ADMIN_API_TOKEN = "change-me-admin-api-token"
