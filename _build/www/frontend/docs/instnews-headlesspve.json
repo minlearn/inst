@@ -1,0 +1,60 @@
+{
+  "id": "instnews-headlesspve",
+  "slug": "headlesspve",
+  "title": "无头模式pve和本地分离式前端",
+  "subtitle": "",
+  "icon": "📄",
+  "tags": [
+    "文档"
+  ],
+  "category": "instnews",
+  "lastUpdated": "2024-09-19",
+  "sections": [
+    {
+      "type": "text",
+      "content": [
+        "众所周知，pve被发布成一个前后结合的app，但是这并不表示它是个整体一块的app，它由可分离的perl后端+js前端写成，只需要作一些修改就可将pve打造成前后分离的app。",
+        "甚至如果可以，想象一下将pve后端做成无头的，那么无数这样的pve后端可以用一个pve前端来聚合连接，那该多cool",
+        "1kdd就提供了一个这样的演示和原型:"
+      ],
+      "title": ""
+    },
+    {
+      "type": "text",
+      "content": "首先，安装一个绕过了cors的pve后端修改版本：debianmu。",
+      "title": "后端安装"
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "content": "wget -qO- inst.sh|bash -s - -t debianmu\n\n安装完成，打开https://yourpveserverip:8006, 当浏览器提示有https内容时选择继续, 我们这里的目的仅是得到能浏览https://domain的证书，无其它，不需要在这里登录\n"
+    },
+    {
+      "type": "quote",
+      "content": "安装的pve不是100%无头的，但是已经经过了无头化改造，分离了前后端，只是没有彻底去掉前端，以保持原pve的使用风格。"
+    },
+    {
+      "type": "text",
+      "content": "接下来，我们需要准备一个本地的“pveman”，这就是打包了所有pvemanager前端资源的“客户端”了，我们还增强加进了允许其它服务器登录的相关逻辑",
+      "title": "前端安装"
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "content": "https://github.com/minlearn/mujj/archive/refs/heads/master.zip\n\n解压mujj/dist/pveman dir, 用本的http服务器将其服务成静态网站\n你也可以直接打开https://mujj.de/pveman使用，测试\n"
+    },
+    {
+      "type": "text",
+      "content": [
+        "完成!",
+        "在你本地静态网站或打开的https://mujj.de/pveman登录框中的server填空处，填入你远程pve后端的地址，形如https://ip:8006，等待realm回调完成，点击登录按钮连接",
+        "======",
+        "star仓库:\nhttps://github.com/minlearn/inst",
+        "客户端资源:\nhttps://github.com/minlearn/mujj/archive/refs/heads/master.zip",
+        "视频:",
+        "<iframe src=\"//player.bilibili.com/player.html?isOutside=true&aid=113160056998336&bvid=BV1eRt7eTE5A&cid=25914769628&p=1\" scrolling=\"no\" border=\"0\" frameborder=\"no\" framespacing=\"0\" allowfullscreen=\"true\"></iframe>"
+      ],
+      "title": "测试客户端服务端连接"
+    }
+  ]
+}
