@@ -1,0 +1,54 @@
+{
+  "id": "instnews-vzpve",
+  "slug": "vzpve",
+  "title": "将openvz容器一键转化为pve",
+  "subtitle": "",
+  "icon": "📄",
+  "tags": [
+    "文档"
+  ],
+  "category": "instnews",
+  "lastUpdated": "2024-05-14",
+  "sections": [
+    {
+      "type": "text",
+      "content": [
+        "这主要是兴趣来临下的一次测试，证明pve的可以安装作为容器的rootfs，并且openvz（lxc）这种容器的rootfs，是可以实时转换的。",
+        "开始，需要保证openvz的母机端给ovz容器子鸡配置了fuse节点:"
+      ],
+      "title": ""
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "content": "lsmod|grep fuse"
+    },
+    {
+      "type": "text",
+      "content": "然后，就可以像往常一样使用1keydd inst.sh脚本安装目标了，这次是 -t debianctmu"
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "content": "wget -qO- inst.sh|bash -s - -t debianctmu"
+    },
+    {
+      "type": "text",
+      "content": [
+        "安装完后，网络和ssh以及root密码基本会复制转化前的方案。你可以拿原来的root帐密来登录https://yourip:8006",
+        "容器版的pve只占200m不到的内存"
+      ]
+    },
+    {
+      "type": "hr"
+    },
+    {
+      "type": "text",
+      "content": [
+        "仓库: https://github.com/minlearn/inst",
+        "视频：",
+        "<iframe src=\"//player.bilibili.com/player.html?aid=1104517365&bvid=BV1rw4m1Q7dv&cid=1544516754&p=1\" scrolling=\"no\" border=\"0\" frameborder=\"no\" framespacing=\"0\" allowfullscreen=\"true\"> </iframe>"
+      ]
+    }
+  ]
+}

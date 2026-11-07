@@ -1,0 +1,95 @@
+{
+  "hero": {
+    "title": "inst",
+    "subtitle": "lifelong linux and onekeystoke netinstall script/panel/appstore",
+    "ctas": [
+      {
+        "text": "开始使用",
+        "link": "https://www.inst.sh/panel",
+        "target": "_self",
+        "primary": true
+      },
+      {
+        "text": "更多文档",
+        "link": "/docs/#/instintro-intro",
+        "primary": false
+      }
+    ],
+    "image": "https://raw.githubusercontent.com/minlearn/inst/master/_build/www/frontend/assets/instcf.png"
+  },
+  "features": [
+    {
+      "icon": "⚡",
+      "title": "多平台",
+      "details": "linux/windows/osx，双架构amd,arm双启动uefi,bios"
+    },
+    {
+      "icon": "📝",
+      "title": "多引擎",
+      "details": "增强的debianinstaller和嵌入的pve lxc环境"
+    },
+    {
+      "icon": "🎨",
+      "title": "多功能",
+      "details": "nativedi,wgetdd,liveuntar,nc restore,inplace dd"
+    },
+    {
+      "icon": "🔍",
+      "title": "多镜像格式",
+      "details": "remote mirror/iso/dmg/raw/gz/xz/zstd/qcow2,localfile,docker oci,pve lxc app"
+    },
+    {
+      "icon": "🧩",
+      "title": "可调试",
+      "details": "vnc,web,支持免d坏模式"
+    },
+    {
+      "icon": "📦",
+      "title": "高扩展性",
+      "details": "az,servarica,oracle/oracle arm,ksle,bwg10g512m,..."
+    },
+    {
+      "icon": "📦",
+      "title": "高可用",
+      "details": "自扩硬盘和智能嵌入静态ip参数(特殊掩码支持)，无最小内存限制"
+    },
+    {
+      "icon": "📦",
+      "title": "高成功率",
+      "details": "90%的linux成功率,80%的other os成功率"
+    }
+  ],
+  "pricing": {
+    "title": "用户对比",
+    "free": {
+      "name": "一般用户",
+      "price": "免费",
+      "period": "",
+      "cta": "开始使用",
+      "link": "https://p.inst.sh",
+      "features": [
+        "基础脚本库",
+        "公开文档",
+        "基础面板"
+      ]
+    },
+    "paid": {
+      "name": "群组用户",
+      "price": "¥99",
+      "period": "终身",
+      "cta": "立即加入",
+      "link": "#supportly",
+      "widgetChannelId": "supportly-widget-ch_04b307667f6c0225062b42347907191f-frame",
+      "features": [
+        "基础脚本库",
+        "公开文档",
+        "基础面板",
+        "社区支持",
+        "定制镜像",
+        "精细到厂商机型的DD方案",
+        "专属资源配置"
+      ]
+    }
+  },
+  "quote": "本项目主体免费，仅定制部分采用捐助开发模式，本人长期接脚本二次功能开发/有偿付费dd/定制dd镜像服务/定制app服务，价格各60元/10U起，不成功不收费，可送加群资格"
+}

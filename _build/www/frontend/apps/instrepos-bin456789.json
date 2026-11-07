@@ -1,0 +1,46 @@
+{
+  "id": "instrepos-bin456789",
+  "slug": "bin456789",
+  "name": "bin456789",
+  "type": "script",
+  "description": "bin456789",
+  "date_created": "2026-11-07",
+  "lastUpdated": "2026-11-07",
+  "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+  "category": "instrepos",
+  "categories": [
+    "instrepos"
+  ],
+  "sections": [
+    {
+      "type": "text",
+      "content": "bin456789的arm windows包",
+      "title": ""
+    },
+    {
+      "type": "table",
+      "headers": [
+        "系统",
+        "作者",
+        "解压",
+        "平台",
+        "启动",
+        "登录密码",
+        "直链"
+      ],
+      "rows": [
+        [
+          "win11",
+          "bin456789",
+          "10.0GB",
+          "arm64",
+          "UEFI",
+          "123@@@",
+          "https://r2.hotdog.eu.org/en-us_windows_11_enterprise_ltsc_2024_arm64_10g_123%40%40%40.xz"
+        ]
+      ]
+    }
+  ],
+  "install_methods": [],
+  "config_file": ""
+}

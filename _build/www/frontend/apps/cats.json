@@ -1,0 +1,529 @@
+{
+  "categories": [
+    {
+      "id": "instrepos",
+      "name": "instrepos",
+      "icon": "🖥",
+      "sort_order": 1,
+      "items": [
+        {
+          "id": "instrepos-1keydd",
+          "slug": "1keydd",
+          "name": "1keydd",
+          "type": "script",
+          "date_created": "2026-11-07",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "1keydd"
+        },
+        {
+          "id": "instrepos-bin456789",
+          "slug": "bin456789",
+          "name": "bin456789",
+          "type": "script",
+          "date_created": "2026-11-07",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "bin456789"
+        },
+        {
+          "id": "instrepos-linuxlive",
+          "slug": "linuxlive",
+          "name": "linuxlive isos",
+          "type": "script",
+          "date_created": "2026-11-07",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "linuxlive isos"
+        },
+        {
+          "id": "instrepos-natee",
+          "slug": "natee",
+          "name": "natee",
+          "type": "script",
+          "date_created": "2026-11-07",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "natee"
+        },
+        {
+          "id": "instrepos-osxdmgs",
+          "slug": "osxdmgs",
+          "name": "osx dmgs",
+          "type": "script",
+          "date_created": "2026-11-07",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "osx dmgs"
+        },
+        {
+          "id": "instrepos-teddysun",
+          "slug": "teddysun",
+          "name": "teddysun",
+          "type": "script",
+          "date_created": "2026-11-07",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "teddysun"
+        },
+        {
+          "id": "instrepos-wikihost",
+          "slug": "wikihost",
+          "name": "wikihost",
+          "type": "script",
+          "date_created": "2026-11-07",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "wikihost"
+        },
+        {
+          "id": "instrepos-windowsisos",
+          "slug": "windowsisos",
+          "name": "windows isos",
+          "type": "script",
+          "date_created": "2026-11-07",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "windows isos"
+        }
+      ]
+    },
+    {
+      "id": "pveapps",
+      "name": "pveapps",
+      "icon": "🐧",
+      "sort_order": 2,
+      "items": [
+        {
+          "id": "pveapps-android",
+          "slug": "android",
+          "name": "android",
+          "type": "script",
+          "date_created": "2026-11-07",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "android"
+        },
+        {
+          "id": "pveapps-buildkernel",
+          "slug": "buildkernel",
+          "name": "buildkernel",
+          "type": "script",
+          "date_created": "2026-11-07",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "buildkernel"
+        },
+        {
+          "id": "pveapps-bxcq",
+          "slug": "bxcq",
+          "name": "bxcq",
+          "type": "script",
+          "date_created": "2026-11-07",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "bxcq"
+        },
+        {
+          "id": "pveapps-chrome",
+          "slug": "chrome",
+          "name": "chrome",
+          "type": "script",
+          "date_created": "2026-11-07",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "chrome"
+        },
+        {
+          "id": "pveapps-clashmeta",
+          "slug": "clashmeta",
+          "name": "clashmeta",
+          "type": "script",
+          "date_created": "2026-11-07",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "clashmeta"
+        },
+        {
+          "id": "pveapps-cloudflared",
+          "slug": "cloudflared",
+          "name": "cloudflared",
+          "type": "script",
+          "date_created": "2026-11-07",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "cloudflared"
+        },
+        {
+          "id": "pveapps-code-server",
+          "slug": "code-server",
+          "name": "code-server",
+          "type": "script",
+          "date_created": "2026-11-07",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "code-server"
+        },
+        {
+          "id": "pveapps-counter",
+          "slug": "counter",
+          "name": "counter",
+          "type": "script",
+          "date_created": "2026-11-07",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "counter"
+        },
+        {
+          "id": "pveapps-debian-installer",
+          "slug": "debian-installer",
+          "name": "debian-installer",
+          "type": "script",
+          "date_created": "2026-11-07",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "debian-installer"
+        },
+        {
+          "id": "pveapps-debiande",
+          "slug": "debiande",
+          "name": "debiande",
+          "type": "script",
+          "date_created": "2026-11-07",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "debiande"
+        },
+        {
+          "id": "pveapps-debmirror",
+          "slug": "debmirror",
+          "name": "debmirror",
+          "type": "script",
+          "date_created": "2026-11-07",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "debmirror"
+        },
+        {
+          "id": "pveapps-debootstrap",
+          "slug": "debootstrap",
+          "name": "debootstrap",
+          "type": "script",
+          "date_created": "2026-11-07",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "debootstrap"
+        },
+        {
+          "id": "pveapps-dibootstrap",
+          "slug": "dibootstrap",
+          "name": "dibootstrap",
+          "type": "script",
+          "date_created": "2026-11-07",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "dibootstrap"
+        },
+        {
+          "id": "pveapps-docker",
+          "slug": "docker",
+          "name": "docker",
+          "type": "script",
+          "date_created": "2026-11-07",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "docker"
+        },
+        {
+          "id": "pveapps-dummy",
+          "slug": "dummy",
+          "name": "dummy",
+          "type": "script",
+          "date_created": "2026-11-07",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "dummy"
+        },
+        {
+          "id": "pveapps-gitbook",
+          "slug": "gitbook",
+          "name": "gitbook",
+          "type": "script",
+          "date_created": "2026-11-07",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "gitbook"
+        },
+        {
+          "id": "pveapps-gitea",
+          "slug": "gitea",
+          "name": "gitea",
+          "type": "script",
+          "date_created": "2026-11-07",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "gitea"
+        },
+        {
+          "id": "pveapps-golang",
+          "slug": "golang",
+          "name": "golang",
+          "type": "script",
+          "date_created": "2026-11-07",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "golang"
+        },
+        {
+          "id": "pveapps-iplc",
+          "slug": "iplc",
+          "name": "iplc",
+          "type": "script",
+          "date_created": "2026-11-07",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "iplc"
+        },
+        {
+          "id": "pveapps-jigdo",
+          "slug": "jigdo",
+          "name": "jigdo",
+          "type": "script",
+          "date_created": "2026-11-07",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "jigdo"
+        },
+        {
+          "id": "pveapps-kasmvnc",
+          "slug": "kasmvnc",
+          "name": "kasmvnc",
+          "type": "script",
+          "date_created": "2026-11-07",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "kasmvnc"
+        },
+        {
+          "id": "pveapps-kvmosx",
+          "slug": "kvmosx",
+          "name": "kvmosx",
+          "type": "script",
+          "date_created": "2026-11-07",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "kvmosx"
+        },
+        {
+          "id": "pveapps-kvmwin",
+          "slug": "kvmwin",
+          "name": "kvmwin",
+          "type": "script",
+          "date_created": "2026-11-07",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "kvmwin"
+        },
+        {
+          "id": "pveapps-mariadb",
+          "slug": "mariadb",
+          "name": "mariadb",
+          "type": "script",
+          "date_created": "2026-11-07",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "mariadb"
+        },
+        {
+          "id": "pveapps-mmdebstrap",
+          "slug": "mmdebstrap",
+          "name": "mmdebstrap",
+          "type": "script",
+          "date_created": "2026-11-07",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "mmdebstrap"
+        },
+        {
+          "id": "pveapps-mongodb",
+          "slug": "mongodb",
+          "name": "mongodb",
+          "type": "script",
+          "date_created": "2026-11-07",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "mongodb"
+        },
+        {
+          "id": "pveapps-mysql57",
+          "slug": "mysql57",
+          "name": "mysql57",
+          "type": "script",
+          "date_created": "2026-11-07",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "mysql57"
+        },
+        {
+          "id": "pveapps-nbd",
+          "slug": "nbd",
+          "name": "nbd",
+          "type": "script",
+          "date_created": "2026-11-07",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "nbd"
+        },
+        {
+          "id": "pveapps-nextcloud",
+          "slug": "nextcloud",
+          "name": "nextcloud",
+          "type": "script",
+          "date_created": "2026-11-07",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "nextcloud"
+        },
+        {
+          "id": "pveapps-nodejs",
+          "slug": "nodejs",
+          "name": "nodejs",
+          "type": "script",
+          "date_created": "2026-11-07",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "nodejs"
+        },
+        {
+          "id": "pveapps-ollama",
+          "slug": "ollama",
+          "name": "ollama",
+          "type": "script",
+          "date_created": "2026-11-07",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "ollama"
+        },
+        {
+          "id": "pveapps-openwebui",
+          "slug": "openwebui",
+          "name": "openwebui",
+          "type": "script",
+          "date_created": "2026-11-07",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "openwebui"
+        },
+        {
+          "id": "pveapps-ovhauto",
+          "slug": "ovhauto",
+          "name": "ovhauto",
+          "type": "script",
+          "date_created": "2026-11-07",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "ovhauto"
+        },
+        {
+          "id": "pveapps-owt",
+          "slug": "owt",
+          "name": "owt",
+          "type": "script",
+          "date_created": "2026-11-07",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "owt"
+        },
+        {
+          "id": "pveapps-playwright",
+          "slug": "playwright",
+          "name": "playwright",
+          "type": "script",
+          "date_created": "2026-11-07",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "playwright"
+        },
+        {
+          "id": "pveapps-postgresql",
+          "slug": "postgresql",
+          "name": "postgresql",
+          "type": "script",
+          "date_created": "2026-11-07",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "postgresql"
+        },
+        {
+          "id": "pveapps-proxmox-backup",
+          "slug": "proxmox-backup",
+          "name": "proxmox-backup",
+          "type": "script",
+          "date_created": "2026-11-07",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "proxmox-backup"
+        },
+        {
+          "id": "pveapps-proxmox-ve",
+          "slug": "proxmox-ve",
+          "name": "proxmox-ve",
+          "type": "script",
+          "date_created": "2026-11-07",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "proxmox-ve"
+        },
+        {
+          "id": "pveapps-python",
+          "slug": "python",
+          "name": "python",
+          "type": "script",
+          "date_created": "2026-11-07",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "python"
+        },
+        {
+          "id": "pveapps-qemu",
+          "slug": "qemu",
+          "name": "qemu",
+          "type": "script",
+          "date_created": "2026-11-07",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "qemu"
+        },
+        {
+          "id": "pveapps-redis",
+          "slug": "redis",
+          "name": "redis",
+          "type": "script",
+          "date_created": "2026-11-07",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "redis"
+        },
+        {
+          "id": "pveapps-redriod",
+          "slug": "redriod",
+          "name": "redriod",
+          "type": "script",
+          "date_created": "2026-11-07",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "redriod"
+        },
+        {
+          "id": "pveapps-tm",
+          "slug": "tm",
+          "name": "tm",
+          "type": "script",
+          "date_created": "2026-11-07",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "tm"
+        },
+        {
+          "id": "pveapps-vncterm",
+          "slug": "vncterm",
+          "name": "vncterm",
+          "type": "script",
+          "date_created": "2026-11-07",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "vncterm"
+        },
+        {
+          "id": "pveapps-wordpress",
+          "slug": "wordpress",
+          "name": "wordpress",
+          "type": "script",
+          "date_created": "2026-11-07",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "wordpress"
+        },
+        {
+          "id": "pveapps-xmrig",
+          "slug": "xmrig",
+          "name": "xmrig",
+          "type": "script",
+          "date_created": "2026-11-07",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "xmrig"
+        },
+        {
+          "id": "pveapps-xray",
+          "slug": "xray",
+          "name": "xray",
+          "type": "script",
+          "date_created": "2026-11-07",
+          "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/proxmox.webp",
+          "description": "xray"
+        }
+      ]
+    },
+    {
+      "id": "cfapps",
+      "name": "cfapps",
+      "icon": "☁️",
+      "sort_order": 3,
+      "items": []
+    },
+    {
+      "id": "misc",
+      "name": "misc",
+      "sort_order": 99,
+      "description": "",
+      "icon": "📌"
+    }
+  ]
+}
