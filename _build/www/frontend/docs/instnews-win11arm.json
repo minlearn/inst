@@ -1,0 +1,45 @@
+{
+  "id": "instnews-win11arm",
+  "slug": "win11arm",
+  "title": "把arm vps从linux重装为win11(同样支持oracle ampere)",
+  "subtitle": "",
+  "icon": "📄",
+  "tags": [
+    "文档"
+  ],
+  "category": "instnews",
+  "lastUpdated": "2024-10-02",
+  "sections": [
+    {
+      "type": "text",
+      "content": [
+        "直到最近windows才更新了它的arm iso(24h2)，基本上从这个win11 iso开始，windows arm才算可以在一般的arm vps上实现安装并运行了。",
+        "比起win10 arm iso只能在az上运行，新的win11（或许还有winsrv2025）似乎对通用armvps和设备有了广泛支持。",
+        "多亏reinstall.sh的作者，在解决了显卡驱动的小问题后，他把一个windows11的iso安装在了一台oracle arm vps上并使得它成功运行。",
+        "我们用他做的包和 inst.sh ，来快速尝试一下，",
+        "我是在一台hetzner cx11(2c4g arm vps)上尝试的，而不是甲骨文"
+      ],
+      "title": ""
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "content": "wget -qO- inst.sh|bash -s - -t https://r2.hotdog.eu.org/en-us_windows_11_enterprise_ltsc_2024_arm64_10g_123@@@.xz\n\n(安装完后密码为: administrator，123@@@)\n因为cx11和甲骨文arm在硬件上都有不错的跑分，所以安装后的win11也不会表现太坏。"
+    },
+    {
+      "type": "hr"
+    },
+    {
+      "type": "text",
+      "content": [
+        "视频:",
+        "<iframe src=\"//player.bilibili.com/player.html?isOutside=true&aid=113237399963492&bvid=BV15h4ge2EX7&cid=26108363239&p=1\" scrolling=\"no\" border=\"0\" frameborder=\"no\" framespacing=\"0\" allowfullscreen=\"true\"></iframe>",
+        "仓库:",
+        "https://github.com/minlearn/inst",
+        "https://github.com/bin456789/reinstall",
+        "资源:",
+        "https://minlearn.org/inst/instrepos/bin456789"
+      ]
+    }
+  ]
+}

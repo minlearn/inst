@@ -1,0 +1,11 @@
+Template: my_script/progress/pass1
+Type: text
+Description: pass1 begin,please wait: ${STATUS}
+
+Template: my_script/progress/pass2
+Type: text
+Description: pass2 begin,please wait: ${STATUS}
+
+Template: my_script/progress/pass3
+Type: text
+Description: pass3 begin,please wait: ${STATUS}

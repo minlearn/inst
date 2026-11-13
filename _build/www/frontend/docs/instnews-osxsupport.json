@@ -1,0 +1,59 @@
+{
+  "id": "instnews-osxsupport",
+  "slug": "osxsupport",
+  "title": "利用可显进度的一键dd脚本1keydd重装osx为带gui的pve",
+  "subtitle": "",
+  "icon": "📄",
+  "tags": [
+    "文档"
+  ],
+  "category": "instnews",
+  "lastUpdated": "2024-01-30",
+  "sections": [
+    {
+      "type": "text",
+      "content": "第一步，下载面的脚本依赖，将osx打造为脚本友好的环境（实际上就是grub2）：",
+      "title": ""
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "content": "https://github.com/minlearn/inst/releases/download/inital/instsupportforosx.pkg"
+    },
+    {
+      "type": "text",
+      "content": [
+        "在你要dd的osx上解压依赖并安装，确保你能成功执行wget和grub命令（比如grub-mkimage）",
+        "对了osx下需要进入恢复模式打开csrutil disable",
+        "一切完成后，在bash中执行："
+      ]
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "content": "wget -qO- inst.sh|bash -s - -t debianmu\n大部分参数和在linux下一样，除了不推荐使用-n参数"
+    },
+    {
+      "type": "text",
+      "content": [
+        "debianmu新加了一个gui桌面模式，与console的pve做成了二合一的pve发布版：",
+        "脚本执行完后选择grub条目启动，dd完后选择devdeskos gui启动。",
+        "完工！"
+      ]
+    },
+    {
+      "type": "hr"
+    },
+    {
+      "type": "text",
+      "content": [
+        "仓库:",
+        "https://github.com/minlearn/inst/",
+        "教程和实例:",
+        "https://inst.sh",
+        "视频:",
+        "<iframe src=\"//player.bilibili.com/player.html?aid=1000060550&bvid=BV1S44y1F7o6&cid=1438197271&p=1\" scrolling=\"no\" border=\"0\" frameborder=\"no\" framespacing=\"0\" allowfullscreen=\"true\"> </iframe>"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+name: deployserverless
+
+on:
+  push:
+  workflow_dispatch:
+
+env:
+  CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+  CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+  CLOUDFLARE_PROJECT_NAME: ${{ secrets.CLOUDFLARE_PROJECT_NAME }}
+  CF_CREDENTIALS_KEY: ${{ secrets.CF_CREDENTIALS_KEY }}
+  ADMIN_API_TOKEN: ${{ secrets.ADMIN_API_TOKEN }}
+  DEPLOYMENT_ENVIRONMENT: production
+  DEPLOY_TYPE: ${{ secrets.DEPLOY_TYPE }}
+  PRODUCTION_BRANCH: main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-22.04
+    environment:
+      name: ${{ github.event.inputs.DEPLOYMENT_ENVIRONMENT }}
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: 17.x
+          #tmpcomment      cache: 'yarn'
+
+
+      - name: deploy to cfpagesaio/worker
+        run: |
+
+          #not needed anymore,directly edit it inside db
+          #sudo sh -c "for i in _tmpbuild/_build/discuss/_worker.js _tmpbuild/_build/discuss/app.js;do toreplace=\`cat \$i|grep -Po '(?<=https://t.me/minlearn_1keydd\",)[^}]*'\`;echo \$toreplace;toreplacewith=\`echo \$toreplace|sed -e 's#on#off#;t' -e 's#off#on#;t'\`;echo \$toreplacewith;sed -i s/\${toreplace}/\${toreplacewith}/g \$i;done"
+
+          sudo npm install toml aws-sdk
+          sudo npm install -g wrangler
+          # .vars.toml 为两分支提供 CLOUDFLARE_*（WranglerCmd._getCmd 需要），仅文件缺失时生成；DEPLOY_TYPE 走 CI 环境变量
+          sh .github/actions/serverless/generate_vars_toml.sh
+
+          if [ "$DEPLOY_TYPE" = "worker" ]; then
+            # worker 部署：wrangler.toml 自带 D1/DO/vars 绑定，仅需发布（wrangler deploy），patch wrangler.toml 的 d1 database_id（缺失自动建库）→ 再 wrangler deploy
+            sudo node .github/actions/serverless/init_app_db.js && sudo node .github/actions/serverless/patch_wrangler_toml.js && sudo node .github/actions/serverless/deploy_worker.js
+          else
+            # pages 部署：建库 + 建项目 + 同步配置 + Pages Direct Upload
+            sudo node .github/actions/serverless/init_app_db.js && sudo node .github/actions/serverless/init_project.js
+            sudo node .github/actions/serverless/sync_project_config.js && NODE_ENV=production sudo node .github/actions/serverless/direct_upload.js
+          fi
+
