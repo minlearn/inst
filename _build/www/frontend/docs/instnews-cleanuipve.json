@@ -1,0 +1,27 @@
+{
+  "id": "instnews-cleanuipve",
+  "slug": "cleanuipve",
+  "title": "巨清爽，为pve增加了clean mode",
+  "subtitle": "",
+  "icon": "📄",
+  "tags": [
+    "文档"
+  ],
+  "category": "instnews",
+  "lastUpdated": "2024-02-28",
+  "sections": [
+    {
+      "type": "text",
+      "content": [
+        "继 暗黑模式 后，又为pve增加了清爽模式",
+        "左拉，会腾出一大块空间，上边条会隐藏，节点等图标会出现在最左边一列，这样lxc桌面，及shell窗口会显得很开阔\n（目前样式还有点问题需要修正下）\n拉回去，会恢复原来的完整视图"
+      ],
+      "title": ""
+    },
+    {
+      "type": "image",
+      "alt": "",
+      "src": "/assets/instnews/2k5g4GetvrIMPcs.png"
+    }
+  ]
+}

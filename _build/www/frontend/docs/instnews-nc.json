@@ -1,0 +1,52 @@
+{
+  "id": "instnews-nc",
+  "slug": "nc",
+  "title": "利用一键dd打包脚本inst.sh导出硬盘为http直链包(也可导出分区)",
+  "subtitle": "",
+  "icon": "📄",
+  "tags": [
+    "文档"
+  ],
+  "category": "instnews",
+  "lastUpdated": "2024-09-08",
+  "sections": [
+    {
+      "type": "text",
+      "content": [
+        "将vps上的硬盘导出为本地备份，或者直接用它配合dd脚本在线dd到其它同款机型上，这是很受欢迎的想法和思路了。(dd用于安装和打包需求场景总是成对出现 ...)",
+        "虽然在inst.sh中本来就有早期实现草稿并一个可用版本，但也是直到最近才决定释出。"
+      ],
+      "title": ""
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "content": "原理和工具集使用了netcat: 它接受管道中的数据流并可透露为http静态文件服务"
+    },
+    {
+      "type": "text",
+      "content": "开始试验:\n(请选用debian,ubuntu,kali,etc作为实验系统)"
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "content": "wget -qO- inst.sh|bash -s - -t 10000:/dev/sda\n这个命令将sda在vps本地上的10000端口透出，地址为http://ip:10000。\n当然sda在这里也可sda1，sdb1这样的形式，导出分区"
+    },
+    {
+      "type": "text",
+      "content": "导出时，可查看80端口的vnc实时监测服务，当有客户端连接所在导出地址的包时，统计数字会疯长，一旦连接消失，数据会趋于恢复停止和空dd。"
+    },
+    {
+      "type": "hr"
+    },
+    {
+      "type": "text",
+      "content": [
+        "仓库:",
+        "https://github.com/minlearn/inst",
+        "视频:",
+        "<iframe src=\"//player.bilibili.com/player.html?isOutside=true&aid=113102276267755&bvid=BV1P4pqe8EVK&cid=25790514184&p=1\" scrolling=\"no\" border=\"0\" frameborder=\"no\" framespacing=\"0\" allowfullscreen=\"true\"></iframe>"
+      ]
+    }
+  ]
+}
