@@ -1,0 +1,46 @@
+{
+  "id": "instnews-rescue",
+  "slug": "rescue",
+  "title": "利用支持rescue的一键dd脚本inst.sh重装vps/独服为windows(也支持第三方救援环境)",
+  "subtitle": "",
+  "icon": "📄",
+  "tags": [
+    "文档"
+  ],
+  "category": "instnews",
+  "lastUpdated": "2025-05-23",
+  "sections": [
+    {
+      "type": "text",
+      "content": [
+        "有一种Live OS（实时操作系统），它和普通操作系统有很大不同：在这种系统中，硬盘通常是临时挂载的，操作系统的引导程序经常是通过网络启动（netboot）而不是硬盘启动。\n这种救援系统（rescue）常见于 OVH、Hetzner、Netcup 等 ISP 的用户后台面板中，像 SystemRescue、Finnix 这样的 Linux ISO 也属于这类 Live CD。",
+        "与常规的操作系统环境/模式相比，对于 VPS 或裸金属服务器来说，Live Rescue 环境/模式是进行安装、预安装、重装、维护、救援的最佳选择。\n 对于需要耗时重装过程的独立服务器，在 Rescue 环境下重装更加简单可靠，且所需操作更少。",
+        "这些重装脚本（如 inst.sh、reinstall.sh）可能会在内部集成自定义精简版的 Rescue Linux，实现底层新系统的部署（provision）。",
+        "现在，inst.sh 脚本不仅能在自身的环境下运行，也兼容其他常见第三方 Rescue 环境。",
+        "如何使用？\n======",
+        "只需进入 Rescue 环境，像普通 Linux SSH 一样输入命令："
+      ],
+      "title": ""
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "content": "wget -qO- inst.sh | bash -s - -t yourgziposurl\n\n如果有多个网卡/多块硬盘（如 en1、sda 为例）：\nwget -qO- inst.sh | bash -s - -i en1 -p sda -t yourgziposurl"
+    },
+    {
+      "type": "text",
+      "content": "当脚本提示“检测到第三方 Rescue 环境（3rd rescue env detected）”时，会直接在原地进行重装，并在安装完成后提示你重启。"
+    },
+    {
+      "type": "hr"
+    },
+    {
+      "type": "text",
+      "content": [
+        "命令示例：  \nwget -qO- inst.sh | bash -s - -t yourzipurl  \nwget -qO- inst.sh | bash -s - -i xx -p xxx -t yourzipurl  \n-i 强制指定网卡名，-p 强制指定硬盘名",
+        "项目地址：\nhttps://github.com/minlearn/inst",
+        "演示视频：\n<iframe src=\"//player.bilibili.com/player.html?isOutside=true&aid=114556458239507&bvid=BV1NmjnzfEvs&cid=30105143656&p=1\" scrolling=\"no\" border=\"0\" frameborder=\"no\" framespacing=\"0\" allowfullscreen=\"true\"></iframe>"
+      ]
+    }
+  ]
+}

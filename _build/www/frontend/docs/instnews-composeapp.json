@@ -1,0 +1,57 @@
+{
+  "id": "instnews-composeapp",
+  "slug": "composeapp",
+  "title": "利用可编排应用的一键dd脚本inst重装linux为kasmvnc chrome",
+  "subtitle": "",
+  "icon": "📄",
+  "tags": [
+    "文档"
+  ],
+  "category": "instnews",
+  "lastUpdated": "2026-11-25",
+  "sections": [
+    {
+      "type": "text",
+      "content": [
+        "现在，你可以使用dd脚本重装os，并编排你的应用了",
+        "我们知道docker作为一个容器层处在os和应用之间，提供了一定的方便性，但对于资源少目的专用的vps，比如一个1c1g的vps要安装一个节点服务器来说，安装一个docker占资源不说，docker本身网络映射和文件系统也凭空增大了复杂性",
+        "这时，如果直接能简单一次性重装一个os到干净调好的状态并且把应用安装好，结果可能反而会更好。",
+        "inst.sh就支持这种-t debian,app1,app2的编排方式。当然，这个app不是apt-get install的那些，而是写好的脚本，由inst.sh重装完系统之后会在进入后自动运行这些app脚本"
+      ],
+      "title": ""
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "content": "这种的实现原理，基本基于以前的的cmdstr实现，但做了更多，比如，你可以理解为把所有的cmdstr全做成脚本形式（只不过它被放在了系统初始化阶段和可视控制终端下,而非在后台运行），并且可以适合从安装app到安装脚本在后期能做的一切场景和目的，这就相当于另一种“cloudinit”了\n\n当然inst.sh也完全支持在debian中直接-t app1,app2，但不是由重装而来，直接安装的app会先检测你的环境，安装一个嵌入pve lxc层（这就是devdesk，它还支持-t app1:N，N是容器数量，表示这个app1安装N份），然后再安装这些app背后的脚本，这就相当于另一种“docker”了\n\n即：inst.sh二种编排应用的方式都支持\n"
+    },
+    {
+      "type": "text",
+      "content": [
+        "下面以单个kasmvnc app为例说明吧，你完全可以fork inst/instapps，扩充自己的脚本库。或组合更多更复杂的应用形式",
+        "命令为(以下二条命令都在debian下运行)："
+      ]
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "content": "wget -qO- inst.sh|bash -s - -t debian,kasmvnc\n\n（注意此命令为先DD，dd完后进入debian再安装kasmvnc脚本，因此你的系统会被重置）\n\nwget -qO- inst.sh|bash -s - -t kasmvnc\n\n(这条不会，但它不会重置你的现系统，它要求debian11，它会先安装一个嵌入pve层，再产生一个kasmvnc容器)\n"
+    },
+    {
+      "type": "text",
+      "content": "完成后，https://ip:8000打开vnc，记得改vnc密码(初始为123456，通过/root/changevncpw.sh更改)和root密码(初始为inst.sh，通过passwd root更改)哦"
+    },
+    {
+      "type": "hr"
+    },
+    {
+      "type": "text",
+      "content": [
+        "仓库：",
+        "https://github.com/minlearn/inst\nhttps://github.com/minlearn/instapps",
+        "脚本使用方式见文中，面板使用更方便：",
+        "https://inst.sh/panel"
+      ]
+    }
+  ]
+}
